@@ -1,0 +1,6 @@
+# Build output of scripts/release.py
+dist/
+
+# Python
+__pycache__/
+*.pyc

@@ -15,6 +15,7 @@
   },
   "min_app_version": "1.0.0",
   "homepage": "https://github.com/pe1mew/Zangbundel-bibliotheek",
+  "release_index": "https://raw.githubusercontent.com/pe1mew/Zangbundel-bibliotheek/main/releases.json",
   "languages": ["nl"],
   "tags": {
     "kampvuur":   { "nl": "Kampvuur",   "en": "Campfire" },

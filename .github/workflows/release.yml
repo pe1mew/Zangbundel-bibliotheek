@@ -1,0 +1,61 @@
+name: Release
+
+# Builds the .zbl release archive for a pushed tag v<version>, verifies it,
+# publishes it as a GitHub release (also under the fixed name
+# <library id>-latest.zbl) and updates releases.json on main.
+# See song-format specification section 12.6.
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build archive from the tag
+        run: python scripts/release.py build --tag "$GITHUB_REF_NAME" --out dist
+
+      - name: Verify archive
+        run: python scripts/release.py verify --strict dist/*.zbl
+
+      - name: Copy archive under the fixed "latest" name
+        run: |
+          LIB=$(python -c "import json;print(json.load(open('zangbundel.json',encoding='utf-8'))['id'])")
+          cp dist/"$LIB"-*.zbl "dist/$LIB-latest.zbl"
+          echo "LIB=$LIB" >> "$GITHUB_ENV"
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/*.zbl \
+            --title "${GITHUB_REF_NAME#v}" \
+            --notes-file dist/release-notes.md
+
+      - name: Update releases.json on main
+        run: |
+          ARCHIVE=$(ls dist/"$LIB"-*.zbl | grep -v -- '-latest.zbl')
+          git fetch origin main
+          git checkout -B main origin/main
+          python scripts/release.py index "$ARCHIVE" --tag "$GITHUB_REF_NAME"
+          if git diff --quiet -- releases.json; then
+            echo "releases.json already up to date"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add releases.json
+            git commit -m "Update release index for ${GITHUB_REF_NAME#v}"
+            git push origin main
+          fi

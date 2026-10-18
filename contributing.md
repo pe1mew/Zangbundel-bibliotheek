@@ -68,6 +68,16 @@ Imperative subject, under 72 characters, naming the song, for example `Add Advoc
 - Pull requests are reviewed by the maintainer, who checks the licence, the source and the format rules.
 - Be open to feedback and make the requested changes.
 
+## Making a release (maintainer)
+
+1. Make sure `main` validates: `python scripts/validate.py --strict --info .`
+2. Add a release entry to `changelog.md` and commit.
+3. Tag the commit: `git tag -a v2026.10.0 -m "Release 2026.10.0"` (calendar versioning `year.month.sequence`).
+4. Push the tag: `git push origin v2026.10.0`. The release workflow builds and verifies the archive, publishes the GitHub release and updates `releases.json` on `main`.
+5. Pull `main` afterwards to get the updated `releases.json`.
+
+A local build with `python scripts/release.py build --tag v2026.10.0` produces the same bytes as the workflow, so the published SHA-256 can be checked.
+
 ## Community standards
 
 - Follow the [Code of Conduct](code_of_conduct.md).

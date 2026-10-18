@@ -237,6 +237,9 @@ def validate_library_json(root, report, app_version):
     if 'languages' in lib and not (isinstance(lib['languages'], list) and
                                    all(isinstance(x, str) for x in lib['languages'])):
         report.warning(path, None, 'L002', 'languages should be an array of strings')
+    if 'release_index' in lib and not (isinstance(lib['release_index'], str) and
+                                       lib['release_index'].startswith('https://')):
+        report.warning(path, None, 'L002', 'release_index should be an HTTPS URL')
     if 'tags' in lib:
         tags = lib['tags']
         if not isinstance(tags, dict):
@@ -612,35 +615,14 @@ def find_song_files(root, report):
     return cho, other
 
 
-def main(argv=None):
-    parser = argparse.ArgumentParser(
-        description='Validate a Zangbundel song library (song-format specification 1.0).')
-    parser.add_argument('root', nargs='?', default='.', help='library root (default: current directory)')
-    parser.add_argument('--app-version', metavar='X.Y.Z',
-                        help='check min_app_version against this app version (L005)')
-    parser.add_argument('--allow-empty', action='store_true',
-                        help='an empty songs/ directory is a warning instead of an error (L008)')
-    parser.add_argument('--strict', action='store_true', help='exit non-zero on warnings too')
-    parser.add_argument('--info', action='store_true', help='also print informational findings')
-    parser.add_argument('--quiet', action='store_true', help='print findings and summary only, no per-song lines')
-    args = parser.parse_args(argv)
-
-    root = args.root
-    if not os.path.isdir(root):
-        parser.error('"%s" is not a directory' % root)
-    app_version = None
-    if args.app_version:
-        app_version = parse_semver(args.app_version)
-        if app_version is None:
-            parser.error('--app-version must be major.minor.patch')
-
+def run(root, app_version=None, allow_empty=False):
+    """Validates the library at root. Returns (report, lib, songs); lib is None when refused."""
     report = Report()
-    out = sys.stdout
 
     lib = validate_library_json(root, report, app_version)
     song_files, _ = find_song_files(root, report)
     if song_files is None or not song_files:
-        if args.allow_empty:
+        if allow_empty:
             report.warning('songs', None, 'L008', 'songs/ directory missing or contains no .cho file')
         else:
             report.error('songs', None, 'L008', 'songs/ directory missing or contains no .cho file')
@@ -685,6 +667,37 @@ def main(argv=None):
                     report.info(song.path, None, 'I001', 'tag "%s" has no label in zangbundel.json; '
                                 'shown as is' % tag)
 
+    return report, lib, songs
+
+
+def library_errors(report):
+    return [f for f in report.findings if f[2] == 'error' and f[3][0] in 'LA']
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        description='Validate a Zangbundel song library (song-format specification 1.0).')
+    parser.add_argument('root', nargs='?', default='.', help='library root (default: current directory)')
+    parser.add_argument('--app-version', metavar='X.Y.Z',
+                        help='check min_app_version against this app version (L005)')
+    parser.add_argument('--allow-empty', action='store_true',
+                        help='an empty songs/ directory is a warning instead of an error (L008)')
+    parser.add_argument('--strict', action='store_true', help='exit non-zero on warnings too')
+    parser.add_argument('--info', action='store_true', help='also print informational findings')
+    parser.add_argument('--quiet', action='store_true', help='print findings and summary only, no per-song lines')
+    args = parser.parse_args(argv)
+
+    root = args.root
+    if not os.path.isdir(root):
+        parser.error('"%s" is not a directory' % root)
+    app_version = None
+    if args.app_version:
+        app_version = parse_semver(args.app_version)
+        if app_version is None:
+            parser.error('--app-version must be major.minor.patch')
+
+    out = sys.stdout
+    report, lib, songs = run(root, app_version, args.allow_empty)
     report.print(out, args.info)
 
     if not args.quiet:
@@ -692,7 +705,7 @@ def main(argv=None):
             status = 'SKIPPED' if song.skipped else 'OK'
             out.write('%s: %s hash=%s lines=%d\n' % (song.path, status, song.hash_hex or '-', len(song.lines)))
 
-    lib_errors = [f for f in report.findings if f[2] == 'error' and f[3].startswith('L')]
+    lib_errors = library_errors(report)
     imported = sum(1 for s in songs if not s.skipped)
     skipped = sum(1 for s in songs if s.skipped)
     warnings = report.count('warning')
