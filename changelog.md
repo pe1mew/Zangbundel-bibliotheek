@@ -7,13 +7,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
-- *Nothing.*
+- `releases.json` with release 2026.10.0 (archive SHA-256 `a4730fdc…d0e9`, verified against the published asset).
 
 ### Changed
 - *Nothing.*
 
 ### Fixed
-- *Nothing.*
+- Release workflow: the index step treated a newly created `releases.json` as unchanged and never committed it; it now checks the staged file.
 
 ### Removed
 - *Nothing.*

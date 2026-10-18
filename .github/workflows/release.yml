@@ -50,12 +50,12 @@ jobs:
           git fetch origin main
           git checkout -B main origin/main
           python scripts/release.py index "$ARCHIVE" --tag "$GITHUB_REF_NAME"
-          if git diff --quiet -- releases.json; then
+          git add releases.json
+          if git diff --cached --quiet -- releases.json; then
             echo "releases.json already up to date"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add releases.json
             git commit -m "Update release index for ${GITHUB_REF_NAME#v}"
             git push origin main
           fi
