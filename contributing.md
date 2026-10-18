@@ -21,8 +21,13 @@ Only contribute songs you have the right to distribute:
 - **Traditional and public-domain songs**: words and melody out of copyright. Mark them `{lyricist: traditioneel}`, `{composer: traditioneel}` (or the known author when there is one), `{copyright: Public domain}` and `{meta: license public-domain}`.
 - **Your own songs**: state yourself as lyricist and composer and choose a licence that permits redistribution, for example `{meta: license CC-BY-SA-4.0}` or `CC0-1.0`.
 - **Songs under an open licence**: state the licence and the source.
+- **Songs whose author or rights holder cannot be traced**: many campfire songs are passed on orally and appear in print without a name. Such a song can be accepted at the maintainer's discretion when a reasonable search (for example in the [Nederlandse Liederenbank](https://www.liederenbank.nl/)) finds no author. Mark it `{lyricist: onbekend}`, `{composer: onbekend}`, `{copyright: Rechthebbende onbekend}` and `{meta: license proprietary}`, and record in a `#` comment what you searched and the oldest print you found, so the status can be revisited.
 
-Songs still under copyright without such a licence are not accepted, however well known they are. Always fill `{meta: source …}` so the origin can be checked.
+Songs with a known author that are still under copyright are not accepted without a licence from the rights holder, however well known they are. Always fill `{meta: source …}` so the origin can be checked.
+
+## Credits and corrections
+
+Every effort is made to credit authors, composers and sources correctly, and to state the licence of every song truthfully. If you are a rights holder, or you know who is, and a song is credited wrongly, is licensed wrongly or should not be here, please [open an issue](https://github.com/pe1mew/Zangbundel-bibliotheek/issues) naming the song. The maintainer will correct the metadata or remove the song. If you cannot use GitHub, contact the maintainer through the link in `zangbundel.json`.
 
 ## Adding a song
 

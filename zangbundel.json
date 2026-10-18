@@ -18,6 +18,8 @@
   "languages": ["nl"],
   "tags": {
     "kampvuur":   { "nl": "Kampvuur",   "en": "Campfire" },
-    "kinderlied": { "nl": "Kinderlied", "en": "Children's song" }
+    "kinderlied": { "nl": "Kinderlied", "en": "Children's song" },
+    "volkslied":  { "nl": "Volkslied",  "en": "Folk song" },
+    "canon":      { "nl": "Canon",      "en": "Round" }
   }
 }

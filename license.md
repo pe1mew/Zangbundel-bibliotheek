@@ -29,7 +29,13 @@ Each song file carries its own origin and licence metadata, which the app shows 
 | `{meta: license …}` | An SPDX identifier (`CC-BY-SA-4.0`, `CC0-1.0`, …), `public-domain` or `proprietary`. When absent, the collection licence above applies. |
 | `{meta: source …}` | Where the text came from. |
 
-Traditional songs whose words and melody are in the public domain are marked `public-domain`; the collection licence does not restrict them beyond the transcription itself. Contributors are responsible for having the right to distribute every song they add, and for stating its licence correctly. Songs that are neither public domain nor released under a licence that permits redistribution are not accepted; see [contributing.md](contributing.md).
+Traditional songs whose words and melody are in the public domain are marked `public-domain`; the collection licence does not restrict them beyond the transcription itself. Contributors are responsible for having the right to distribute every song they add, and for stating its licence correctly.
+
+Some campfire songs are passed on without an author's name and appear in print only in modern collections. When a reasonable search finds no author or rights holder, such a song may be included at the maintainer's discretion, marked `onbekend` (unknown) for lyricist and composer, "Rechthebbende onbekend" as copyright and `proprietary` as licence, so that nobody mistakes it for a freely licensed text. See [contributing.md](contributing.md) for the rules.
+
+## Credits and corrections
+
+Every effort is made to credit authors, composers and sources correctly and to state each song's licence truthfully. If you are a rights holder, or know who is, and a song is credited wrongly, licensed wrongly or should not be distributed here, please [open an issue](https://github.com/pe1mew/Zangbundel-bibliotheek/issues) naming the song. The maintainer will correct the metadata or remove the song. If you cannot use GitHub, contact the maintainer through the link in `zangbundel.json`.
 
 ## Code: Apache License 2.0 with the Commons Clause
 

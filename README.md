@@ -52,6 +52,10 @@ The same check runs on GitHub for every push and pull request.
 
 See [contributing.md](contributing.md) and the [Code of Conduct](code_of_conduct.md). Only contribute songs you have the right to distribute: traditional and public-domain songs, your own work, or songs whose licence allows it. Every song states its origin and licence in its metadata.
 
+## Credits and corrections
+
+Every effort is made to credit authors, composers and sources correctly and to state each song's licence truthfully. Songs whose author could not be traced after a reasonable search are marked as such in their metadata. If you are a rights holder, or know who is, and a song is credited wrongly, licensed wrongly or should not be distributed here, please [open an issue](https://github.com/pe1mew/Zangbundel-bibliotheek/issues) naming the song; the metadata will be corrected or the song removed. If you cannot use GitHub, contact the maintainer through the link in `zangbundel.json`.
+
 ## License
 
 See [license.md](license.md) for details.

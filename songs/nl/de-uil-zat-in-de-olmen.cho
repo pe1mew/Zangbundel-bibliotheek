@@ -1,0 +1,36 @@
+# De uil zat in de olmen - canon
+# Rechthebbende onbekend. De melodie is de internationale koekoekscanon
+# ("Il cucù", "Dans la forêt lointaine", 18e eeuw) en is publiek domein. Van de
+# Nederlandse tekst is geen dichter en geen druk van voor 1992 gevonden
+# (Nederlandse Liederenbank: "Waarom niet een Hollands lied?" 1992, Klöters 1993).
+# Algemeen als traditioneel beschouwd, maar niet aantoonbaar publiek domein;
+# opgenomen op verzoek van de beheerder. Meld het als u de rechthebbende kent.
+# Overgenomen uit raw/De uil zal in de Olmen.doc (2005), akkoorden bij benadering
+# geplaatst naar de kolommen in het origineel.
+{title: De uil zat in de olmen}
+{meta: id de-uil-zat-in-de-olmen}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: melody Il cucù}
+{meta: source Eigen tekstbestand uit 2005; oudste gevonden druk 1992 (Nederlandse Liederenbank)}
+{meta: tag kampvuur}
+{meta: tag canon}
+{key: G}
+
+{comment: Canon}
+{start_of_verse}
+[G]De uil zat in de olmen
+bij 't [D]vallen van de [G]nacht,
+[G]en achter gindse heuvels
+de [D]koekoek antwoord [G]zacht.
+{end_of_verse}
+
+{start_of_verse}
+Koekoek, koekoek,
+[C]koekoekoekoekoekoek,[G]
+koekoek, koekoek,
+koekoekoekoekoekoek.
+{end_of_verse}
