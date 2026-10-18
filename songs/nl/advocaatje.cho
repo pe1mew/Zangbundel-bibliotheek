@@ -1,0 +1,81 @@
+# Advocaatje - traditioneel Nederlands kinderlied
+# Overgenomen uit raw/ADVOCAAT.WPF (WordPerfect 5.1, 1991).
+# Het origineel noteert akkoorden alleen bij het eerste couplet en het refrein;
+# de overige coupletten volgen hetzelfde patroon.
+{title: Advocaatje}
+{meta: id advocaatje}
+{meta: language nl}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit raw/ADVOCAAT.WPF, een WordPerfect 5.1-bestand uit 1991}
+{meta: tag kampvuur}
+{meta: tag kinderlied}
+{key: F}
+
+{start_of_verse}
+[F]Advokaatje ging op reis, [C]tiereliere[F]liere,
+[F]Advokaatje ging op reis, [C]tiereliere[F]lom.
+{end_of_verse}
+
+{start_of_chorus}
+[F]Met een hoedje op zijn arm, [C]tiereliere[F]liere,
+[F]Met een hoedje op zijn arm, [C]tiereliere[F]lom.
+{end_of_chorus}
+
+{start_of_verse}
+Voor een herberg bleef hij staan, tiereliereliere,
+Voor een herberg bleef hij staan, tierelierelom.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Stokvis krijg hij bij 't ontbijt, tiereliereliere,
+Stokvis krijg hij bij 't ontbijt, tierelierelom.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Graatje stak hem in de keel, tiereliereliere,
+Graatje stak hem in de keel, tierelierelom.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+De dokter werd er bij gehaald, tiereliereliere,
+De dokter werd er bij gehaald, tierelierelom.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Maar de dokter kwam te laat, tiereliereliere,
+Maar de dokter kwam te laat, tierelierelom.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Zo stierf onze advocaat, tiereliereliere,
+Zo stierf onze advocaat, tierelierelom.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Op zijn buik daar groeit nu gras, tiereliereliere,
+Op zijn buik daar groeit nu gras, tierelierelom.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Zing nog eenmaal tot besluit, tiereliereliere,
+Zing nog eenmaal tot besluit, tierelierelom.
+{end_of_verse}
+
+{chorus}

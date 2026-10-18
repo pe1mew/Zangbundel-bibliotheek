@@ -1,0 +1,23 @@
+{
+  "format": "zangbundel-library",
+  "format_version": "1.0",
+  "id": "zangbundel-bibliotheek",
+  "name": "Zangbundel bibliotheek",
+  "description": "Kampvuur- en kinderliederen voor de Zangbundel-app. Traditionele liederen zijn publiek domein; de bundel als geheel is CC BY-NC 4.0. Zie de licentie per lied.",
+  "maintainer": {
+    "name": "Remko Welling",
+    "url": "https://github.com/pe1mew/Zangbundel-bibliotheek"
+  },
+  "license": {
+    "id": "CC-BY-NC-4.0",
+    "file": "LICENSE",
+    "summary": "Creative Commons Naamsvermelding-NietCommercieel 4.0, tenzij een lied anders aangeeft."
+  },
+  "min_app_version": "1.0.0",
+  "homepage": "https://github.com/pe1mew/Zangbundel-bibliotheek",
+  "languages": ["nl"],
+  "tags": {
+    "kampvuur":   { "nl": "Kampvuur",   "en": "Campfire" },
+    "kinderlied": { "nl": "Kinderlied", "en": "Children's song" }
+  }
+}
