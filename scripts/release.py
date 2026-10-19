@@ -47,8 +47,9 @@ import zipfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import validate  # noqa: E402
 
-BUILDER = 'zangbundel-release 1.0.0'
+BUILDER = 'zangbundel-release 1.1.0'
 ARCHIVE_VERSION = '1.0'
+ARCHIVE_VERSION_WITH_SETLISTS = '1.1'
 ARCHIVE_MAJOR_SUPPORTED = 1
 MANIFEST_NAME = 'zangbundel-archive.json'
 DEFLATE_LEVEL = 9
@@ -185,7 +186,7 @@ def build(args):
 
     with tempfile.TemporaryDirectory() as tmp:
         tree_paths = export_tree(repo_dir, revision, tmp)
-        report, lib, songs = validate.run(tmp)
+        report, lib, songs, setlists = validate.run(tmp)
         report.print(sys.stdout, args.info)
         if lib is None or validate.library_errors(report):
             raise ReleaseError('library-level errors; nothing built')
@@ -230,9 +231,24 @@ def build(args):
         skipped.sort(key=lambda e: e['path'])
         notation.sort(key=lambda e: e['path'])
 
+        # Setlists (section 13.7): valid ones go in canonical form and into the manifest; archive 1.1.
+        setlist_entries = []
+        for sl in setlists:
+            if sl.skipped:
+                first = next((f for f in report.findings if f[0] == sl.path and f[2] == 'error'), None)
+                skipped.append({'path': sl.path, 'code': first[3] if first else 'SL000',
+                                'message': first[4] if first else 'skipped'})
+                continue
+            entries[sl.path] = sl.canonical
+            setlist_entries.append({'path': sl.path, 'id': sl.meta['id'][0], 'title': sl.meta['title'][0],
+                                    'songs': len(sl.entries), 'sha256': hashlib.sha256(sl.canonical).hexdigest(),
+                                    'size': len(sl.canonical)})
+        setlist_entries.sort(key=lambda e: e['path'])
+        skipped.sort(key=lambda e: e['path'])
+
         manifest = {
             'format': 'zangbundel-archive',
-            'archive_version': ARCHIVE_VERSION,
+            'archive_version': ARCHIVE_VERSION_WITH_SETLISTS if setlist_entries else ARCHIVE_VERSION,
             'library': lib['id'],
             'format_version': lib['format_version'],
             'version': version,
@@ -244,6 +260,8 @@ def build(args):
         }
         if notation:
             manifest['notation'] = notation
+        if setlist_entries:
+            manifest['setlists'] = setlist_entries
         manifest['builder'] = BUILDER
         if args.previous:
             pv, _, pr = args.previous.partition(':')
@@ -274,6 +292,8 @@ def build(args):
         fh.write('| Revision | `%s` |\n' % revision)
         fh.write('| Created | %s |\n' % created)
         fh.write('| Songs | %d included, %d skipped |\n' % (len(included), len(skipped)))
+        if setlist_entries:
+            fh.write('| Setlists | %d |\n' % len(setlist_entries))
         fh.write('| Archive | `%s`, %d bytes |\n' % (file_name, len(data)))
         fh.write('| SHA-256 | `%s` |\n\n' % digest)
         fh.write('Open the `.zbl` file with the Zangbundel app, or add the library by its repository URL.\n')
@@ -437,6 +457,13 @@ def verify(args):
             if isinstance(entry, dict) and entry.get('path') in files:
                 if hashlib.sha256(zf.read(entry['path'])).hexdigest() != entry.get('sha256'):
                     report.warning(entry['path'], None, 'A103', 'notation sha256 does not match; file dropped')
+        for entry in manifest.get('setlists', []) or []:
+            if not isinstance(entry, dict) or not isinstance(entry.get('path'), str):
+                report.error(MANIFEST_NAME, None, 'A007', 'malformed setlists entry: %r' % (entry,))
+            elif entry['path'] not in files:
+                report.warning(entry['path'], None, 'A104', 'listed setlist is missing; dropped')
+            elif hashlib.sha256(zf.read(entry['path'])).hexdigest() != entry.get('sha256'):
+                report.warning(entry['path'], None, 'A104', 'setlist sha256 does not match; dropped')
 
     # Validate the contents like a git import (12.7 step 5).
     with tempfile.TemporaryDirectory() as tmp:
@@ -453,7 +480,7 @@ def verify(args):
             os.makedirs(os.path.dirname(full), exist_ok=True)
             with open(full, 'wb') as fh:
                 fh.write(zf.read(info))
-        inner, lib_obj, songs = validate.run(tmp)
+        inner, lib_obj, songs, setlists = validate.run(tmp)
         report.findings.extend(inner.findings)
         if manifest is not None:
             for s in manifest.get('skipped', []) or []:
@@ -463,6 +490,9 @@ def verify(args):
         for song in songs:
             status = 'SKIPPED' if song.skipped else 'OK'
             print('%s: %s hash=%s lines=%d' % (song.path, status, song.hash_hex or '-', len(song.lines)))
+        for sl in setlists:
+            status = 'SKIPPED' if sl.skipped else 'OK'
+            print('%s: %s hash=%s entries=%d' % (sl.path, status, sl.hash_hex or '-', len(sl.entries)))
     return finish_verify(report, args)
 
 

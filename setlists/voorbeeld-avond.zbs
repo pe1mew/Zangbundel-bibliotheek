@@ -1,0 +1,17 @@
+# Voorbeeld van een setlist (song-format specificatie, sectie 13).
+# Een avond rond het kampvuur met liederen uit deze bundel; de titels achter #
+# zijn alleen voor de lezer, de app toont altijd de titel uit het liedbestand.
+{title: Voorbeeldavond}
+{meta: id voorbeeld-avond}
+{meta: description Een avond kampvuurliederen, van opening tot afsluiting}
+{meta: language nl}
+
+zangbundel-bibliotheek/hoog-laait-het-vuur             # Hoog laait het vuur
+zangbundel-bibliotheek/advocaatje                      # Advocaatje
+zangbundel-bibliotheek/daar-was-laatst-een-meisje-loos # Daar was laatst een meisje loos
+zangbundel-bibliotheek/de-boer-had-maar-ene-schoen     # De boer had maar ene schoen
+zangbundel-bibliotheek/drie-schuintamboers             # Drie schuintamboers
+zangbundel-bibliotheek/ik-heb-een-tante-in-marokko     # Ik heb een tante in Marokko
+zangbundel-bibliotheek/de-koning-van-siam              # De koning van Siam
+zangbundel-bibliotheek/de-uil-zat-in-de-olmen          # De uil zat in de olmen
+? Vader Jacob

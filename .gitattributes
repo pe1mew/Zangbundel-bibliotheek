@@ -2,3 +2,4 @@
 *.cho   text eol=lf
 *.json  text eol=lf
 raw/*   binary
+*.zbs   text eol=lf

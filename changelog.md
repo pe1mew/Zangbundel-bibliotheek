@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
+- Setlists (song-format specification section 13, format 1.1): `setlists/voorbeeld-avond.zbs`, an example evening with the eight songs and one title-only entry; `format_version` raised to `1.1` in `zangbundel.json`. `scripts/validate.py` validates `setlists/**/*.zbs` (codes SL001–SL104, I004, I005, a warning when `format_version` is below 1.1); `scripts/release.py` puts valid setlists in the archive in canonical form, lists them in the manifest's `setlists` field with archive version 1.1, and verifies them (A104). README section "Setlists".
 - `releases.json` with release 2026.10.0 (archive SHA-256 `a4730fdc…d0e9`, verified against the published asset).
 
 ### Changed

@@ -11,6 +11,7 @@ zangbundel.json       library metadata: id, name, licence, maintainer, tag label
 LICENSE               full text of the collection licence (CC BY-NC 4.0)
 songs/                one ChordPro (.cho) file per song, in the Zangbundel profile
   nl/                 Dutch songs
+setlists/             setlists (.zbs) shipped with the library, see "Setlists"
 raw/                  source material the songs were transcribed from (ignored by the app)
 releases.json         release index: every published .zbl archive with URL, size and SHA-256
 scripts/validate.py   command-line validator applying the format's rules (see "Validating")
@@ -65,6 +66,10 @@ python scripts/release.py index dist/zangbundel-bibliotheek-2026.10.0.zbl
 A song is one `.cho` file whose name is the song id (`advocaatje.cho` has id `advocaatje`). Required metadata: `{title: …}`, `{meta: id …}` equal to the file name, and `{meta: language …}` (a BCP 47 tag). Lyrics go in `{start_of_verse}` … `{end_of_verse}` and `{start_of_chorus}` … `{end_of_chorus}` blocks; `{chorus}` repeats the last chorus in full, so the text is complete and in sung order. Chords in `[F]` brackets are allowed and ignored by the phase 1 app. Lines starting with `#` are maintainer notes and are never shown.
 
 See [songs/nl/advocaatje.cho](songs/nl/advocaatje.cho) for a complete example, and the format specification for the full rules, the validation codes and the canonicalisation the content hash is computed over.
+
+## Setlists
+
+A setlist (*setlist*) is the ordered programme of an evening. This library ships one example, [setlists/voorbeeld-avond.zbs](setlists/voorbeeld-avond.zbs), and the app imports every `.zbs` file under `setlists/` together with the library (song-format specification section 13, format 1.1). The file is plain text: `{title: …}` and `{meta: id …}` first, then one song per line as `<library id>/<song id>`, optionally followed by `# title` for readability, or `? <title>` for a song known only by name. Lines starting with `#` are comments. Leaders can write such a file on a computer, import it in the app from a file or URL, and export their own setlists in the same form. The validator checks setlists (codes `SL…`) and the release tool puts them in the archive and its manifest.
 
 ## Validating
 

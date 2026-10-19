@@ -48,6 +48,11 @@ MAX_TITLE = 60
 MAX_LINE = 120
 MAX_CANONICAL_LINES = 254
 
+# Setlists (section 13, format 1.1)
+SETLIST_MAX_ENTRIES = 200
+SETLIST_ENTRY_RE = re.compile(r'^([a-z0-9]+(?:-[a-z0-9]+)*)/([a-z0-9]+(?:-[a-z0-9]+)*)(?:\s+#.*)?$')
+SETLIST_TITLE_ENTRY_RE = re.compile(r'^\?\s+(\S.*)$')
+
 # Short forms accepted by the profile (section 5.3, 6, 7).
 ALIASES = {
     't': 'title', 'st': 'subtitle',
@@ -593,6 +598,132 @@ def validate_song(root, rel_path, report, lib):
 
 
 # ---------------------------------------------------------------------------
+# Setlists (section 13, codes SL001-SL104, I004, I005)
+# ---------------------------------------------------------------------------
+
+class Setlist:
+    def __init__(self, path):
+        self.path = path
+        self.meta = {}        # name -> (value, line)
+        self.entries = []     # dicts: kind 'song' (lib, song) or 'title' (title), line
+        self.hash_hex = None
+        self.canonical = b''
+        self.skipped = False
+
+
+def find_setlist_files(root):
+    base = os.path.join(root, 'setlists')
+    if not os.path.isdir(base):
+        return []
+    found = []
+    for dirpath, dirnames, filenames in os.walk(base):
+        dirnames.sort()
+        for fn in sorted(filenames):
+            if fn.endswith('.zbs'):
+                found.append(os.path.relpath(os.path.join(dirpath, fn), root).replace(os.sep, '/'))
+    found.sort()
+    return found
+
+
+def validate_setlist(root, rel_path, report, lib, song_ids):
+    """Validates one setlist file. song_ids: set of song ids of this library that passed validation."""
+    sl = Setlist(rel_path)
+    file_name = os.path.basename(rel_path)
+    expected_id = file_name[:-4]
+    lib_id = lib.get('id', '')
+
+    def err(line, code, msg):
+        report.error(rel_path, line, code, msg)
+        sl.skipped = True
+
+    with open(os.path.join(root, rel_path), 'rb') as fh:
+        raw = fh.read()
+    if len(raw) > MAX_FILE_BYTES:
+        err(None, 'SL001', 'file is %d bytes, larger than 64 KiB' % len(raw))
+        return sl
+    bad = sorted({b for b in raw if b < 0x20 and b not in (0x09, 0x0A, 0x0D)} | ({0x7F} if 0x7F in raw else set()))
+    if bad:
+        err(None, 'SL001', 'control characters other than LF, CR and tab: %s' % ', '.join('0x%02X' % b for b in bad))
+        return sl
+    try:
+        canonical, deviations = canonicalise(raw)
+    except UnicodeDecodeError as exc:
+        err(None, 'SL001', 'file is not valid UTF-8 (%s)' % exc)
+        return sl
+    if deviations:
+        report.warning(rel_path, None, 'SL102', 'file is not in canonical form: %s' % ', '.join(deviations))
+    sl.canonical = canonical
+    sl.hash_hex = hashlib.sha256(canonical).digest()[:16].hex()
+
+    unknown_reported = set()
+    for line_no, line in enumerate(canonical.decode('utf-8').split('\n')[:-1], 1):
+        if line.strip() == '' or line[0] == '#':
+            continue
+        if line[0] == '{' or line[-1] == '}':
+            if not (line[0] == '{' and line[-1] == '}') or '{' in line[1:-1] or '}' in line[1:-1]:
+                err(line_no, 'SL004', 'malformed directive line')
+                continue
+            name, _, value = line[1:-1].partition(':')
+            name = name.strip().lower()
+            value = value.strip()
+            if name == 'meta':
+                parts = value.split(None, 1)
+                if not parts:
+                    err(line_no, 'SL004', '{meta} without a name')
+                    continue
+                name, value = parts[0].lower(), (parts[1] if len(parts) > 1 else '')
+            if name == 'title':
+                if sl.entries:
+                    err(line_no, 'SL002', '{title} after the first entry')
+                if 'title' in sl.meta:
+                    err(line_no, 'SL002', '{title} occurs more than once')
+                sl.meta['title'] = (value, line_no)
+            elif name in ('id', 'description', 'language'):
+                if name in sl.meta:
+                    err(line_no, 'SL002' if name == 'id' else 'SL004', '{meta: %s} occurs more than once' % name)
+                sl.meta[name] = (value, line_no)
+            else:
+                if name not in unknown_reported:
+                    unknown_reported.add(name)
+                    report.info(rel_path, line_no, 'I001', 'unknown directive "%s" ignored' % name)
+            continue
+        m = SETLIST_ENTRY_RE.match(line)
+        if m:
+            entry_lib, entry_song = m.group(1), m.group(2)
+            sl.entries.append({'kind': 'song', 'lib': entry_lib, 'song': entry_song, 'line': line_no})
+            if entry_lib == lib_id:
+                if entry_song not in song_ids:
+                    report.warning(rel_path, line_no, 'SL101', 'song "%s" does not exist in this library' % entry_song)
+            else:
+                report.info(rel_path, line_no, 'I004', 'entry names another library "%s"; resolved only when it is '
+                            'installed' % entry_lib)
+            continue
+        m = SETLIST_TITLE_ENTRY_RE.match(line)
+        if m:
+            sl.entries.append({'kind': 'title', 'title': m.group(1).strip(), 'line': line_no})
+            report.info(rel_path, line_no, 'I005', 'title-only entry "%s"' % m.group(1).strip())
+            continue
+        err(line_no, 'SL004', 'malformed entry line')
+
+    title = sl.meta.get('title', ('', None))[0]
+    sl_id = sl.meta.get('id', ('', None))[0]
+    if not title:
+        err(None, 'SL002', 'required {title: ...} is missing or empty')
+    elif len(title) > MAX_TITLE:
+        report.warning(rel_path, sl.meta['title'][1], 'SL104', 'title is %d characters, longer than %d' %
+                       (len(title), MAX_TITLE))
+    if not sl_id:
+        err(None, 'SL002', 'required {meta: id ...} is missing or empty')
+    elif not ID_RE.match(sl_id) or sl_id != expected_id:
+        err(sl.meta['id'][1], 'SL003', 'id "%s" does not equal the file name "%s"' % (sl_id, expected_id))
+    if not sl.entries:
+        err(None, 'SL005', 'no entries')
+    elif len(sl.entries) > SETLIST_MAX_ENTRIES:
+        report.warning(rel_path, None, 'SL103', '%d entries, more than %d' % (len(sl.entries), SETLIST_MAX_ENTRIES))
+    return sl
+
+
+# ---------------------------------------------------------------------------
 # Library walk (codes S005, L008, W011, I003)
 # ---------------------------------------------------------------------------
 
@@ -616,7 +747,7 @@ def find_song_files(root, report):
 
 
 def run(root, app_version=None, allow_empty=False):
-    """Validates the library at root. Returns (report, lib, songs); lib is None when refused."""
+    """Validates the library at root. Returns (report, lib, songs, setlists); lib is None when refused."""
     report = Report()
 
     lib = validate_library_json(root, report, app_version)
@@ -667,7 +798,29 @@ def run(root, app_version=None, allow_empty=False):
                     report.info(song.path, None, 'I001', 'tag "%s" has no label in zangbundel.json; '
                                 'shown as is' % tag)
 
-    return report, lib, songs
+    # Setlists (section 13): validated against the songs that passed.
+    setlists = []
+    if lib is not None:
+        setlist_files = find_setlist_files(root)
+        if setlist_files:
+            m = FORMAT_VERSION_RE.match(lib.get('format_version', '') or '')
+            if m and (int(m.group(1)), int(m.group(2))) < (1, 1):
+                report.warning('zangbundel.json', None, 'L002', 'setlists/ needs format_version 1.1 or later '
+                               '(found %s)' % lib.get('format_version'))
+        song_ids = {s.meta['id'][0] for s in songs if not s.skipped and 'id' in s.meta}
+        seen_ids = {}
+        for rel in setlist_files:
+            sl = validate_setlist(root, rel, report, lib, song_ids)
+            sl_id = sl.meta.get('id', ('', None))[0]
+            if sl_id and not sl.skipped:
+                if sl_id in seen_ids:
+                    report.error(sl.path, None, 'SL003', 'id "%s" duplicates %s' % (sl_id, seen_ids[sl_id]))
+                    sl.skipped = True
+                else:
+                    seen_ids[sl_id] = sl.path
+            setlists.append(sl)
+
+    return report, lib, songs, setlists
 
 
 def library_errors(report):
@@ -697,23 +850,29 @@ def main(argv=None):
             parser.error('--app-version must be major.minor.patch')
 
     out = sys.stdout
-    report, lib, songs = run(root, app_version, args.allow_empty)
+    report, lib, songs, setlists = run(root, app_version, args.allow_empty)
     report.print(out, args.info)
 
     if not args.quiet:
         for song in songs:
             status = 'SKIPPED' if song.skipped else 'OK'
             out.write('%s: %s hash=%s lines=%d\n' % (song.path, status, song.hash_hex or '-', len(song.lines)))
+        for sl in setlists:
+            status = 'SKIPPED' if sl.skipped else 'OK'
+            out.write('%s: %s hash=%s entries=%d\n' % (sl.path, status, sl.hash_hex or '-', len(sl.entries)))
 
     lib_errors = library_errors(report)
     imported = sum(1 for s in songs if not s.skipped)
     skipped = sum(1 for s in songs if s.skipped)
+    sl_imported = sum(1 for s in setlists if not s.skipped)
+    sl_skipped = sum(1 for s in setlists if s.skipped)
     warnings = report.count('warning')
     if lib_errors or lib is None:
         out.write('Library refused: %d library error(s).\n' % len(lib_errors))
         return 1
-    out.write('%d song(s) imported, %d skipped, %d warning(s).\n' % (imported, skipped, warnings))
-    if skipped or lib_errors:
+    extra = ', %d setlist(s) imported, %d skipped' % (sl_imported, sl_skipped) if setlists else ''
+    out.write('%d song(s) imported, %d skipped%s, %d warning(s).\n' % (imported, skipped, extra, warnings))
+    if skipped or sl_skipped or lib_errors:
         return 1
     if args.strict and warnings:
         return 1
