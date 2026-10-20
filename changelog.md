@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 
 ### Fixed
 - Release workflow: the index step treated a newly created `releases.json` as unchanged and never committed it; it now checks the staged file.
+- `license.md` and `README.md` no longer say the scripts have the same licence as the app: the app dropped the Commons Clause for F-Droid on 2026-10-20, this repository keeps it (decisions driven by F-Droid do not apply here).
 
 ### Removed
 - *Nothing.*

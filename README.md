@@ -95,7 +95,7 @@ Every effort is made to credit authors, composers and sources correctly and to s
 
 See [license.md](license.md) for details.
 
-The collection (the selection, the transcriptions, the metadata and the documentation) is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0) by Remko Welling, PE1MEW (https://github.com/pe1mew). The full text is in [LICENSE](LICENSE). Individual songs can carry a licence of their own in their `{meta: license …}` directive; traditional songs are marked `public-domain`. The validator under `scripts/` is code and is licensed under the Apache License 2.0 with the Commons Clause condition (see [scripts/LICENSE](scripts/LICENSE)), as in the app repository.
+The collection (the selection, the transcriptions, the metadata and the documentation) is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0) by Remko Welling, PE1MEW (https://github.com/pe1mew). The full text is in [LICENSE](LICENSE). Individual songs can carry a licence of their own in their `{meta: license …}` directive; traditional songs are marked `public-domain`. The validator and release tool under `scripts/` are code and are licensed under the Apache License 2.0 with the Commons Clause condition (see [scripts/LICENSE](scripts/LICENSE)).
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
