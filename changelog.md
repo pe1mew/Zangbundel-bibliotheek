@@ -2,9 +2,25 @@
 
 All notable changes to this library are documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/). The library follows Zangbundel library format 1.0 (`format_version` in `zangbundel.json`). Releases are tagged `v<version>` with calendar versions (`year.month.sequence`) and published as `.zbl` archives; see `releases.json`.
+The format is based on [Keep a Changelog](https://keepachangelog.com/). The library follows Zangbundel library format 1.1 (`format_version` in `zangbundel.json`; 1.0 until release 2026.10.0). Releases are tagged `v<version>` with calendar versions (`year.month.sequence`) and published as `.zbl` archives; see `releases.json`.
 
 ## [Unreleased]
+
+### Added
+- *Nothing.*
+
+### Changed
+- *Nothing.*
+
+### Fixed
+- *Nothing.*
+
+### Removed
+- *Nothing.*
+
+## [2026.10.1] - 2026-10-25
+
+Second release: setlists (format 1.1) and a demonstration song.
 
 ### Added
 - `songs/la/lorem-ipsum.cho`, "Lorem Ipsum!", a demonstration song written for the Zangbundel project in 2026 and licensed CC0-1.0. It sets lorem-ipsum words to the tune of Vader Jacob and has four verses with the refrain "Lorem ipsum, lorem ipsum!" between them, plus chords in F. Every metadata field of the format is filled in except `variant-group`, which needs a second song (W011). It validates with 22 canonical lines.
