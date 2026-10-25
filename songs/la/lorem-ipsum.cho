@@ -1,0 +1,69 @@
+# Lorem Ipsum! - demonstratielied voor de Zangbundel-app
+# Geschreven voor het Zangbundel-project (2026) om de app te demonstreren: elk
+# metadataveld van de specificatie is ingevuld, en het lied heeft couplet- en
+# refreinblokken, een herhaald refrein en akkoorden.
+# De tekst is gebouwd uit woorden van de bekende lorem-ipsum-opvultekst, die
+# teruggaat op Cicero, De finibus bonorum et malorum (45 v.Chr.), publiek domein.
+# Wijs: Vader Jacob (Frère Jacques), traditioneel, publiek domein. Het refrein
+# past op de eerste regel van de wijs, de coupletten op de regels daarna.
+# Geen {meta: variant-group}: een groep met één lied is betekenisloos (W011);
+# voeg het veld toe zodra er een vertaling of variant van dit lied is.
+{title: Lorem Ipsum!}
+{subtitle: Demonstratielied op de wijs van Vader Jacob}
+{sorttitle: Lorem Ipsum}
+{meta: id lorem-ipsum}
+{meta: language la}
+{lyricist: Zangbundel-project}
+{lyricist: Cicero (bron van de lorem-ipsumtekst)}
+{composer: traditioneel}
+{artist: Zangbundel-project}
+{year: 2026}
+{copyright: 2026 Zangbundel-project}
+{meta: license CC0-1.0}
+{meta: source Geschreven voor het Zangbundel-project als demonstratielied (2026); woorden uit de lorem-ipsum-opvultekst naar Cicero, De finibus bonorum et malorum}
+{meta: tag demo}
+{meta: tag kampvuur}
+{meta: melody Vader Jacob}
+{meta: redistribute yes}
+{key: F}
+{capo: 0}
+{tempo: 100}
+{time: 4/4}
+{duration: 1:12}
+
+{start_of_verse}
+[F]Dolor sit, dolor sit,
+[F]amet consec[C]tetur,
+[F]amet consec[C]tetur,
+[F]elit [C]sed, [F]elit [C]sed.[F]
+{end_of_verse}
+
+{start_of_chorus}
+[F]Lorem ipsum,
+[F]lorem ipsum!
+{end_of_chorus}
+
+{start_of_verse}
+[F]Tempor est, tempor est,
+[F]ut labore [C]magna,
+[F]ut labore [C]magna,
+[F]ali[C]qua, [F]ali[C]qua.[F]
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+[F]Ut enim, ut enim,
+[F]ad minim [C]veniam,
+[F]ad minim [C]veniam,
+[F]quis [C]nostrud, [F]quis [C]nostrud.[F]
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+[F]Irure, irure,
+[F]cillum do[C]lore eu,
+[F]cillum do[C]lore eu,
+[F]fugi[C]at, [F]fugi[C]at.[F]
+{end_of_verse}

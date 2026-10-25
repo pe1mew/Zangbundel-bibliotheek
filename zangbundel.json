@@ -16,11 +16,12 @@
   "min_app_version": "1.0.0",
   "homepage": "https://github.com/pe1mew/Zangbundel-bibliotheek",
   "release_index": "https://raw.githubusercontent.com/pe1mew/Zangbundel-bibliotheek/main/releases.json",
-  "languages": ["nl"],
+  "languages": ["nl", "la"],
   "tags": {
     "kampvuur":   { "nl": "Kampvuur",   "en": "Campfire" },
     "kinderlied": { "nl": "Kinderlied", "en": "Children's song" },
     "volkslied":  { "nl": "Volkslied",  "en": "Folk song" },
-    "canon":      { "nl": "Canon",      "en": "Round" }
+    "canon":      { "nl": "Canon",      "en": "Round" },
+    "demo":       { "nl": "Demo",       "en": "Demo" }
   }
 }

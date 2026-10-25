@@ -1,0 +1,8 @@
+# Demonstratie-setlist voor de Zangbundel-app: één lied, om de app te laten zien
+# zonder een hele avond te hoeven kiezen.
+{title: Demo setlist}
+{meta: id demo-setlist}
+{meta: description Eén demonstratielied om de app te laten zien}
+{meta: language la}
+
+zangbundel-bibliotheek/lorem-ipsum   # Lorem Ipsum!
