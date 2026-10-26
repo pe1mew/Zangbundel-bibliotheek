@@ -3,6 +3,14 @@
   "library": "zangbundel-bibliotheek",
   "releases": [
     {
+      "version": "2026.10.2",
+      "revision": "35e9c07fd1334d4ba8bffae666b94ecf3f44b333",
+      "created": "2026-10-26T07:58:09Z",
+      "url": "https://github.com/pe1mew/Zangbundel-bibliotheek/releases/download/v2026.10.2/zangbundel-bibliotheek-2026.10.2.zbl",
+      "size": 21725,
+      "sha256": "f63559de1d20393062b369af157beafe16ff5cc1cd305f28990e4519f4e2b47f"
+    },
+    {
       "version": "2026.10.1",
       "revision": "13288c5fb79b07c8feb95cfceacf015cd5a06bfa",
       "created": "2026-10-25T18:50:05Z",
