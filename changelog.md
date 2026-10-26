@@ -7,10 +7,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
-- *Nothing.*
+- README section "Your own private library". It explains how to copy this repository into a private one (only `main`, with this repository kept as `upstream`) and what to change: a new id, no `release_index` or `homepage`, and deleting `releases.json`, because the release tool refuses another library's index. It covers how to build a release on GitHub or locally, and how to get the `.zbl` file onto the leader's phone with "import from file", since the app cannot read private repositories. Rehearsed on a scratch clone: the validator accepts the result.
 
 ### Changed
-- *Nothing.*
+- README:
+  - It now says format 1.1 instead of 1.0.
+  - The repository layout lists `songs/la/`.
+  - The app is added by the URL of `releases.json` instead of the git repository URL, since the app imports release archives only (app architecture A-11).
 
 ### Fixed
 - *Nothing.*
