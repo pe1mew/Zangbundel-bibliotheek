@@ -7,9 +7,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
+- *Nothing.*
+
+### Changed
+- *Nothing.*
+
+### Fixed
+- *Nothing.*
+
+### Removed
+- *Nothing.*
+
+## [2026.10.2] - 2026-10-26
+
+Third release: the app's development builds can import the library.
+
+### Added
 - README section "Your own private library". It explains how to copy this repository into a private one (only `main`, with this repository kept as `upstream`) and what to change: a new id, no `release_index` or `homepage`, and deleting `releases.json`, because the release tool refuses another library's index. It covers how to build a release on GitHub or locally, and how to get the `.zbl` file onto the leader's phone with "import from file", since the app cannot read private repositories. Rehearsed on a scratch clone: the validator accepts the result.
 
 ### Changed
+- `zangbundel.json`: `min_app_version` lowered from `1.0.0` to `0.1.0`. The library uses nothing newer than the first app builds, and the app (version 0.1.0 during development) refused it with L005. The song-format specification asks to keep this value as low as the content allows (section 4.3).
 - README:
   - It now says format 1.1 instead of 1.0.
   - The repository layout lists `songs/la/`.
