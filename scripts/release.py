@@ -71,6 +71,47 @@ class ReleaseError(Exception):
 
 
 # ---------------------------------------------------------------------------
+# GitHub Actions annotations
+# ---------------------------------------------------------------------------
+
+def annotate(level, message, path=None, line=None, title='release.py'):
+    """Repeat a message as a GitHub Actions annotation, so it shows in the run summary.
+
+    The log alone is easy to miss: the summary page of a failed run shows only annotations
+    and "Process completed with exit code N". Outside GitHub Actions this does nothing; the
+    caller prints the plain message as before.
+    """
+    if os.environ.get('GITHUB_ACTIONS') != 'true':
+        return
+
+    def esc(text, prop=False):
+        text = str(text).replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+        return text.replace(':', '%3A').replace(',', '%2C') if prop else text
+
+    props = ['title=%s' % esc(title, True)]
+    if path:
+        props.append('file=%s' % esc(path, True))
+    if line:
+        props.append('line=%d' % line)
+    print('::%s %s::%s' % (level, ','.join(props), esc(message)), flush=True)
+
+
+class ArgumentParser(argparse.ArgumentParser):
+    """argparse whose usage errors are also annotations, with a hint for a stray archive."""
+
+    def error(self, message):
+        hint = ''
+        if 'unrecognized arguments' in message and '.zbl' in message:
+            hint = (' verify and index take exactly one archive. If a wildcard such as dist/*.zbl matched'
+                    ' several files, an older archive is lying in that folder, often because dist/ was'
+                    ' committed to git: keep dist/ in .gitignore and remove it with git rm -r --cached dist.')
+        annotate('error', message + '.' + hint, title='release.py: wrong arguments')
+        if hint:
+            sys.stderr.write('hint:%s\n' % hint)
+        super().error(message)
+
+
+# ---------------------------------------------------------------------------
 # git helpers
 # ---------------------------------------------------------------------------
 
@@ -179,6 +220,18 @@ def build(args):
         raise ReleaseError('give --tag or --version')
     if len(version) > 32:
         raise ReleaseError('version "%s" is longer than 32 characters' % version)
+
+    # Build output in git does no harm to the archive, but older archives in dist/ break
+    # wildcards such as dist/*.zbl in scripts and workflows, and bloat the repository.
+    try:
+        tracked = [p for p in git('ls-files', '--', 'dist', '*.zbl', cwd=repo_dir).splitlines() if p]
+    except ReleaseError:
+        tracked = []
+    if tracked:
+        msg = ('%d build output file(s) are committed to git, for example %s. Keep dist/ and *.zbl in'
+               ' .gitignore and remove them from git with: git rm -r --cached dist' % (len(tracked), tracked[0]))
+        print('warning: ' + msg)
+        annotate('warning', msg, title='release.py: build output in git')
 
     commit_time = int(git('show', '-s', '--format=%ct', revision, cwd=repo_dir))
     created = datetime.datetime.fromtimestamp(commit_time, datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -296,7 +349,8 @@ def build(args):
             fh.write('| Setlists | %d |\n' % len(setlist_entries))
         fh.write('| Archive | `%s`, %d bytes |\n' % (file_name, len(data)))
         fh.write('| SHA-256 | `%s` |\n\n' % digest)
-        fh.write('Open the `.zbl` file with the Zangbundel app, or add the library by its repository URL.\n')
+        fh.write('Open the `.zbl` file with the Zangbundel app, or add the library by the URL of its '
+                 '`releases.json`.\n')
         if skipped:
             fh.write('\nSkipped songs:\n\n')
             for s in skipped:
@@ -501,13 +555,39 @@ def finish_verify(report, args):
     errors = validate.library_errors(report)
     skipped = [f for f in report.findings if f[2] == 'error' and f[3].startswith('S')]
     warnings = report.count('warning')
+    name = os.path.basename(args.archive)
     if errors:
         print('Archive refused: %d error(s).' % len(errors))
+        annotate_findings(report, ('error',))
+        annotate('error', '%s refused: %d error(s); the findings are listed in the log of this step.' %
+                 (name, len(errors)), title='release.py: archive refused')
         return 1
     print('Archive accepted, %d warning(s)%s.' % (warnings, ', %d song(s) with errors' % len(skipped) if skipped else ''))
     if skipped:
+        annotate_findings(report, ('error',))
+        annotate('error', '%s: %d song(s) with errors; fix them or remove them before releasing.' %
+                 (name, len(skipped)), title='release.py: songs with errors')
         return 1
-    return 1 if (args.strict and warnings) else 0
+    if args.strict and warnings:
+        annotate_findings(report, ('warning',))
+        annotate('error', '%s: %d warning(s), refused because of --strict.' % (name, warnings),
+                 title='release.py: warnings under --strict')
+        return 1
+    return 0
+
+
+def annotate_findings(report, levels, limit=20):
+    """One annotation per finding of the given levels, at most `limit`, so the summary names the cause."""
+    shown = 0
+    for path, line, level, code, message in report.findings:
+        if level not in levels:
+            continue
+        if shown == limit:
+            annotate('error', 'and more; see the log of this step.', title='release.py')
+            return
+        annotate('error' if level == 'error' else 'warning', '%s %s' % (code, message),
+                 path=path, line=line, title='release.py: %s' % code)
+        shown += 1
 
 
 # ---------------------------------------------------------------------------
@@ -560,7 +640,7 @@ def index(args):
 # ---------------------------------------------------------------------------
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description='Build, verify and index Zangbundel release archives (.zbl).')
+    parser = ArgumentParser(description='Build, verify and index Zangbundel release archives (.zbl).')
     sub = parser.add_subparsers(dest='command', required=True)
 
     b = sub.add_parser('build', help='build the archive of a tagged revision')
@@ -591,6 +671,7 @@ def main(argv=None):
         return {'build': build, 'verify': verify, 'index': index}[args.command](args)
     except ReleaseError as exc:
         print('error: %s' % exc, file=sys.stderr)
+        annotate('error', str(exc), title='release.py %s' % args.command)
         return 1
 
 

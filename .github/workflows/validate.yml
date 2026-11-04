@@ -8,9 +8,16 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Validate song library
         run: python scripts/validate.py --strict --info .
+      - name: Check for build output in git
+        run: |
+          tracked=$(git ls-files -- dist '*.zbl')
+          if [ -n "$tracked" ]; then
+            n=$(printf '%s\n' "$tracked" | wc -l)
+            echo "::warning title=Build output in git::$n build output file(s) are committed, for example $(printf '%s\n' "$tracked" | head -1). Keep dist/ and *.zbl in .gitignore and remove them from git with: git rm -r --cached dist"
+          fi

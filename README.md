@@ -130,6 +130,7 @@ git push -u origin main
 | `README.md`, `changelog.md`, `contributing.md` | Rewrite them for your library, or delete what you do not need. |
 | `scripts/` | Keep as is, including `scripts/LICENSE`. The Commons Clause allows using and changing the scripts for your own library; it asks you to keep the licence notice. |
 | `raw/` | Delete it; it holds the source material of this library's songs. |
+| `.gitignore` | **Keep it.** It keeps `dist/` and `*.zbl` out of git: the archives you build locally belong on the release page, not in the repository. If you committed them anyway, remove them from git (the files stay on your disk) with `git rm -r --cached dist` and commit. |
 
 Write songs as described in "Song file format in short" above. Then check the whole library:
 
@@ -152,6 +153,16 @@ git push origin v2026.11.0
 ```
 
 Download `<your id>-2026.11.0.zbl` from the release page while signed in to GitHub.
+
+If no release appears, open the run under **Actions**. The summary page of a failed run lists the cause, for example a song with an error, with the file and line where possible, and the steps to fix it. Fix the cause, delete the tag, and tag and push again:
+
+```bash
+git tag -d v2026.11.0
+```
+
+```bash
+git push origin :refs/tags/v2026.11.0
+```
 
 **Locally, without GitHub Actions.** Tag the commit (pushing the tag is optional) and build and verify the archive yourself; it is written to `dist/`:
 

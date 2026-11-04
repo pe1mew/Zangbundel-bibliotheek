@@ -7,13 +7,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
-- *Nothing.*
+- Validation workflow: a warning when build output (`dist/`, `*.zbl`) is committed to git.
+- README, "Your own private library": a `.gitignore` row (keep it; how to remove committed build output), and what to do when no release appears (the run's summary page names the cause; delete and re-push the tag).
 
 ### Changed
-- *Nothing.*
+- Workflows use `actions/checkout@v7` and `actions/setup-python@v7`, which run on Node.js 24, so GitHub no longer warns about Node.js 20.
+- `.gitignore` also ignores `*.zbl` anywhere in the repository.
+- Release notes say to add the library by the URL of its `releases.json` instead of its repository URL (the app imports release archives only).
 
 ### Fixed
-- *Nothing.*
+- A committed `dist/` folder broke the release with only "Process completed with exit code 2" on the run's summary page ([#2](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/2), Pepe's proposal 7):
+  - **7B:** the old archive in `dist/` made `dist/*.zbl` match two files, and `release.py verify` stopped on "unrecognized arguments". The release workflow now builds in a fresh folder outside the checkout (`$RUNNER_TEMP`) and names every archive exactly, so committed build output no longer affects it. `release.py build` warns when build output is committed.
+  - **7A:** `release.py` reports errors as GitHub Actions annotations, which the summary page shows: wrong arguments (with a hint about a stray archive), build errors, and each verification finding with file and line. A final workflow step adds a summary with the common causes when a release fails. Outside GitHub Actions the output is unchanged.
+
+  The archive is unchanged: rebuilding tag `v2026.10.2` with the new tool gives the published SHA-256 `f63559de…b47f`.
 
 ### Removed
 - *Nothing.*

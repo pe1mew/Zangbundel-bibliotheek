@@ -4,6 +4,11 @@ name: Release
 # publishes it as a GitHub release (also under the fixed name
 # <library id>-latest.zbl) and updates releases.json on main.
 # See song-format specification section 12.6.
+#
+# The archive is built in a fresh folder outside the checkout ($RUNNER_TEMP), and
+# every step names the archive file exactly, so a dist/ folder that was committed
+# to the repository by mistake cannot get in the way. Failures are reported as
+# annotations, which GitHub shows on the summary page of the run.
 
 on:
   push:
@@ -17,36 +22,48 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
+      - name: Name the archive
+        run: |
+          LIB=$(python -c "import json;print(json.load(open('zangbundel.json',encoding='utf-8'))['id'])") || {
+            echo "::error title=zangbundel.json::zangbundel.json is missing or is not valid JSON with an \"id\" field."
+            exit 1
+          }
+          VERSION="${GITHUB_REF_NAME#v}"
+          OUT="$RUNNER_TEMP/zbl"
+          {
+            echo "LIB=$LIB"
+            echo "VERSION=$VERSION"
+            echo "OUT=$OUT"
+            echo "ARCHIVE=$OUT/$LIB-$VERSION.zbl"
+            echo "LATEST=$OUT/$LIB-latest.zbl"
+          } >> "$GITHUB_ENV"
+
       - name: Build archive from the tag
-        run: python scripts/release.py build --tag "$GITHUB_REF_NAME" --out dist
+        run: python scripts/release.py build --tag "$GITHUB_REF_NAME" --out "$OUT"
 
       - name: Verify archive
-        run: python scripts/release.py verify --strict dist/*.zbl
+        run: python scripts/release.py verify --strict "$ARCHIVE"
 
       - name: Copy archive under the fixed "latest" name
-        run: |
-          LIB=$(python -c "import json;print(json.load(open('zangbundel.json',encoding='utf-8'))['id'])")
-          cp dist/"$LIB"-*.zbl "dist/$LIB-latest.zbl"
-          echo "LIB=$LIB" >> "$GITHUB_ENV"
+        run: cp "$ARCHIVE" "$LATEST"
 
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" dist/*.zbl \
-            --title "${GITHUB_REF_NAME#v}" \
-            --notes-file dist/release-notes.md
+          gh release create "$GITHUB_REF_NAME" "$ARCHIVE" "$LATEST" \
+            --title "$VERSION" \
+            --notes-file "$OUT/release-notes.md"
 
       - name: Update releases.json on main
         run: |
-          ARCHIVE=$(ls dist/"$LIB"-*.zbl | grep -v -- '-latest.zbl')
           git fetch origin main
           git checkout -B main origin/main
           python scripts/release.py index "$ARCHIVE" --tag "$GITHUB_REF_NAME"
@@ -56,6 +73,21 @@ jobs:
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "Update release index for ${GITHUB_REF_NAME#v}"
+            git commit -m "Update release index for $VERSION"
             git push origin main
           fi
+
+      - name: Explain a failed release
+        if: failure()
+        run: |
+          echo "::error title=Release failed::No release was published for $GITHUB_REF_NAME. The annotations above name the cause; the log of the failed step has the details."
+          {
+            echo "## Release $GITHUB_REF_NAME failed"
+            echo
+            echo "No release was published. The annotations on this page name the cause, and the log of the failed step has the details. Common causes:"
+            echo
+            echo "- **Songs with errors or warnings.** Run \`python scripts/validate.py --strict .\` on your computer and fix what it reports."
+            echo "- **A tag on the wrong commit**, or a release with this tag that already exists. Delete the tag, fix, tag again and push the tag."
+            echo "- **\`releases.json\` of another library.** A copy of a library keeps the original's \`releases.json\`; delete it (README, \"Your own private library\")."
+            echo "- **Build output committed to git.** Keep \`dist/\` and \`*.zbl\` in \`.gitignore\` and remove them with \`git rm -r --cached dist\`."
+          } >> "$GITHUB_STEP_SUMMARY"

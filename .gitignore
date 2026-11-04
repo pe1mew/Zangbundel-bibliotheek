@@ -1,5 +1,8 @@
-# Build output of scripts/release.py
+# Build output of scripts/release.py. Never commit it: release archives are
+# published as GitHub release assets, and older archives in dist/ confuse scripts
+# that look for "the" archive there.
 dist/
+*.zbl
 
 # Python
 __pycache__/
