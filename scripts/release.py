@@ -407,9 +407,12 @@ def verify(args):
     for info in infos:
         if info.is_dir():
             continue
-        problem = check_entry_name(info.filename)
+        # orig_filename is the name as stored: on Windows, zipfile turns backslashes into slashes
+        # in .filename, which would hide archives the app (on Android) refuses, such as those
+        # made with Compress-Archive of Windows PowerShell 5.1.
+        problem = check_entry_name(info.orig_filename)
         if problem:
-            report.error(name, None, 'A006', 'entry "%s": %s' % (info.filename, problem))
+            report.error(name, None, 'A006', 'entry "%s": %s' % (info.orig_filename, problem))
         key = info.filename.lower()
         if key in seen:
             report.error(name, None, 'A006', 'entry "%s" duplicates another (case-insensitive)' % info.filename)

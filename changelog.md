@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
+- README section "Your own songs the easy way: a ZIP file" ([#1](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/1), Pepe's proposal 8, step 1). It describes the route with no GitHub, git or Python: a folder with `zangbundel.json` (a template to fill in), `LICENSE` and `songs/`, its contents zipped with Explorer, then "import from file" in the app, which checks every song. It warns against `Compress-Archive` of Windows PowerShell 5.1, and against `.cho.txt` names. Tested with ZIPs made by Python, by Explorer's "Send to → Compressed (zipped) folder", by `Compress-Archive` (refused, as the app will) and without a licence file (refused, L007). It also lists the two planned steps: a library builder in the browser without uploads, and signed archives (song-format Q12).
 - Validation workflow: a warning when build output (`dist/`, `*.zbl`) is committed to git.
 - README, "Your own private library": a `.gitignore` row (keep it; how to remove committed build output), and what to do when no release appears (the run's summary page names the cause; delete and re-push the tag).
 
@@ -21,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   - **7A:** `release.py` reports errors as GitHub Actions annotations, which the summary page shows: wrong arguments (with a hint about a stray archive), build errors, and each verification finding with file and line. A final workflow step adds a summary with the common causes when a release fails. Outside GitHub Actions the output is unchanged.
 
   The archive is unchanged: rebuilding tag `v2026.10.2` with the new tool gives the published SHA-256 `f63559de…b47f`.
+- `release.py verify` checks entry names as stored in the ZIP. On Windows, Python turns backslashes into slashes when reading, which hid ZIPs that the app refuses, such as those made by `Compress-Archive` of Windows PowerShell 5.1.
 
 ### Removed
 - *Nothing.*

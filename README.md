@@ -86,9 +86,94 @@ It prints one line per finding as `path:line LEVEL CODE message`, using the code
 
 The same check runs on GitHub for every push and pull request.
 
+## Your own songs the easy way: a ZIP file
+
+The quickest way to put a group's own songs in the app needs no GitHub, no git and no Python. Write the songs, put them in a folder with two small files, zip the folder's contents, and open the ZIP in the app. The app checks every song on import and reports anything it cannot use.
+
+What you give up compared with a library on GitHub: the app cannot check for updates, so after a change you zip and import again; the library has no version number (the app shows "snapshot, revision unknown"); and nothing proves the ZIP was not altered on the way. Singers do not need the ZIP: the leader pushes each song over Bluetooth during the campfire.
+
+### 1. Make the folder
+
+```
+mijn-liedjes/
+  zangbundel.json        about the library (see below)
+  LICENSE                a text file saying who may use the songs
+  songs/                 one .cho file per song
+    ons-groepslied.cho
+  setlists/              optional: setlists (.zbs) for your evenings
+    eerste-avond.zbs
+```
+
+`zangbundel.json` describes the library. Copy this and change the values:
+
+```json
+{
+  "format": "zangbundel-library",
+  "format_version": "1.1",
+  "id": "scouting-voorbeeld",
+  "name": "Liederen van Scouting Voorbeeld",
+  "description": "Onze eigen kampvuurliederen.",
+  "maintainer": { "name": "Jan Jansen", "email": "liederen@example.org" },
+  "license": { "id": "proprietary", "file": "LICENSE", "summary": "Alleen voor eigen gebruik binnen de groep." },
+  "min_app_version": "0.1.0"
+}
+```
+
+- `id`: lower-case letters, digits and hyphens. It names your library and must not be the id of another library you use, such as `zangbundel-bibliotheek`.
+- `name`, `description`: shown in the app.
+- `maintainer`: a name, plus an `email` or a `url`.
+- `license`: for songs meant only for your group, keep `proprietary` and write a one-line `summary`. `file` names the licence file, which must exist: without it the app refuses the library. A single line in `LICENSE`, such as "Alleen voor eigen gebruik binnen Scouting Voorbeeld.", is enough.
+- `format`, `format_version` and `min_app_version`: leave as shown.
+
+### 2. Write the songs
+
+Each song is a plain text file under `songs/`, named after the song's id: `ons-groepslied.cho` starts with `{meta: id ons-groepslied}`. See "Song file format in short" below, and use [songs/la/lorem-ipsum.cho](songs/la/lorem-ipsum.cho) as an example: it uses every field. Save the files as UTF-8 text in any editor, such as Notepad; the line endings do not matter. Check that the name ends in `.cho` and not in `.cho.txt`: Windows hides known extensions by default, so turn on **View → File name extensions** in Explorer.
+
+A setlist (optional) names songs as `<library id>/<song id>`, so with the example id: `scouting-voorbeeld/ons-groepslied`. See "Setlists" below.
+
+### 3. Zip it
+
+Zip the **contents** of the folder, not the folder itself: open `mijn-liedjes`, select everything in it (`zangbundel.json`, `LICENSE`, `songs`, `setlists`), and then:
+
+- **Windows:** right-click → **Send to** → **Compressed (zipped) folder** (on Windows 11, first choose **Show more options**).
+- **macOS:** right-click → **Compress**.
+
+Do not use the `Compress-Archive` command of Windows PowerShell 5.1: it writes backslashes into the ZIP, and the app refuses such a file.
+
+### 4. Open it in the app
+
+Copy the ZIP to the leader's phone, by cable, by e-mail to yourself or through your own cloud storage, and open it in the app with **import from file**.
+
+The app shows a report:
+- A song with a mistake is left out and listed with the reason; the other songs are imported.
+- Only a missing or wrong `zangbundel.json` or licence file stops the whole import.
+
+To change something, edit the files, zip again and import the new ZIP. The app replaces the library and shows which songs were added, changed or removed.
+
+**Checking before you import (optional).** With Python 3 installed and a copy of this repository's `scripts/` folder, run the same checks the app runs:
+
+```bash
+python scripts/release.py verify mijn-liedjes.zip
+```
+
+"Archive accepted" means the app will import it. The warning A102 (no manifest, no update checks) is expected for a ZIP made this way.
+
+When the group outgrows this, because it wants version numbers, update checks or several maintainers, move the same folder into a repository as described next.
+
+### Planned: easier still
+
+Two further steps are planned ([issue #1](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/1)). Neither exists yet.
+
+- **A library builder in the browser.** A web page on GitHub Pages where you choose your song files or your ZIP.
+  - It runs the validator's checks and explains problems in plain language.
+  - It can turn folders into setlists.
+  - It hands back a finished `.zbl` with a version number and a checksum.
+  - The checks run in your own browser and nothing is uploaded: the project has no server, also not for library maintainers.
+- **A seal against tampering.** The builder would sign the archive with a key that stays on the maintainer's computer. The app would remember a library's key at the first import and refuse any later archive of that library not signed with it. This needs a change to the format specification (open question Q12, signing release archives) and to the app, so it follows the builder.
+
 ## Your own private library
 
-A group that wants songs of its own, for example its group song, or songs it may sing but not publish, can copy this repository into a private one and build its library there. The scripts, the validator and the release workflow come along. Nothing of the private library is ever published.
+A group that wants songs of its own, for example its group song, or songs it may sing but not publish, can copy this repository into a private one and build its library there. The scripts, the validator and the release workflow come along. Nothing of the private library is ever published. This takes more setup than the ZIP file above, and in return gives version numbers, release archives and checks on every push.
 
 **What a private library means for the app.** The app downloads libraries only over plain HTTPS without logging in, so it cannot read a private repository or its releases. A private library therefore reaches the phones as a `.zbl` file: you build it, copy it to the leader's phone and open it there. Singers do not need it: the leader pushes each song over Bluetooth during the campfire. Leave `{meta: redistribute …}` at its default (`yes`) for songs singers should see, and only add songs you are allowed to share with the group.
 
