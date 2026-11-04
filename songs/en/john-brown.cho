@@ -1,0 +1,44 @@
+# John Brown - lied op de wijs van "John Brown's Body"
+# Tekst: "John Brown Song" van Edna Dean Proctor (1829-1923; Wikidata Q4380427), gedrukt in
+# The Independent van 15 januari 1863 en The Liberator van 23 januari 1863, later in
+# A. M. Ross, Recollections and Experiences of an Abolitionist (1876) (Internet Archive).
+# De melodie gaat terug op het kampmeetinglied "Say, Brothers, Will You Meet Us" (in druk
+# vanaf 1806-1808) en is traditioneel (Wikipedia (en), "John Brown's Body").
+# Tekst en melodie zijn publiek domein.
+# Overgenomen uit JOHN_BR.OWN (WordPerfect 5.1, 1991). Tikfouten hersteld: "our" werd
+# "hour", "aenges" werd "avenges", "halelujah" werd "hallelujah". Akkoorden volgens de
+# kolommen; het tweede couplet heeft in de bron geen akkoorden.
+{title: John Brown}
+{meta: id john-brown}
+{meta: language en}
+{lyricist: Edna Dean Proctor}
+{composer: traditioneel}
+{year: 1863}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit JOHN_BR.OWN (WordPerfect 5.1, 1991); tekst in The Independent, 15 januari 1863 (Internet Archive); levensjaren via Wikidata Q4380427; herkomst van de melodie via Wikipedia (en)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+{meta: melody John Brown's Body}
+{key: G}
+
+{start_of_verse}
+[G]John Brown died on the scaffold for the slave
+[C]Dark was the hour when we dug his hallow[G]ed grave
+[G]now, God avenges the life he gladly gav[Em]e
+[Am]Freedom [C]reigns [D7]toda[G]y
+{end_of_verse}
+
+{start_of_chorus}
+Glo[G]ry, glory hallelujah, glory, [C]glory hallelujah[G]
+[G]Glory, glory halleluj[Em]ah, [Am]freedom [C]reigns [D7]toda[G]y
+{end_of_chorus}
+
+{start_of_verse}
+John Brown's body lies mouldring in the grave
+Bright o'er the sod let the starry banner wave
+Lo, for the millions he periled all to save
+Freedom reigns today
+{end_of_verse}
+
+{chorus}

@@ -1,0 +1,32 @@
+# A ram sam sam - kinderlied en kampvuurlied
+# Wikipedia (en, "A Ram Sam Sam") noemt het een traditioneel Marokkaans kinderlied
+# en spelletje, zonder auteur; songwriter "Traditional". Oudste genoemde opname:
+# The Spinners, "Aram Sa-sa" (1964). Vaak sneller wordend of als canon gezongen.
+# Conclusie: traditioneel, publiek domein. Klanktaal; als taal geldt die van de
+# groep die het zingt (nl).
+# Overgenomen uit A ram sam sam.docx (Word 2007+, 2018) en A_RAMSAM.SAM
+# (WordPerfect 5.1, 1991); beide teksten zijn gelijk.
+{title: A ram sam sam}
+{meta: id a-ram-sam-sam}
+{meta: language nl}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit A ram sam sam.docx (2018) en A_RAMSAM.SAM (WordPerfect 5.1, 1991); herkomst via Wikipedia (en, A Ram Sam Sam)}
+{meta: tag kinderlied}
+{meta: tag kampvuur}
+
+{start_of_verse}
+A ram sam sam - A ram sam sam
+Koeli koeli koeli koeli ram sam sam.
+A ram sam sam - A ram sam sam
+Koeli koeli koeli koeli ram sam sam.
+{end_of_verse}
+
+{start_of_verse}
+A ravit A ravit
+Koeli koeli koeli koeli ram sam sam.
+A ravit A ravit
+Koeli koeli koeli koeli ram sam sam.
+{end_of_verse}

@@ -1,0 +1,33 @@
+# Mijn hoed - bewegingslied, Nederlandse versie van "Mein Hut, der hat drei Ecken"
+# De Duitse wijs en tekst zijn traditioneel; de wijs gaat volgens Wikipedia (en,
+# "My Hat, It Has Three Corners") terug op een Napolitaanse melodie. De maker van
+# de Nederlandse tekst is onbekend. Meld het als u de rechthebbende kent.
+# Overgenomen uit MIJN_H.OED (WordPerfect 5.1, 1991). De bron zegt "vier deuken"
+# waar andere versies drie hebben; zo overgenomen. De uitleg over de gebaren staat
+# hier als opmerkingen.
+{title: Mijn hoed}
+{meta: id mijn-hoed}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit MIJN_H.OED (WordPerfect 5.1, 1991); herkomst van de wijs via Wikipedia (en)}
+{meta: tag kinderlied}
+{meta: tag kampvuur}
+{meta: melody Mein Hut, der hat drei Ecken}
+
+{start_of_verse}
+Mijn hoed die heeft vier deuken, vier deuken heeft mijn hoed.
+En had hij niet vier deuken, dan was het niet mijn hoed.
+{end_of_verse}
+
+{comment: Zing het lied steeds opnieuw; telkens komt er voor een woord een gebaar in de plaats:}
+
+{comment: Mijn: naar jezelf wijzen}
+
+{comment: Hoed: cirkelende beweging}
+
+{comment: Vier: 4 vingers in de lucht steken}
+
+{comment: Deuken: met 3 vingers van de ene hand doen alsof we iets in de andere hand stoppen}

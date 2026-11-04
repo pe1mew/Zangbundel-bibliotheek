@@ -1,0 +1,57 @@
+# Limburg allein - Limburgs lied van Jo Erens
+# Tekst en muziek van Jo Erens (Sittard, 24-2-1928 - Amersfoort, 21-1-1955). Wikipedia (nl),
+# "Jo Erens", noemt Limburg allein bij zijn bekende liedjes en zegt dat hij tekst en muziek
+# zelf schreef; dezelfde levensjaren in Wikidata Q2645241. De Nederlandse Liederenbank, record
+# 93731 (cd Limburg mie landj), noemt J. Erens als maker. Delpher: de Volkskrant van 18-9-1987
+# noemt "Limburg allein (Jo Erens)" in een top tien van Limburgse liedjes, en het Limburgsch
+# Dagblad van 27-3-1965 drukt onder deze titel de tekst af; die komt overeen met de bron, in
+# een andere spelling. Maker overleden vóór 1956: publiek domein.
+# Overgenomen uit LIMBURGA.LEI (WordPerfect 5.1, 1991), in de Limburgse spelling van de bron.
+# Akkoorden alleen bij het eerste couplet en het refrein. De bron zet het refrein één keer;
+# het is na het tweede en derde couplet herhaald.
+{title: Limburg allein}
+{meta: id limburg-allein}
+{meta: language li}
+{lyricist: Jo Erens}
+{composer: Jo Erens}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit LIMBURGA.LEI (WordPerfect 5.1, 1991); maker Nederlandse Liederenbank, record 93731, Wikipedia (nl) en Wikidata Q2645241; tekst in krant 1965 en top tien 1987 (Delpher)}
+{meta: tag kampvuur}
+{key: C}
+
+{start_of_verse}
+[C]Doa woo [G]ich geboare bin
+wo mien [C]auwesjhoes nog sjteit
+De taa[G]l die ich nog zo goud kin
+woo'ch hauw [C]mie leif en leid
+{end_of_verse}
+
+{start_of_chorus}
+[F]Dat is mien Limburg
+Limbu[C]rg allein
+Doa [G]geit niks baove
+zoo [C]is ter mer ein
+Es mein auw[F]t Limburg
+Limburg [C]allein
+Doa [G]geit niks baove
+zoo [C]is ter mer ein
+{end_of_chorus}
+
+{start_of_verse}
+Gaon ich noa de vraemde haer
+of wied oet Limburg weg
+Heur ich ummer toch zoo gaer
+'t goud, 't kaod, 't sjlech
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Zuik ich mich e maedje oet
+is dat e Limburgs kèndj
+Doa woo ich zoo op vertroew
+en nurges baeter vèndj
+{end_of_verse}
+
+{chorus}

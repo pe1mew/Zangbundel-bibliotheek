@@ -1,0 +1,38 @@
+# Bingo - kinderlied, Nederlandse versie
+# Het Engelse "Bingo" is een traditioneel kinderlied; de oudste gedateerde versie
+# staat in The Scots Nightingale (Edinburgh, 1778), volgens Wikipedia (en), "Bingo
+# (folk song)". Wie de Nederlandse tekst maakte is niet bekend; rechthebbende van
+# de vertaling onbekend.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit BINGO (WordPerfect 5.1, 1991). Tikfout hersteld: "zwart als roert"
+# werd "zwart als roet". "(roepen)" is een aanwijzing van de bron en staat in de regel.
+{title: Bingo}
+{meta: id bingo}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit BINGO (WordPerfect 5.1, 1991); herkomst van het Engelse lied via Wikipedia (en)}
+{meta: tag kinderlied}
+{meta: tag welpen}
+{meta: tag kampvuur}
+{meta: melody Bingo}
+
+{start_of_verse}
+Er was eens een hond zo zwart als roet
+en Bingo was zijn naam
+Er was eens een hond zo zwart als roet
+en Bingo was zijn naam
+B.I.N.G.O, B.I.N.G.O, B.I.N.G.O, en Bingo was zijn naam
+B_I_N_G_O_BINGO!! (roepen)
+{end_of_verse}
+
+{start_of_verse}
+Er was eens een welp die had een hond
+en Bingo was zijn naam
+Als hij wandelen ging met zijn hond,
+dan riep hij hard zijn naam.
+B.I.N.G.O, B.I.N.G.O, B.I.N.G.O, en Bingo was zijn naam
+B_I_N_G_O_BINGO!! (roepen)
+{end_of_verse}

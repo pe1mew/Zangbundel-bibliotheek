@@ -1,0 +1,49 @@
+# Susanna - Amerikaans lied (Oh! Susanna) van Stephen Foster
+# Geschreven door Stephen Foster (overleden 1864), in 1848 uitgegeven door W. C. Peters
+# & Co. in Cincinnati (Wikipedia (en), "Oh! Susanna"). Publiek domein.
+# Overgenomen uit SUSANNA (WordPerfect 5.1, 1991). Tikfouten hersteld: "alle night", "saud",
+# "comming", en hoofdletters voor Alabama en Louisiana. De bron noteert het refrein
+# een keer; hier staat het na elk couplet.
+{title: Susanna}
+{meta: id susanna}
+{meta: language en}
+{lyricist: Stephen Foster}
+{composer: Stephen Foster}
+{year: 1848}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit SUSANNA (WordPerfect 5.1, 1991); schrijver en jaar via Wikipedia (en), Oh! Susanna}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+{key: D}
+
+{start_of_verse}
+I [D]come from [E7]Alaba[A7]ma with a banjo on my knee
+I'm [D]going to Louisiana, [G]my [D]true love for [A7]to [D]see
+it [D]rained all night the day I [E7]left the [A7]weather it was dry
+the [D]sun so hot I [G]froze to [D]death Susanna [A7]don't you [D]cry[D7]
+{end_of_verse}
+
+{start_of_chorus}
+[G]Oh Susan[A7]na oh don't [D]you cry for [A7]me
+I come [D]from Alabama
+[G]with a [D]banjo [A7]on my [D]knee
+{end_of_chorus}
+
+{start_of_verse}
+I had a dream the other night when everything was still
+I thought I saw Susanna a coming down the hill
+A red red rose was in her cheek, a tear was in her eye
+I said to her, Susanna girl, Susanna don't you cry
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+I soon will be in New Orleans and I will look around
+and when I find Susanna I will fall upon the ground
+but if I do not find her then I'm surely bound
+to die and when I'm dead and buried Susanna don't you cry
+{end_of_verse}
+
+{chorus}

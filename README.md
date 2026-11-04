@@ -2,7 +2,7 @@
 
 A song library for the [Zangbundel](https://github.com/pe1mew/Zangbundel) campfire songbook app. Zangbundel ("songbook" in Dutch) shows lyrics on the phones of everyone around a campfire, pushed by one leader phone over Bluetooth Low Energy. The app itself contains no songs: it imports libraries like this one from git repositories.
 
-This library holds Dutch campfire and children's songs. It follows the **Zangbundel library format 1.1** defined in [design/song-format.md](https://github.com/pe1mew/Zangbundel/blob/main/design/song-format.md) of the app repository.
+This library holds campfire, scouting and children's songs, most of them Dutch, with songs in English, German, French, Limburgish and a few other languages. It follows the **Zangbundel library format 1.1** defined in [design/song-format.md](https://github.com/pe1mew/Zangbundel/blob/main/design/song-format.md) of the app repository.
 
 ## Repository layout
 
@@ -11,7 +11,9 @@ zangbundel.json       library metadata: id, name, licence, maintainer, tag label
 LICENSE               full text of the collection licence (CC BY-NC 4.0)
 songs/                one ChordPro (.cho) file per song, in the Zangbundel profile
   nl/                 Dutch songs
-  la/                 the demonstration song "Lorem Ipsum!"
+  en/, de/, fr/, li/  English, German, French and Limburgish songs
+  af/, he/, it/, la/, mi/, nds/, srn/
+                      songs in other languages; la/ also holds the demonstration song "Lorem Ipsum!"
 setlists/             setlists (.zbs) shipped with the library, see "Setlists"
 raw/                  source material the songs were transcribed from (ignored by the app)
 releases.json         release index: every published .zbl archive with URL, size and SHA-256

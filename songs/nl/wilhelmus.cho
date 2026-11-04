@@ -1,0 +1,126 @@
+# Wilhelmus - Nederlands volkslied, alle vijftien coupletten
+# Tekst geschreven tussen 1568 en 1572, dichter onbekend (vaak toegeschreven aan Marnix van
+# Sint-Aldegonde; ook Coornhert en Datheen worden genoemd). Melodie ontleend aan een Frans
+# lied uit 1568, oudste notatie 1574; Adriaen Valerius nam het op in de Nederlandtsche
+# Gedenck-clanck (1626) (Wikipedia (nl), "Wilhelmus"). Publiek domein.
+# Overgenomen uit WILHEL.MUS (WordPerfect 5.1, 1991). De bron zegt: tekst uit de 16e eeuw, muziek
+# Adriaen Valerius (1626); Valerius gaf de wijs uit, maar schreef haar niet.
+# De coupletkoppen ("1e vers" enz.) zijn weggelaten; de app nummert zelf.
+# Overslagtekens in de bron (" of ^ + backspace + klinker) zijn omgezet: Israël, Neêrlands,
+# obediëren. Tikfouten hersteld: "geeerd" werd "geëerd", "geprezn" werd "geprezen", "at men
+# ziet" werd "dat men ziet", "gerder" werd "herder", "wlit" werd "wilt", "dat ij God" werd
+# "dat ik God", "prindelijk" werd "princelijk".
+{title: Wilhelmus}
+{meta: id wilhelmus}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit WILHEL.MUS (WordPerfect 5.1, 1991); herkomst tekst en melodie via Wikipedia (nl)}
+{meta: tag volkslied}
+
+{start_of_verse}
+Wilhelmus van Nassouwe ben ik van Duitse bloed;
+het vaderland getrouwe blijf ik tot in den dood.
+Een prinse van oranje ben ik vrij onverveerd,
+den koning van Hispanje heb ik altijd geëerd.
+{end_of_verse}
+
+{start_of_verse}
+In Godes vrees te leven heb ik altijd betracht,
+Daarom ben ik verdreven, om land, om luid' gebracht;
+Maar God zal mij regeren als een goed instrument,
+Dat ik zal wederkeren in mijnen regiment
+{end_of_verse}
+
+{start_of_verse}
+Lijdt U, mijn onderzaten, die oprecht zijt van aard:
+God zal U niet verlaten, al zijt gij nu bezwaard;
+Die vroom begeert te leven, bidt God nacht en de dag,
+Dat Hij mij kracht wil geven, dat ik U helpen mag.
+{end_of_verse}
+
+{start_of_verse}
+Lijf en goed altezamen heb ik U niet verschoond;
+mijn broeders, hoog van namen, hebben 't U ook vertoond:
+Graaf Adolf is gebleven in Friesland in de slag;
+zijn ziel in 't eeuwig leven verwacht de jongste dag.
+{end_of_verse}
+
+{start_of_verse}
+Edel en hoog geboren van keizerlijke stam,
+een vorst des rijks verkoren, als een vroom Christen man
+voor Godes woord geprezen heb ik vrij onversaagd,
+als een held zonder vrezen mijn edel bloed gewaagd.
+{end_of_verse}
+
+{start_of_verse}
+Mijn schild ende betrouwen zijt Gij, o God mijn Heer;
+Op U zo wil ik bouwen, verlaat mij nimmermeer:
+Dat ik toch vroom mag blijven, Uw dienaar t'aller stond,
+Die tyrannie verdrijven, die mij mijn hart doorwondt.
+{end_of_verse}
+
+{start_of_verse}
+Van al die mij bezwaren en mijn opvolgers zijn,
+mijn God, wil toch bewaren de trouwe dienaar dijn;
+dat zij mij niet verrassen in hunne boze moed,
+hun handen niet en wassen in mijn onschuldig bloed!
+{end_of_verse}
+
+{start_of_verse}
+Als David moeste vluchten voor Saul de tiran,
+zo heb ik moeten zuchten met menig edelman.
+Maar God heeft hem verheven verlost uit aller nood,
+een koninkrijk gegeven in Israël zeer groot.
+{end_of_verse}
+
+{start_of_verse}
+Na 't zuur zal ik ontvangen van God de Heer dat zoet;
+daarnaar zo doet verlangen mijn vorstelijk gemoed:
+dat is, dat ik mag sterven met eren in dat veld
+een eeuwig rijk verwerven als een getrouwe held.
+{end_of_verse}
+
+{start_of_verse}
+Niets doet mij meer erbarmen in mijne wederspoed,
+dan dat men ziet verarmen des konings land en goed;
+dat U de Spanjaards krenken, o edel Neêrlands zoet,
+als ik daaraan gedenke, mijn edel hart dat bloedt.
+{end_of_verse}
+
+{start_of_verse}
+Als een prins opgezeten met mijne heires kracht,
+van de tiran vermeten, heb ik de slag verwacht.
+Die, bij Maastricht begraven, bevreesde mijn geweld;
+mijn ruiters zag men draven zeer moedig door dat veld.
+{end_of_verse}
+
+{start_of_verse}
+So het de wil des Heren op die tijd had geweest
+had ik geern willen keren van U dit zwaar tempeest.
+Maar de Heer van hierboven die alle ding regeert,
+die men altijd moet loven, en die heeft het niet begeerd.
+{end_of_verse}
+
+{start_of_verse}
+Zeer prins'lijk was gedreven mijn princelijk gemoed,
+standvastig is gebleven mijn hart in tegenspoed.
+De Heer heb ik gebeden van mijnes harten grond,
+dat Hij mijn zaak wil redden, mijn onschuld doen oorkond.
+{end_of_verse}
+
+{start_of_verse}
+Oorlof, mijn arme schapen, Die zijt in grote nood,
+Uw herder zal niet slapen, Al zijt gij nu verstrooid;
+Tot God wilt U begeven, Zijn heilzaam woord neemt aan;
+Als vrome Christen leven, 't Zal hier haast zijn gedaan.
+{end_of_verse}
+
+{start_of_verse}
+Voor God wil ik belijden en zijner grote macht,
+dat ik te genen tijden de koning heb veracht,
+dan dat ik God de Here, der Hoogster Majesteit,
+heb moeten obediëren in der gerechtigheid.
+{end_of_verse}

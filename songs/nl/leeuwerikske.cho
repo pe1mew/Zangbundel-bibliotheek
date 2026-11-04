@@ -1,0 +1,50 @@
+# Leeuwerikske - stapellied op de wijs van Alouette
+# De bron noemt alleen de wijs ("Alouette"). Oudste gevonden druk: Kohnstamm, Zingen, 1951
+# (Nederlandse Liederenbank, record 142132), ook in Gemert, Zing, 1959 (record 143853);
+# beide koppelen het lied aan de melodie "Alouette gentille alouette", een traditionele
+# wijs (zie alouette-frans). Tekstdichter van deze Nederlandstalige versie onbekend.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit LEEUWERI.KSK (WordPerfect 5.1, 1991). Na "Voorzanger:" en "Allen:" is een
+# spatie gezet. De lijst lichaamsdelen aan het eind geeft de volgende rondes aan.
+{title: Leeuwerikske}
+{meta: id leeuwerikske}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit LEEUWERI.KSK (WordPerfect 5.1, 1991); oudste gevonden druk Kohnstamm, Zingen, 1951; Nederlandse Liederenbank, records 142132 en 143853}
+{meta: tag kampvuur}
+{meta: tag kinderlied}
+{meta: melody Alouette}
+
+{start_of_verse}
+Leeuwerikse, leeuweleeuwerikse
+Leeuwerikse pluimen zal ik u
+{end_of_verse}
+
+{start_of_verse}
+Voorzanger: Pluimen zal ik u de kop
+Allen: Pluimen zal ik u de kop!
+Voorzanger: Ja de kop
+Allen: ja de kop!
+Voorzanger: Leeuwerik
+Allen: leeuwerik, Leeeeeeeeeeeeeeeeeeeeu.............
+{end_of_verse}
+
+{comment: Volgende rondes, telkens een lichaamsdeel erbij:}
+
+{start_of_verse}
+Ja, de rug
+Ja, de staart
+Ja, de nek,
+Ja, de borst,
+Ja, de poot,
+Ja, de hals,
+Ja, de neus,
+Ja, de ogen,
+Ja, de oren,
+Ja, de mond,
+Ja, de romp,
+enz.
+{end_of_verse}

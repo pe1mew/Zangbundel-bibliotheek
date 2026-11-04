@@ -1,0 +1,39 @@
+# Man in het rood-oranje-geel enz. - naroepliedje voor het kampvuur
+# Rechthebbende onbekend. De bron noemt geen tekstdichter of componist;
+# de Nederlandse Liederenbank heeft geen record van dit lied; niet op het web nagezocht.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit Man in het rood-oranje-geel enz.docx (Word 2007+, 2026, OKHH
+# Zangbundel 2027). De aanduidingen voor voorzanger en allen zijn labels van de
+# blokken geworden; "2x" is "(2x)" geworden. Volgens de titel volgen herhalingen
+# met andere kleuren; de bron geeft alleen de eerste.
+{title: Man in het rood-oranje-geel enz.}
+{meta: id man-in-het-rood-oranje-geel-enz}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit Man in het rood-oranje-geel enz.docx (2026, OKHH Zangbundel 2027)}
+{meta: tag kampvuur}
+
+{comment: Voorzanger zingt voor, allen zingen na. Daarna opnieuw met een andere kleur: oranje, geel enz.}
+
+{start_of_verse: Voorzanger}
+Ik ken een man in het rood (2x)
+En z'n hamster die is dood (2x)
+{end_of_verse}
+
+{start_of_verse: Allen}
+Ik ken een man in het rood (2x)
+En z'n hamster die is dood (2x)
+{end_of_verse}
+
+{start_of_verse: Voorzanger}
+Zing ik ladie la la (2x)
+Zing ik ladieladiela (2x)
+{end_of_verse}
+
+{start_of_verse: Allen}
+Zing ik ladie la la (2x)
+Zing ik ladieladiela (2x)
+{end_of_verse}

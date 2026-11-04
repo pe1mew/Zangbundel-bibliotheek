@@ -1,0 +1,59 @@
+# House of the rising sun - Amerikaans volkslied (eerste versie)
+# Traditioneel. Oudste gepubliceerde tekst 1925 (kolom van Robert Winslow Gordon in
+# het tijdschrift Adventure), oudste opname 1933 door Clarence "Tom" Ashley en Gwen
+# Foster; de bekende versie van The Animals (1964) staat op naam van "Traditional,
+# arr. by Alan Price" (Wikipedia (en), "The House of the Rising Sun"). Publiek domein;
+# alleen arrangementen kunnen beschermd zijn.
+# Overgenomen uit HOUSERIS.SUN (WordPerfect 5.1, 1991). Het bestand bevat twee
+# versies onder de koppen "(1)" en "(2)"; dit is de eerste, de tweede staat in
+# house-of-the-rising-sun-tweede-versie. Tikfouten hersteld: "carts" werd "cards",
+# dubbele spatie in "I'm  going" weggehaald. "he'll passes" gelaten zoals in de
+# bron. De bron schrijft "E(e7)", hier als [E]; akkoorden alleen bij het eerste
+# couplet, geschaald naar de lengte van de tekstregels.
+{title: House of the rising sun}
+{meta: id house-of-the-rising-sun}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit HOUSERIS.SUN (WordPerfect 5.1, 1991), versie 1; herkomst via Wikipedia (en)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+{meta: variant-group house-of-the-rising-sun}
+{key: Am}
+
+{start_of_verse}
+There [Am]is a [C]house in [D]New Or[F]leans
+they call [Am]the ri[C]sing sun[E]
+And it's [Am]been the [C]ruin of [D]many a poor [F]boy
+and me [Am]oh God [E]for [Am]one
+{end_of_verse}
+
+{start_of_verse}
+If I had listened to what my mother said
+I'd have been at home today
+But I was young and foolish, oh God
+let a gambler lead me astray
+{end_of_verse}
+
+{start_of_verse}
+He fills his glass up to the brim
+And he'll passes the cards around
+The only pleasure that he's got out of his life
+is rambling from town to town
+{end_of_verse}
+
+{start_of_verse}
+Go tell my baby sister
+not to do what I have done
+But shun that house in New Orleans
+they call the rising sun
+{end_of_verse}
+
+{start_of_verse}
+I'm going back to New Orleans
+my race is almost run
+I'm going back to spend my life
+Beneath the rising sun
+{end_of_verse}

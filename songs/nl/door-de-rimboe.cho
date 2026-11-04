@@ -1,0 +1,61 @@
+# Door de rimboe - welpenlied
+# Nederlandse welpentekst op de wijs van "Oh my darling Clementine"; de bron noemt die wijs in de
+# titel. Delpher (2026): titel en tweede regel staan in Kampvuur klanken (1930), de oudste
+# gevonden druk; titel en eerste twee regels ook in Welpenliedjes (1947) en "De Zangspuit" (1953).
+# Tekstdichter onbekend. Meld het als u de rechthebbende kent.
+# Overgenomen uit DOORDERM.BOE (WordPerfect 5.1, 1991). De titel in de bron is "Door de
+# rimboe (Welpenlied) (Melodie: Oh my darling Clementine)"; welpenlied en wijs staan hier in
+# ondertitel en melodieveld. Tikfout hersteld: "geluidt" werd "geluid" (twee keer).
+{title: Door de rimboe}
+{subtitle: Welpenlied}
+{meta: id door-de-rimboe}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit DOORDERM.BOE (WordPerfect 5.1, 1991); oudste gevonden druk Kampvuur klanken, 1930 (Delpher)}
+{meta: tag welpen}
+{meta: tag scouting}
+{meta: tag kampvuur}
+{meta: melody Oh My Darling, Clementine}
+
+{start_of_verse}
+Door de rimboe, door de rimboe,
+klinkt een vrolijk geluid
+'t zijn de welpen van de horde
+en die trekken er op uit!
+{end_of_verse}
+
+{start_of_chorus}
+Yalahia-hi-a-hi, Yalahia-hi-a-hi,
+Yalahia-hi-a-hi-a-hi-a
+Yalahi
+{end_of_chorus}
+
+{start_of_verse}
+Achter struiken, achter bomen
+overal een welpensnuit
+tot de horderoep weerklinkt
+tjoep, dan rennen ze vooruit
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En wat hollen, rennen draven
+en wat rollen in het zand
+en Baloe een beetje plagen
+is een kolfje naar hun hand
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Door de rimboe, Door de rimboe,
+klinkt een vrolijk geluid
+{end_of_verse}
+
+{comment: De twee volgende regels fluiten, en dan weer verder zingen.}
+
+{chorus}

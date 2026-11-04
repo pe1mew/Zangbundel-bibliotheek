@@ -1,0 +1,35 @@
+# Aap op zee - kampvuur- en kinderlied
+# Rechthebbende onbekend. Delpher (2026): het lied wordt gezongen door welpen in een
+# krantenartikel over de katholieke jeugdbeweging (19 mei 1949, tweede regel letterlijk); oudste
+# gevonden druk in boekvorm is Kampleidersboek van de Jonge Kerk (1952); ook in Zingend kamp
+# (z.j.). Geen tekstdichter of componist gevonden.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit AAP_OP.WPF (WordPerfect 5.1, 1991) en Aap op zee.docx (Word 2007+,
+# 2018); beide bestanden hebben dezelfde tekst. Een langere versie van hetzelfde lied
+# staat als weet-jij-wat-een-aap-op-zee-doet in de bibliotheek (WEETJIJ.WAT).
+# De aanwijzing van de bron staat hier vóór de telregel in plaats van onder het lied.
+{title: Aap op zee}
+{meta: id aap-op-zee}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit AAP_OP.WPF (WordPerfect 5.1, 1991) en Aap op zee.docx (Word, 2018); oudste vermelding krant 19-05-1949, oudste gevonden druk Kampleidersboek van de Jonge Kerk, 1952 (Delpher)}
+{meta: tag kampvuur}
+{meta: tag kinderlied}
+{meta: variant-group aap-op-zee}
+
+{start_of_verse}
+Weet jij wat een aap op zee doet
+zich vlooien uit weemoed
+Weet jij wat een aap op zee doet
+zich vlooien in de mast
+{end_of_verse}
+
+{start_of_verse}
+En het is zo fijn, Floep
+En het is zo fijn, Floep
+{comment: Heel zacht tellen, en dan heel hard "Uit" roepen}
+1, 2, 3, 4, 5, 6, 7, Uit!
+{end_of_verse}

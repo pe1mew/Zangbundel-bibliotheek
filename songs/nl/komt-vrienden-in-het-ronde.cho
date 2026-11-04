@@ -1,0 +1,96 @@
+# Komt vrienden in het ronde - lied van de scharensliep (slijpersstiel)
+# Traditioneel, publiek domein. De bron noemt geen tekstdichter of componist. Delpher:
+# oudste gevonden druk Het zingende oog (1935), daarna o.a. De stem van Allard (1946),
+# Kampliedjes (1956) en Nederland zingt (1963); kranten noemen het een oud-Hollands of
+# Nederlands volkslied (1964, 1965, 1974), met koorbewerkingen van Oscar van Hemel en
+# Herman Strategier. Nederlandse Liederenbank: oudste gevonden druk Volk en Taal (1889-90),
+# p. 179 (record 159578), daarna onder meer in bundels uit 1930 (record 132717), 1936 (record
+# 136311, "Vlaams volkslied") en 1952 (record 143459). Originals.be (Vlaamse liedjesdatabank)
+# noemt het een werkliedje uit de late 18e eeuw, voor het eerst gedrukt in De Vino Caser of
+# De Amsterdamse Pakhuis-Vreugt (1783); het lied daar met een gelijke beginregel is een ander
+# lied, een kluchtlied over een huwelijk (Nederlandse Liederenbank, record 180272).
+# Originals.be noemt ook Jan Bols; in de Liederenbank staat dit lied niet in een bundel van
+# Bols, dus zijn rol is onbekend.
+# Conclusie: anoniem volkslied met een druk van vóór 1900.
+# Overgenomen uit KOMTVRIE.DEN (WordPerfect 5.1, 1991). Het eerste couplet en het refrein
+# staan in de bron in lettergrepen gesplitst (met koppeltekens) onder de akkoorden; de
+# koppeltekens zijn weggelaten. In de bron lopen de coupletten door elkaar en staat het
+# refrein alleen na het eerste couplet; de coupletten zijn in blokken van drie regels
+# gezet en het refrein is na elk couplet herhaald. Tikfouten hersteld: "Zijt vindt" werd
+# "Zij vindt", "verslerken" werd "versterken". Twijfel: "De schoenpik stijg gezeten"
+# (stijf?) is zo gelaten.
+{title: Komt vrienden in het ronde}
+{meta: id komt-vrienden-in-het-ronde}
+{meta: language nl}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit KOMTVRIE.DEN (WordPerfect 5.1, 1991); oudste gevonden druk Volk en Taal, 1889-90 (Nederlandse Liederenbank, record 159578); Het zingende oog, 1935 (Delpher); originals.be}
+{meta: tag kampvuur}
+{key: Dm}
+
+{comment: Probeer zo mogelijk vooraf de goede toon te bepalen met behulp van een fluit}
+
+{start_of_verse}
+Komt [Dm]vrienden in het ronde, de minnaars [A7]enen stiel;
+ik zal u gaan [Gm]verkonden, hoe [A7]ik door 't slijpers wiel
+de [F]kost verdien voor vrouw en [C]kind, schoon [A7]blootgesteld aan sneeuw en wind,
+{end_of_verse}
+
+{start_of_chorus}
+[Dm]terlierelom terla!
+terlierelom terla!
+van [Dm]linksom, rechtsom draait [Gm]mijne steen [Dm]
+van linksom, rechtsom draait mijne steen
+door [Gm]het [A7]roeren van mijn [Dm]been, ju, ju, [Dm7]ju, [Bb]ju, ju, [Gm]ju, ju, [Dm]ju.
+door het roeren van mijn been, ju, ju, ju.
+{end_of_chorus}
+
+{start_of_verse}
+De kleerfrik maakt ons kleren, voor acht stuivers per dag;
+wil hij den loon vermeren, hij snijdt meer dan hij mag.
+Maar ik met mijne slijperssteen, ik win meer op een uur alleen,
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+De maalder moet graan malen, tot in het fijnste meel;
+hij doet dubbel betalen, voor zijne droge keel.
+Maar ik door iever en door vlijt, ik win mijn brood in eerlijkheid,
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Mijn vrouw, die roept victoria, over de slijpersstiel
+Zij vindt de grootste gloria, in 't draaien van mijn wiel
+Mijn kinders hebben geen ongemak, zij lopen met de bedelzak
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+De smid, die moet hard werken, gestadig voor het vier
+Hij durft hem niet versterken, met ene kan goed bier
+Terwijl ik ga op mijn gemak, soms ook wel met een lege zak
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+De schoenpik stijg gezeten, Op ene pikkelstoel
+Zou kaas en droog brood eten, Maar als ik nood gevoel
+Dan slijp ik tot de avond toe, en zo heb ik nooit arremoe
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Sa vrienden voor het leste: all' ambachten zijn goed;
+maar 't mijn is toch het beste, schoon ik soms slapen moet
+op hooi en strooi in enen stal, dan heb ik kost voor niemendal,
+{end_of_verse}
+
+{chorus}

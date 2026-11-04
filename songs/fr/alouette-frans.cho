@@ -1,0 +1,58 @@
+# Alouette - Frans-Canadees volksliedje
+# Traditioneel. Oudste bekende druk: A Pocket Song Book for the Use of Students and
+# Graduates of McGill College (Montreal, 1879), volgens Wikipedia (en), "Alouette
+# (song)". Publiek domein.
+# Overgenomen uit ALOUETTE.FRA (WordPerfect 5.1, 1991). Accenten hersteld: "tete" werd
+# "tête", "crane" werd "crâne". De bron zingt overal "Et le" (ook "Et le pieds",
+# "Et le mains"); dat is aangehouden. De laatste regel van de lijst ("Et le ,") is
+# onvolledig en weggelaten. Engelse en Nederlandse versies: alouette-engels,
+# alouette-nederlands.
+{title: Alouette}
+{subtitle: Franse versie}
+{meta: id alouette-frans}
+{meta: language fr}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit ALOUETTE.FRA (WordPerfect 5.1, 1991); oudste druk 1879 via Wikipedia (en)}
+{meta: tag kampvuur}
+{meta: tag kinderlied}
+{meta: tag volkslied}
+{meta: variant-group alouette}
+
+{start_of_chorus}
+Alouette, gentille alouette
+Alouette je te plumerai
+{end_of_chorus}
+
+{start_of_verse}
+{comment: Voorzanger zingt voor, allen herhalen}
+Je te plumerai la tête,
+je te plumerai la tête!
+Et la tête
+et la tête!
+Alouette
+Alouette, Aaaaaaaaaaaaaaaaaaah...........
+{end_of_verse}
+
+{chorus}
+
+{comment: Herhaal het couplet telkens met het volgende:}
+
+{start_of_verse}
+Et le dos
+Et le queue
+Et le cou,
+Et le nez,
+Et le pieds,
+Et le mains,
+Et le pattes,
+Et le ailes,
+Et le yeux,
+Et le crâne,
+Et le bec,
+Et le dents,
+{end_of_verse}
+
+{comment: etc.}

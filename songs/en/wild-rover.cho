@@ -1,0 +1,59 @@
+# Wild Rover - Iers/Engels volkslied
+# Traditioneel volkslied (Roud 1173), mogelijk teruggaand op een 17e-eeuwse Engelse
+# broadside; gedrukte versies uit 1813-1845 (Wikipedia (en), "The Wild Rover"). Publiek domein.
+# Overgenomen uit WILD_RO.VER (WordPerfect 5.1, 1991) en Wild rover.doc (Word 97-2003, 2005); beide
+# bestanden hebben dezelfde tekst en akkoorden. De akkoordregels zijn langer dan de tekst
+# (proportioneel lettertype) en zijn naar de regellengte geschaald.
+# De bron noemt het refrein na het eerste couplet; het is hier na elk couplet herhaald.
+{title: Wild Rover}
+{meta: id wild-rover}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit WILD_RO.VER (WordPerfect 5.1, 1991) en Wild rover.doc (2005); herkomst via Wikipedia (en)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+{key: G}
+
+{start_of_verse}
+I've [G]been a wild ro[D]ver [G]for many a [D]year
+[G]and I've spent all [D]my money on [G]whiskey [D]and [G]beer
+[G]But now I'm retur[D]ning [G]with gold in great [D]store
+[G]and I never will play the wild ro[G]ver no [D]more[G]
+{end_of_verse}
+
+{start_of_chorus}
+[D]And it's no, [D7]nay, never
+[G]No, nay, never no [D]more
+I [G]will play the wild ro[C]ver
+no ne[G]ver .............. no [D]more[G]
+{end_of_chorus}
+
+{start_of_verse}
+I went to an alehouse I used to frequent
+I told the landlady my money was spend
+I asked her for credit, she answered me nay
+such a custom as yours I can have every day
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+I brought up from me pocket ten sovereigns bright
+and landlady's eyes opened wide with delight
+She said: "I have whiskey's and wines of the best"
+and the words that she told me were only in jest
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+I'll go home to my parents, confess what I've done
+and I'll ask them to pardon their prodigal son
+And when they've caressed me as oft times before
+I never will play the wild rover no more
+{end_of_verse}
+
+{chorus}

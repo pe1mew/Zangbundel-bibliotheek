@@ -1,0 +1,42 @@
+# De Zeppelin - bewegingsliedje
+# Rechthebbende onbekend. Delpher (2026): oudste gevonden druk is Zangzaad voor kampeerders (Boy
+# Wolsey, 1929), met de beginregel; de tweede regel staat in Kabouterliedjes (1960). Geen maker
+# gevonden.
+# Nederlandse Liederenbank, record 170141: het lied staat in Klöters, In die grote stad Zaltbommel
+# (1993), met de opmerking dat het waarschijnlijk sinds de jaren vijftig bekend is, vooral in
+# protestants-christelijke kring; de druk van 1929 is ouder. Het lied We zaten met een zucht
+# (we-zaten-met-een-zucht) heeft dezelfde tweede regel en komt bij dezelfde zoekopdracht uit;
+# mogelijk een variant.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit ZEPPELIN (WordPerfect 5.1, 1991). Akkoorden geplaatst op de
+# kolommen van de bron, verschoven naar de dichtstbijzijnde lettergreep.
+# "zeppelin !" werd "zeppelin!". De bewegingen staan als opmerking na de tekst.
+{title: De Zeppelin}
+{meta: id de-zeppelin}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit ZEPPELIN (WordPerfect 5.1, 1991); oudste gevonden druk Zangzaad voor kampeerders, 1929 (Delpher); Klöters, 1993 (Nederlandse Liederenbank, record 170141)}
+{meta: tag kinderlied}
+{meta: tag kampvuur}
+{key: G}
+
+{comment: Bewegingsliedje: eerst helemaal zingen, daarna telkens een woord weglaten en vervangen door een gebaar.}
+
+{start_of_verse}
+We [G]voeren met een zucht
+[G]Al boven in de lucht
+En we zaten zo [D]gezellig in een schuitje
+En niemand kon ons zien
+En we hadden pret voor tien
+Lang leve de zeppe[G]lin!
+{end_of_verse}
+
+{comment: Zucht: schouders ophalen}
+{comment: Lucht: wijzen naar boven}
+{comment: Schuitje: doen alsof er een schuitje in de armen ligt}
+{comment: Zien: handen voor de ogen als verrekijker}
+{comment: Tien: tien vingers in de lucht}
+{comment: Zeppelin: handen spreiden en aangeven hoe groot zo'n zeppelin wel niet is}

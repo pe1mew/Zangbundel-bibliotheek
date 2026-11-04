@@ -1,0 +1,90 @@
+# It's me - spiritual (Standing in the Need of Prayer)
+# Traditioneel: Hymnary.org vermeldt "Standing in the Need of Prayer" als
+# Afro-Amerikaanse spiritual zonder bekende auteur, in 82 gezangboeken. Publiek domein.
+# Overgenomen uit ITS.ME (WordPerfect 5.1, 1991). Tikfout hersteld: "deakon" werd
+# "deacon"; "apreaching" gelaten (a-preaching). De bron zet "Refrein:" boven de
+# eerste zes regels; alleen de eerste twee zijn het refrein, de vier daarna het eerste
+# couplet. Het refrein is na elk couplet herhaald. De aanwijzing over een andere versie
+# van het laatste couplet staat als opmerking. Akkoorden alleen bij refrein en eerste
+# couplet, volgens de kolommen.
+{title: It's me}
+{meta: id it-s-me}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit ITS.ME (WordPerfect 5.1, 1991); herkomst via Hymnary.org}
+{meta: tag kampvuur}
+{meta: tag geestelijk}
+{key: Em}
+
+{start_of_chorus}
+[Em]It's me, it's me, [C]it's me my Lord, Stan[D]ding in the [G]need of prayer
+[Em]It's me, [B]it's me, it's [Em]me my Lord[C], Standing [D7]in the nee[G]d of prayer
+{end_of_chorus}
+
+{start_of_verse}
+Not [Em]my father, not my mother, [B]but it's me [Em]my Lord
+[C]Standing in the need [D]of praye[G]r
+Not [Em]my father, not my [B]mother, but [Em]it's me my Lord
+[C]Standing in the need [D7]of praye[G]r
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Not my uncle, not my aunt, but it's me my Lord
+Standing in the need of prayer
+Not my uncle, not my aunt, but it's me my Lord
+Standing in the need of prayer
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Not my neighbour, not a stranger, but it's me my Lord
+Standing in the need of prayer
+Not my neighbour, not a stranger, but it's me my Lord
+Standing in the need of prayer
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Not my preacher, not my teacher, but it's me my Lord
+Standing in the need of prayer
+Not my preacher, not my teacher, but it's me my Lord
+Standing in the need of prayer
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Not my brother, not my sister, but it's me my Lord
+Standing in the need of prayer
+Not my brother, not my sister, but it's me my Lord
+Standing in the need of prayer
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Not the deacon who's apreaching, but it's me my Lord
+Standing in the need of prayer
+Not the deacon who's apreaching, but it's me my Lord
+Standing in the need of prayer
+{end_of_verse}
+
+{chorus}
+
+{comment: Andere versie van het laatste couplet}
+
+{start_of_verse}
+Not my deacon, not my elder, but it's me my Lord
+Standing in the need of prayer
+Not the deacon who's apreaching, but it's me my Lord
+Standing in the need of prayer
+{end_of_verse}
+
+{chorus}

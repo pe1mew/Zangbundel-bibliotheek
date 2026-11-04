@@ -1,0 +1,60 @@
+# Tumbalalaika - lied met Jiddisch refrein, kampvuurlied
+# Volgens Wikipedia (en) een Jiddisch liefdeslied, losjes gebaseerd op een traditioneel
+# Oekraïens lied; het artikel noemt een versie van Abraham Ellstein uit 1940. De
+# Mlotek-collectie (yiddishsongs.org, "Tum Balalayke") noemt tekstdichter en componist
+# onbekend, als eerste bekende druk een Amerikaanse uitgave van A. Bitter uit 1940, en een
+# melodie die lijkt op het volkslied "Gantse teg zits ikh aleyn". Een druk van vóór 1900 is
+# niet gevonden; de melodie is dus niet aantoonbaar traditioneel. De Engelse coupletten zijn
+# een vertaling van onbekende herkomst. Rechthebbende van de vertaling onbekend; meld het
+# als u de vertaler kent.
+# Overgenomen uit TOEMBALA.IKA (WordPerfect 5.1, 1991), tweede versie in dat bestand
+# ("Een andere versie"). Tikfouten hersteld: "th eyears" werd "the years", "whitout"
+# werd "without". Twee regels die in de bron doorliepen zijn gesplitst. De bron zet
+# het refrein vooraan; het is na elk couplet met {chorus} herhaald.
+{title: Tumbalalaika}
+{subtitle: Andere Engelse versie}
+{meta: id tumbalalaika-andere-versie}
+{meta: language en}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit TOEMBALA.IKA (WordPerfect 5.1, 1991), tweede versie; herkomst via Wikipedia (en) en yiddishsongs.org (Mlotek-collectie)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+{meta: variant-group tumbalalaika}
+{key: Em}
+
+{start_of_chorus}
+[Em]Tumbala, tumbala, tumbalalaika[B7],
+Tumbala, tumbala, tumbalalaika[Em],
+Tumbalalaik[C]a, Shpiel bolaik[Em]a
+Tumbalalaika, [B7]frey loch zol zein.
+{end_of_chorus}
+
+{start_of_verse}
+A [Em]young man wonders how he will fin[B7]d
+A girl [Em]who is gentle, loving and kind.
+Many [Em]the maidens, bright are their eyes,
+[B7]How shall he know the one who is wise?[Em]
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Maiden, maiden can you explain
+What can grow and never need rain?
+Which is the fire that burns through the years,
+Which is the sorrow deeper than tears
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Listen, listen while I reply
+A stone can grow and always be dry.
+Love that is true will burn through the years
+When a heart cries, it cries without tears.
+{end_of_verse}
+
+{chorus}

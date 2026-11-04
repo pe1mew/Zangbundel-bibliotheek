@@ -1,0 +1,44 @@
+# Ein Jäger - Duits volkslied
+# Traditioneel. Volgens mainlynorfolk.info (pagina "The Huntsman") is "Es blies ein
+# Jäger wohl in sein Horn" in 1777 opgetekend door Friedrich Nicolai en gaat het
+# terug op de oudere ballade van de Nachtjäger. Publiek domein.
+# Overgenomen uit EIN_JA.GER (WordPerfect 5.1, 1991). De bron spelt de titel
+# "Ein jager"; in de tekst staat "Jäger". Tikfout hersteld: "es sitz" werd tweemaal
+# "es sitzt".
+{title: Ein Jäger}
+{meta: id ein-jager}
+{meta: language de}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit EIN_JA.GER (WordPerfect 5.1, 1991); herkomst (Nicolai, 1777) via mainlynorfolk.info, The Huntsman}
+{meta: tag volkslied}
+{meta: tag kampvuur}
+
+{start_of_verse}
+Es blies ein Jäger wohl in sein Horn
+wohl in sein Horn
+Und alles was er blies das war verlorn
+das war verlorn
+Ai-i-hussasa, tiralala
+Und alles was er blies das war verlorn
+{end_of_verse}
+
+{start_of_verse}
+Soll dann mein Blasen verloren sein,
+verloren sein
+Viel lieber wollt' ich gar kein Jäger sein
+kein Jäger sein
+Ai-i-hussasa, tiralala
+Und alles was er blies das war verlorn
+{end_of_verse}
+
+{start_of_verse}
+Ach nein, das Blasen ist rein und gut
+ist rein und gut
+Ich bleib Jäger weil es sitzt mir im Blut
+es sitzt mir im Blut
+Ai-i-hussasa, tiralala
+Und alles was er blies das war verlorn
+{end_of_verse}

@@ -1,0 +1,74 @@
+# Faria (kampeerdersversie) - Nederlands kampeerlied op de wijs van "Lustig ist das
+# Zigeunerleben"
+# De wijs is een Duits volkslied, in de mondelinge overlevering opgetekend in Hessen
+# (1824) en Silezië (1829) (Wikipedia (de), "Lustig ist das Zigeunerleben"),
+# publiek domein. De maker van deze Nederlandse tekst is onbekend; geen tweede bron
+# geraadpleegd. Meld het als u de rechthebbende kent.
+# Overgenomen uit FARIA2.NED (WordPerfect 5.1, 1991), in de bron "Faria (3)
+# (Nederlands)". Een andere Nederlandse tekst dan faria-1-nederlands.
+# Tikfouten hersteld: "faria,fa-ri-a" werd "faria, fa-ri-a", "Deveter" werd
+# "Deventer", "chagerijn" werd "chagrijn". De bron sluit af met een andere versie
+# van het eerste couplet; die staat hier als laatste couplet met een opmerking.
+# Akkoorden staan in de bron alleen bij het eerste couplet.
+{title: Faria}
+{subtitle: Vrolijk is het kampeerdersleven (tweede Nederlandse tekst)}
+{meta: id faria-3-nederlands}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit FARIA2.NED (WordPerfect 5.1, 1991); herkomst van de wijs via Wikipedia (de)}
+{meta: tag kampvuur}
+{meta: melody Lustig ist das Zigeunerleben}
+{meta: variant-group faria}
+{key: C}
+
+{start_of_verse}
+Vro[C]lijk is het kampeerdersleven, [F]fa[C]ria.
+niemand zal het ooit naarigheid geven, [F]fa[C]ria.
+[F]Vrolijk is het in bos en hei,[C]
+[F]daar zet je al je zorgen op[C]zij,
+[C]Faria, fa[F]ria, fa[G]ria, fa[C]ria, fa-ri-a.
+{end_of_verse}
+
+{start_of_verse}
+Als aan een tafel met wankele schragen, faria.
+Jongens bijeen zijn met hongerige magen, faria.
+Smaakt hun het eten als Deventer koek,
+maken ze zelfs de kruimeltjes zoek.
+Faria, faria, faria, faria, fa-ri-a.
+{end_of_verse}
+
+{start_of_verse}
+Mocht je je soms niet lekker gevoelen, faria.
+Ga je dan bij de pomp afspoelen, faria.
+Pompwater is toch een goed medicijn,
+tegen verveling en chagrijn.
+Faria, faria, faria, faria, fa-ri-a.
+{end_of_verse}
+
+{start_of_verse}
+Als je gaat fietsen of als je gaat luieren, faria.
+Als je een bal trapt of als je gaat kuieren, faria.
+Als je met vrienden wat speelt of praat,
+weet je dat niets boven 't kampleven gaat.
+Faria, faria, faria, faria, fa-ri-a.
+{end_of_verse}
+
+{start_of_verse}
+Komt de slaap je dan 's avonds besluipen, faria.
+Is het een lust in je tent te kruipen, faria.
+Voel je eerst niet goed dat je niet maffen kunt,
+op zo'n harde denneappelpunt.
+Faria, faria, faria, faria, fa-ri-a.
+{end_of_verse}
+
+{comment: Een andere versie van het eerste couplet}
+{start_of_verse}
+Vrolijk trekken wij nu naar buiten, faria.
+Onze rugzak nog vol met duiten, faria.
+Zonder geld, maar toch bruin en sterk,
+gaan we zo strakjes weer aan het werk.
+Faria, faria, faria, faria, fa-ri-a.
+{end_of_verse}

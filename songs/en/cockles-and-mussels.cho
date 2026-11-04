@@ -1,0 +1,49 @@
+# Cockles and Mussels (Molly Malone) - Iers lied
+# Volgens Wikipedia (en), "Molly Malone": eerste druk 1876 in Boston; een Londense
+# uitgave van 1884 noemt James Yorkston uit Edinburgh als auteur. Ouder dan 1900
+# en daarmee publiek domein.
+# Overgenomen uit COCKLES.MUS (WordPerfect 5.1, 1991). Twee regels die in de bron aan
+# elkaar stonden zijn gesplitst. Akkoorden alleen bij het eerste couplet. Het
+# refrein staat in de bron één keer; hier na elk couplet.
+{title: Cockles and Mussels}
+{meta: id cockles-and-mussels}
+{meta: language en}
+{lyricist: James Yorkston}
+{composer: James Yorkston}
+{year: 1876}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit COCKLES.MUS (WordPerfect 5.1, 1991); auteur en oudste druk via Wikipedia (en)}
+{meta: tag volkslied}
+{meta: tag kampvuur}
+{key: C}
+
+{start_of_verse}
+In Dub[C]lin's fair city, [Am]where girl[Dm]s are so pretty,[G7]
+I [C]first set my [A7]eyes on sweet Mol[D7]ly Malon[G7]e
+As she wheeled [C]her wheel-barrow, throug[Am]h streets broad and narr[Dm]ow,[G7]
+crying : "Coc[C]kles and [F]mussel[C]s, alive[F], [C]alive [G7]oh [C]!"
+{end_of_verse}
+
+{start_of_chorus}
+Alive alive-o, alive alive-o
+crying : "Cockles and mussels, alive, alive oh !"
+{end_of_chorus}
+
+{start_of_verse}
+She was a fishmonger, and sure 't was no wonder,
+for so were her father and mother before
+They each pushed their wheel-barrow, through streets broad and narrow,
+crying : "Cockles and mussels, alive, alive oh !"
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+She died of a fever, and no one could save her
+and that was the end of sweet Molly Malone
+Her ghost wheels her barrow, through streets broad and narrow,
+crying : "Cockles and mussels, alive, alive oh !"
+{end_of_verse}
+
+{chorus}

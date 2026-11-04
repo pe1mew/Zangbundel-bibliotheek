@@ -1,0 +1,68 @@
+# Marie-José - kampvuurlied, Nederlandse versie
+# De bron noemt geen tekstdichter of componist. De Nederlandse Liederenbank heeft geen record
+# van dit lied; niet verder op het web nagezocht. Rechthebbende onbekend.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit MARIE_J.OSE (WordPerfect 5.1, 1991); de kop in de bron noemt dit
+# de Nederlandse versie. Een Limburgse versie staat in MIAUW (zie
+# marie-jose-limburgs). Eerste woord "Eénen" zoals in de bron.
+# De bron schrijft alleen de eerste regel van de volgende coupletten uit, met
+# "......"; zo overgenomen. Het refrein staat in de bron eenmaal; hier na elk
+# couplet herhaald. Akkoorden geplaatst naar de kolommen van de bron.
+{title: Marie-José}
+{meta: id marie-jose}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit MARIE_J.OSE (WordPerfect 5.1, 1991)}
+{meta: tag kampvuur}
+{meta: variant-group marie-jose}
+
+{start_of_verse}
+[A]Eénen jarretel
+[G]twee jarretellen
+[F]Ik kan ze [E]bijna niet [Am]meer [E]tel[Am]len[E][Am][E]
+bij ......
+{end_of_verse}
+
+{start_of_chorus}
+[A]Marie-José, met [G]haren op de benen, met haren op de [D]tenen,
+met haren op [E]haar kin
+{end_of_chorus}
+
+{start_of_verse}
+Eénen oorlel ......
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Eénen fietsebel ......
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Eénen berevel ......
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Eénen deurbel ......
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Eénen koebel ......
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Eénen theelepel ......
+{end_of_verse}
+
+{chorus}

@@ -1,0 +1,109 @@
+# Mes Amis - meertalig kampvuurlied (Frans en Fins)
+# De bron noemt geen tekstdichter of componist en geeft één titel, maar de tekst
+# lijkt een aaneenschakeling van drie liederen: een Frans berglied, het Finse
+# "Minun kultani kaunis on" en het Franse "Monsieur, vous êtes jeune homme".
+# De Nederlandse Liederenbank heeft geen record van dit lied; niet verder op het web
+# nagezocht. Rechthebbende onbekend. Meld het als u de rechthebbende kent.
+# Overgenomen uit MES_AMIS (WordPerfect 5.1, 1991). De bron schrijft Frans zonder
+# accenten en Fins als "Minum"; zo overgenomen. Tikfout hersteld: "jeu ne" werd
+# "jeune". Een regel die in de bron twee regels samenvoegt is gesplitst; een losse
+# witregel midden in het eerste Monsieur-couplet is weggelaten.
+{title: Mes Amis}
+{meta: id mes-amis}
+{meta: language fr}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit MES_AMIS (WordPerfect 5.1, 1991)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+
+{start_of_verse}
+Mes amis qu'on est heureux
+sur une montagne
+L'air si frais de ces purs sommets
+chasse les ennuis a jamais
+{end_of_verse}
+
+{start_of_verse}
+Je suis un jeune berger
+j'aime ma promise
+Mon coeur est en soleille
+mon ame est legere
+{end_of_verse}
+
+{start_of_verse}
+Ma chanson dira mon espoir
+Je descendrai pour la revoir
+Minum kultani kaunis on
+Minum kultani kaunis on
+{end_of_verse}
+
+{start_of_verse}
+Vaik on kataluinen
+Minum kultani kaunis on
+Vaik on kataluinen
+Ei Julia, halala
+{end_of_verse}
+
+{start_of_verse}
+Vaik on kataluinen
+Ei Julia, halala
+Vaik on kataluinen
+{end_of_verse}
+
+{start_of_verse}
+Monsieur vous etes jeun'homme
+M'sieur vous etes jeun'homme
+Ayez du sentimant
+Prenez une dames blonde
+pour vivre plus content
+Mais non les blondes sont trop profondes
+mais non les blondes je n'aime pas
+mais non les blondes je n'aime pas
+{end_of_verse}
+
+{start_of_verse}
+M'sieur vous etes jeun'homme
+Ayez du sentimant
+Prenez une dames rouge
+pour vivre plus content
+Mais non les rouges sont trop jalouses
+mais non les rouges je n'aime pas
+mais non les rouges je n'aime pas
+{end_of_verse}
+
+{start_of_verse}
+M'sieur vous etes jeun'homme
+Ayez du sentimant
+Prenez une dames noire
+pour vivre plus content
+Mais non les noires sont trop bizares
+mais non les noires je n'aime pas
+mais non les noires je n'aime pas
+{end_of_verse}
+
+{start_of_verse}
+M'sieur vous etes jeun'homme
+Ayez du sentimant
+Prenez une dames grise
+pour vivre plus content
+Mais non les grises sont trop soumises
+mais non les grises je n'aime pas
+mais non les grises je n'aime pas
+{end_of_verse}
+
+{start_of_verse}
+M'sieur vous etes jeun'homme
+Ayez du sentimant
+Prenez une dames brune
+pour vivre plus content
+Mais non les brunes sont trop communes
+mais non les brunes je n'aime pas
+mais non les brunes je n'aime pas
+{end_of_verse}
+
+{start_of_verse}
+excepte une, et c'est ma femme
+{end_of_verse}

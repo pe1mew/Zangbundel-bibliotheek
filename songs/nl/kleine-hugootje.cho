@@ -1,0 +1,28 @@
+# Kleine hugootje - welpencanon
+# Rechthebbende onbekend. De bron noemt geen tekstdichter, componist of wijs. De Nederlandse
+# Liederenbank heeft geen record van dit lied; niet verder op het web nagezocht. Niet aantoonbaar
+# publiek domein. Meld het als u de rechthebbende kent.
+# Overgenomen uit KLEINHUG.OTJ (WordPerfect 5.1, 1991). De aanwijzing "Dit liedje wordt
+# in canon gezongen" is een {comment} geworden; na "gillen:" is een spatie ingevoegd.
+{title: Kleine hugootje}
+{meta: id kleine-hugootje}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit KLEINHUG.OTJ (WordPerfect 5.1, 1991)}
+{meta: tag canon}
+{meta: tag welpen}
+{meta: tag scouting}
+
+{comment: Canon}
+{start_of_verse}
+Kleine Hugootje zat op een goaltje
+en begon te gillen: "Hopman, hopman, arme zielige vent".
+{end_of_verse}
+
+{start_of_verse}
+Kleine teerpootje zat op een bootje
+en begon te gillen: "Raksja, Raksja, ik voel me toch zo raar".
+{end_of_verse}

@@ -1,0 +1,27 @@
+# Vive la vie (Frans) - kampvuurlied
+# Franse tekst van onbekende herkomst op de wijs van het studentenlied "Vive la compagnie",
+# waarvan de oudste bekende druk bladmuziek uit 1844 is (folklorist.org, via een zoekvraag).
+# Rechthebbende van de tekst onbekend; meld het als u die kent.
+# Overgenomen uit VIVE_LA.VIE (WordPerfect 5.1, 1991). Het bestand bevat een Franse, een Engelse
+# en een Nederlandse versie; elk staat in een eigen bestand met dezelfde variant-group.
+{title: Vive la vie}
+{subtitle: Franse versie}
+{meta: id vive-la-vie-frans}
+{meta: language fr}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit VIVE_LA.VIE (WordPerfect 5.1, 1991); herkomst van de wijs via een zoekmachine (folklorist.org)}
+{meta: tag kampvuur}
+{meta: melody Vive la compagnie}
+{meta: variant-group vive-la-vie-frans}
+
+{start_of_verse}
+Vive vie la, Vive vie la, Vive la vie
+Vive vie la, Vive la compagnie
+Vive la vie, Vive la joie
+Vive la joie, Vive l'amour
+Vive l'amour, Vive la vie
+Vive la compagnie
+{end_of_verse}

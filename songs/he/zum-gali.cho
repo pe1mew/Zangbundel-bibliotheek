@@ -1,0 +1,50 @@
+# Zum gali - Hebreeuws pionierslied (Zum Gali Gali)
+# Herkomst en makers onbekend; verbonden met kibboets Mishmar HaEmek, eerste druk 1939 bij de
+# Hebrew Publishing Company in New York (Wikipedia (en), "Zum Gali Gali"). Niet aantoonbaar
+# publiek domein. Meld het als u de rechthebbende kent.
+# Overgenomen uit ZUM_GALI (WordPerfect 5.1, 1991). Hebreeuws in Latijns schrift, spelling als in de bron.
+# De bron zet "Zum gali gali" eenmaal bovenaan zonder kop; het is hier als refrein gemarkeerd en
+# na elk couplet herhaald.
+{title: Zum gali}
+{meta: id zum-gali}
+{meta: language he-Latn}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit ZUM_GALI (WordPerfect 5.1, 1991); herkomst via Wikipedia (en)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+
+{start_of_chorus}
+Zum gali gali gali zum gali gali
+Zum gali gali gali zum gali gali
+{end_of_chorus}
+
+{start_of_verse}
+Hechalutz le man avodah;
+Avodah le man Hechalutz
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Avodah le man Hechalutz
+Hechalutz le man avodah;
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Hechalutz le man hab'tulah
+hab'tulah le man Hechalutz
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Hashalom le man ha'amin
+ha'amin le man Hashalom
+{end_of_verse}
+
+{chorus}

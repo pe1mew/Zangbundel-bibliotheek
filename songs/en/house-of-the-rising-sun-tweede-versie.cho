@@ -1,0 +1,63 @@
+# House of the rising sun - Amerikaans volkslied (tweede versie)
+# Traditioneel. Oudste gepubliceerde tekst 1925 (kolom van Robert Winslow Gordon in
+# het tijdschrift Adventure), oudste opname 1933 door Clarence "Tom" Ashley en Gwen
+# Foster; de bekende versie van The Animals (1964) staat op naam van "Traditional,
+# arr. by Alan Price" (Wikipedia (en), "The House of the Rising Sun"). Publiek domein;
+# alleen arrangementen kunnen beschermd zijn.
+# Overgenomen uit HOUSERIS.SUN (WordPerfect 5.1, 1991). Het bestand bevat twee
+# versies onder de koppen "(1)" en "(2)"; dit is de tweede, met andere
+# coupletten. Tikfout hersteld: "I'v" werd "I've". "all a drunk"
+# gelaten zoals in de bron. De bron schrijft "E(e7)", hier als [E]; akkoorden alleen
+# bij het eerste couplet, geschaald naar de lengte van de tekstregels. Het laatste
+# couplet is in de bron één blok van zes regels.
+{title: House of the rising sun}
+{subtitle: Tweede versie, met andere coupletten}
+{meta: id house-of-the-rising-sun-tweede-versie}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit HOUSERIS.SUN (WordPerfect 5.1, 1991), versie 2; herkomst via Wikipedia (en)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+{meta: variant-group house-of-the-rising-sun}
+{key: Am}
+
+{start_of_verse}
+[Am]There is a [C]house in New [D]Orleans[F]
+they call [Am]it the ri[C]sing sun[E]
+And been [Am]the [C]ruin of ma[D]ny a poor [F]boy
+and me [Am]oh God [E]for [Am]one
+{end_of_verse}
+
+{start_of_verse}
+My mother was a tailor
+she sewed my new blue jeans
+My father was a gamblin' man
+down in New Orleans
+{end_of_verse}
+
+{start_of_verse}
+Now the only thing a gambler needs
+is a suitcase and a trunk
+And the only time he'll be satisfied
+is when he's all a drunk
+{end_of_verse}
+
+{start_of_verse}
+Oh mother tell your children
+not to do what I have done
+Spend your lives in sin and misery
+in the house of the rising sun
+{end_of_verse}
+
+{start_of_verse}
+Well I've got one foot on the platform the other foot on the train
+I'm going back to New Orleans
+to wear that ball and chain
+Well there is a house in New Orleans
+they call it the rising sun
+And been the ruin of many a poor boy
+and me oh God for one
+{end_of_verse}

@@ -1,0 +1,31 @@
+# Marleentje - kinderlied
+# De bron noemt geen tekstdichter of componist. Nederlandse Liederenbank (2026): geen treffer
+# op de beginregel. Op de titel o.a. "Marleentje" van Willem Gijssels (tekst) en Emiel
+# Hullebroeck (muziek), record 132516 (Nederlandsch volksliederenboek, De Lange en Kalff,
+# 1913; ook 1934 en 1966, record 146487), en een ander Marleentje-lied van J. Lesage en
+# J. Mertens (1966, record 146486). Beginregel en refrein van die records wijken af van dit
+# lied: het zijn andere liederen. Rechthebbende onbekend. Meld het als u de rechthebbende kent.
+# Overgenomen uit MARLEEN.TJE (WordPerfect 5.1, 1991).
+{title: Marleentje}
+{meta: id marleentje}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit MARLEEN.TJE (WordPerfect 5.1, 1991); Nederlandse Liederenbank: geen treffer van dit lied (records 132516 en 146487 zijn een ander lied)}
+{meta: tag kinderlied}
+{meta: tag kampvuur}
+
+{start_of_verse}
+Marleentje ging uit wand'len
+Met Pietje van de hoek
+Met Pietje van de hoek
+Ze kwamen bij de vijver
+Die was vol snoep en koek
+{end_of_verse}
+
+{start_of_chorus}
+Limonade, 't was een reuze feest geweest!
+Allemaal limonade, 't was een reuze feest
+{end_of_chorus}

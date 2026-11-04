@@ -1,0 +1,33 @@
+# De haan is dood - kinderlied in het Nederlands en Frans
+# Rechthebbende onbekend. Het Franse couplet is "Le coq est mort"; de herkomst daarvan is niet
+# nagekeken. Delpher (2026): de titel staat in de bundel Bim, bam, beieren! (1948), de beginregel
+# in Kabouterliedjes (1960) en Zingend kamp (z.j.). Geen maker gevonden.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit HAANISD.OOD.doc (WordPerfect 5.1, 1991).
+# Tikfout hersteld: "Kkukeleku" werd "Kukeleku".
+{title: De haan is dood}
+{meta: id de-haan-is-dood}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit HAANISD.OOD.doc (WordPerfect 5.1, 1991); oudste gevonden druk Bim, bam, beieren!, 1948 (Delpher)}
+{meta: tag kampvuur}
+{meta: tag kinderlied}
+
+{start_of_verse}
+De haan is dood, de haan is dood
+De haan is dood, de haan is dood
+Hij kan niet meer kraaien kukeleku, kukeleku
+Hij kan niet meer kraaien kukeleku, kukeleku
+Kukeleku kukeleku kukeleku
+{end_of_verse}
+
+{start_of_verse}
+Le coq est mort, Le coq est mort
+Le coq est mort, Le coq est mort
+Il ne dira plus cocodi, cocoda
+Il ne dira plus cocodi, cocoda
+Cocodi co di co di co da
+{end_of_verse}

@@ -1,0 +1,109 @@
+# Meine Oma - Duitstalig kampvuurlied met Nederlandse coupletten
+# De bronnen noemen geen tekstdichter of componist. Eén zoekopdracht op de tekst
+# leverde geen herkomst op. Rechthebbende onbekend. Meld het als u de rechthebbende kent.
+# Overgenomen uit MEINE.OMA (WordPerfect 5.1, 1991) en Meine Oma.doc (Word 97-2003,
+# 2005). De teksten zijn gelijk; het Word-bestand begint met het eerste couplet,
+# het WordPerfect-bestand met het refrein. Hier de volgorde van MEINE.OMA.
+# Tikfout hersteld: "Laüse" werd "Läuse". Grammatica en spelling verder zoals in
+# de bron. Na het eerste couplet schrijft de bron alleen de beginregel uit, met
+# "....."; zo overgenomen. De laatste zes coupletten zijn Nederlands.
+{title: Meine Oma}
+{meta: id meine-oma}
+{meta: language de}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit MEINE.OMA (WordPerfect 5.1, 1991) en Meine Oma.doc (Word 97-2003, 2005); herkomst niet gevonden via een zoekopdracht}
+{meta: tag kampvuur}
+
+{start_of_chorus}
+Oh Berner Oberland, Berner Oberland ist schön, ja schön,
+oh Berner Oberland, Berner Oberland ist schön.
+{end_of_chorus}
+
+{start_of_verse}
+Meine Oma hat Toiletpapier mit Blümchen, mit Blümchen, mit Blümchen.
+Meine Oma hat Toiletpapier mit Blümchen,
+meine Oma ist ein ganz moderner Frau.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Meine Oma hat Verkerung mit ein Nozum, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Meine Oma fängt die Läuse mit ein Lasso, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Meine Oma trägt Bikini ohne Hose, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Meine Oma hat ein Milchkuh ohne Spiene, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Meine Oma hat ein Nachttopf mit Beleuchtung, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Meine Oma hat ein Fallschirm auf dem Moped, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Meine Oma hat ein Wohnung ohne Fenster, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Mijn oma heeft een petticot met bandjes
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Mijn oma heeft w.c. papier met randjes, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Mijn oma heeft een onderbroek met kantjes, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Mijn oma heeft een appelboom met mandjes, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Mijn oma heeft een kunstgebit met tandjes, .....
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Mijn oma heeft een fotoboek met standjes, .....
+{end_of_verse}
+
+{chorus}

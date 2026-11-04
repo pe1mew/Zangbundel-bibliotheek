@@ -1,0 +1,30 @@
+# It's a long way - Engels marslied (It's a Long Way to Tipperary)
+# Geschreven door Jack Judge en Harry Williams in 1912 en dat jaar uitgegeven door Bert
+# Feldman; Williams overleed in 1924, Judge in 1938 (Wikipedia (en), "It's a Long Way
+# to Tipperary"). Beide langer dan 70 jaar geleden overleden: publiek domein.
+# Overgenomen uit ITSALONG.WAY (WordPerfect 5.1, 1991). Tikfouten hersteld: "Its"
+# werd "It's" (ook in de titel), "yo" werd "to", "Leicestersquare" werd "Leicester
+# Square". Het bestand bevat alleen het refrein van het lied.
+{title: It's a long way}
+{meta: id it-s-a-long-way}
+{meta: language en}
+{lyricist: Jack Judge}
+{lyricist: Harry Williams}
+{composer: Jack Judge}
+{composer: Harry Williams}
+{year: 1912}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit ITSALONG.WAY (WordPerfect 5.1, 1991); schrijvers en jaar via Wikipedia (en)}
+{meta: tag kampvuur}
+
+{start_of_verse}
+It's a long way to Tipperary,
+it's a long way to go.
+It's a long way to Tipperary,
+to the sweetest girl I know.
+Goodbye my Piccadilly,
+farewell my Leicester Square.
+It's a long long way to Tipperary,
+but my heart is right there.
+{end_of_verse}

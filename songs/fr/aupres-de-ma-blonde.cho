@@ -1,0 +1,71 @@
+# Auprès de ma blonde - Frans volkslied
+# Toegeschreven aan André Joubert du Collet, luitenant bij de marine onder
+# Lodewijk XIV, in 1704, volgens Wikipedia (fr), "Auprès de ma blonde"; mogelijk
+# teruggaand op een lied uit de 16e eeuw. Publiek domein.
+# Overgenomen uit AUPRESBL.OND (WordPerfect 5.1, 1991). Tikfouten hersteld: "jolie
+# combe" werd "jolie colombe" (zoals in het laatste couplet), "ou donc" werd
+# "où donc", een spatie voor een komma verwijderd; in de titel "Aupres" werd
+# "Auprès". Het refrein staat in de bron één keer; hier na elk couplet.
+{title: Auprès de ma blonde}
+{meta: id aupres-de-ma-blonde}
+{meta: language fr}
+{lyricist: André Joubert du Collet}
+{composer: traditioneel}
+{year: 1704}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit AUPRESBL.OND (WordPerfect 5.1, 1991); toeschrijving en jaar via Wikipedia (fr)}
+{meta: tag volkslied}
+{meta: tag kampvuur}
+
+{start_of_verse}
+Dans les jardins de mon père, les lauriers sont fleuris. (2x)
+Tous les oiseaux du monde, vien'nt y faire leurs nids.
+{end_of_verse}
+
+{start_of_chorus}
+Auprès de ma blonde, qu'il fait bon, fait bon, fait bon. (2x)
+Auprès de ma blonde, qu'il fait bon dormir
+{end_of_chorus}
+
+{start_of_verse}
+Tous les oiseaux du monde, vien'nt y faire leurs nids. (2x)
+Et ma jolie colombe, qui chante jour et nuit.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Et ma jolie colombe, qui chante jour et nuit. (2x)
+Qui chante pour les filles, qui n'ont point de mari.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Dites nous donc, la belle, où donc est vot' mari? (2x)
+Il est dans la Hollande, les Hollandais l'ont pris.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Que donneriez vous, belle, pour avoir un ami? (2x)
+Je donnerais Versailles, Paris et Saint Denis.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Je donnerais Versailles, Paris et Saint Denis. (2x)
+Les tours de Notre Dame, et le clocher de not' pays.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Les tours de Notre Dame, et le clocher de not' pays. (2x)
+Et ma jolie colombe, pour avoir un ami.
+{end_of_verse}
+
+{chorus}

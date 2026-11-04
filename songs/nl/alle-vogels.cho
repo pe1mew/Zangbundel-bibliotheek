@@ -1,0 +1,43 @@
+# Alle vogels - kinderlied (Nederlands en Duits)
+# Het Duitse origineel "Alle Vögel sind schon da" is van August Heinrich Hoffmann von
+# Fallersleben (tekst 1835, gepubliceerd 1837); de melodie is een volkswijs uit de 18e
+# eeuw, sinds 1844 met deze tekst, volgens Wikipedia (de), "Alle Vögel sind schon da".
+# Wie het Nederlandse couplet vertaalde is niet bekend. De Nederlandse Liederenbank kent twee
+# oudere Nederlandse teksten op deze wijs: de bundel van Goeverneur en Worp
+# (1866-1868; record 199927, tekst J.J.A. Goeverneur) en Kruseman (1916; record
+# 204977); beide hebben een andere beginregel dan de tekst hier, dus het is geen van die twee.
+# Rechthebbende van de vertaling onbekend. Meld het als u de rechthebbende kent.
+# Overgenomen uit ALLE_VOG.WPF (WordPerfect 5.1, 1991). Tikfouten in het Duitse
+# couplet hersteld: umlauts zonder puntjes ("Vogel", "Fruhling") werden "Vögel",
+# "Frühling"; "einmarchieren" werd "einmarschieren"; "Pfeifen. Zwitschern" werd
+# "Pfeifen, Zwitschern".
+{title: Alle vogels}
+{meta: id alle-vogels}
+{meta: language nl}
+{lyricist: onbekend}
+{lyricist: August Heinrich Hoffmann von Fallersleben}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit ALLE_VOG.WPF (WordPerfect 5.1, 1991); Duitse tekstdichter en melodie via Wikipedia (de); oudere Nederlandse teksten via Nederlandse Liederenbank, records 199927 en 204977}
+{meta: tag kinderlied}
+{meta: tag volkslied}
+{meta: melody Alle Vögel sind schon da}
+
+{start_of_verse}
+Alle vogels zijn weer hier
+Alle vogels alle
+'t leeuwerikske, nachtegaal
+Ja, ze zijn er allemaal
+Alle vogels zijn weer hier
+Alle vogels alle
+{end_of_verse}
+
+{start_of_verse}
+Alle Vögel sind schon da!
+Alle Vögel alle!
+Welch ein singen, Musiziern
+Pfeifen, Zwitschern, Tirliern
+Frühling will nun einmarschieren
+Kommt mit Sang und Schalle
+{end_of_verse}

@@ -1,0 +1,72 @@
+# Marie-José - kampvuurlied, Limburgse versie
+# De bron noemt geen tekstdichter of componist. De Nederlandse Liederenbank heeft geen record
+# van dit lied; niet verder op het web nagezocht. Rechthebbende onbekend.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit MIAUW (WordPerfect 5.1, 1991), waar dit lied onder de kop
+# "Marie-José (Limburgs)" na het lied "Miauw" staat. Nederlandse versie: marie-jose.
+# Het refrein staat in de bron eenmaal, vooraan; hier ook na elk couplet herhaald.
+# Spelling ("jaratel", "jaretellen", "snotterbellen") zoals in de bron.
+# Akkoorden geplaatst naar de kolommen van de bron, op de dichtstbijzijnde lettergreep;
+# de reeks Am E Am E Am E staat in de bron aan het eind van de derde regel.
+{title: Marie-José}
+{subtitle: Limburgse versie}
+{meta: id marie-jose-limburgs}
+{meta: language li}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit MIAUW (WordPerfect 5.1, 1991), tweede lied in dat bestand}
+{meta: tag kampvuur}
+{meta: variant-group marie-jose}
+
+{start_of_chorus}
+[A]Marie-José, [G]met haren op je benen, met haren [D]op je tenen
+met ha[E]ren op haar kin
+{end_of_chorus}
+
+{start_of_verse}
+[A]Ein snottebel,
+[G]twie snotterbellen
+[F]die kins se lekker [E]tellen [Am]wie [E]vuul[Am][E][Am][E]
+zo-o-o-o-o-o vuul
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Ein frikandel
+twie frikandellen
+die kins se lekker tellen wie vuul
+zo-o-o-o-o-o vuul
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Ein jaratel
+twie jaretellen
+die kins se lekker tellen wie vuul
+zo-o-o-o-o-o vuul
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Ein lellebel
+twie lellebellen
+die kins se lekker tellen wie vuul
+zo-o-o-o-o-o vuul
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Ein oorbel
+twie oorbellen
+die kins se lekker tellen wie vuul
+zo-o-o-o-o-o vuul
+enz.
+{end_of_verse}
+
+{chorus}

@@ -1,0 +1,61 @@
+# Faidoli - kampvuurlied in klanktaal
+# Rechthebbende onbekend; niet verder onderzocht buiten het bronbestand.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit DE_EZEL (WordPerfect 5.1, 1991), waar het onder een eigen kopje na
+# "De ezel" staat. De bron zet achter elk couplet de "taal" waarin het gezongen wordt
+# (Italiaans, Spaans, ...); dat is hier een opmerking boven het couplet. Klanktaal, dus nl.
+{title: Faidoli}
+{meta: id faidoli}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit DE_EZEL (WordPerfect 5.1, 1991)}
+{meta: tag kampvuur}
+
+{comment: Italiaans}
+{start_of_verse}
+Faidoli, faidoli, faidoli,
+faidoli, faidoli, faidoli,
+fa fa fa fa fa fa fa fa
+faidoli, faidoli, faidoli,
+faidoli, faidoli, faidoli, fa, ha !
+{end_of_verse}
+
+{comment: Spaans}
+{start_of_verse}
+Hidalgo, hidalgo, hidalgo,
+hidalgo, hidalgo, hidalgo,
+hi hi hi hi hi hi hi hi
+hidalgo, hidalgo, hidalgo,
+hidalgo, hidalgo, hidalgo, hi, ho
+{end_of_verse}
+
+{comment: Afrikaans}
+{start_of_verse}
+Tchumbara, tchumbara, tchumbara,
+tchumbara, tchumbara, tchumbara,
+a a a a a a a a
+tchumbara, tchumbara, tchumbara,
+tchumbara, tchumbara, tchumbara, tchum, boem!
+{end_of_verse}
+
+{comment: Russisch}
+{start_of_verse}
+Chouberski, chouberski, chouberski,
+chouberski, chouberski, chouberski,
+ou ou ou ou ou ou ou ou
+chouberski, chouberski, chouberski,
+chouberski, chouberski, chouberski, ou nou
+{end_of_verse}
+
+{comment: Nederlands}
+{start_of_verse}
+Jansen hier, ja, ja, ja, Jansen daar, ja, ja, ja
+Jansen hier, ja, ja, ja
+ja, ja, ja, ja, ja, ja, ja, ja,
+Jansen hier, ja, ja, ja
+Jansen daar, ja, ja, ja
+Jansen hier, ja, ja, ja, ja, ja
+{end_of_verse}

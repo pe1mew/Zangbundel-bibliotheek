@@ -1,0 +1,33 @@
+# Ritselman - kampvuurlied met uitroepen
+# Tekstdichter en componist onbekend. Nederlandse Liederenbank (2026): geen treffer op
+# beginregel of titel. Delpher (2026): oudste gevonden druk Tarabom (Ad Heerkens, 1971);
+# verder Naar buiten (1979). Geen treffer noemt een maker van het lied. Druk na 1900 zonder
+# maker: Rechthebbende onbekend. Meld het als u de rechthebbende kent.
+# Overgenomen uit RITSEL.MAN (WordPerfect 5.1, 1991). De aanwijzing "(uitroepen)" achter de
+# tweede en vierde regel is een comment geworden. "Zonderdag" staat zo in de bron.
+{title: Ritselman}
+{meta: id ritselman}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit RITSEL.MAN (WordPerfect 5.1, 1991); oudste gevonden druk Tarabom, 1971 (Delpher)}
+{meta: tag kampvuur}
+{meta: tag kinderlied}
+
+{comment: De tweede en vierde regel worden uitgeroepen}
+
+{start_of_verse}
+Op de bol van Ritselman
+Oranje! Oranje!
+groeide op een Zonderdag
+Champagne! Champagne!
+{end_of_verse}
+
+{start_of_verse}
+En Ritselman die dronk ervan
+en viel met zijn bibs in de koekepan
+Op de bol van Ritselman
+Groeien nu kastanjes
+{end_of_verse}

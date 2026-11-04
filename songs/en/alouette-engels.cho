@@ -1,0 +1,59 @@
+# Alouette - Engelse spotversie van het Frans-Canadese volksliedje
+# De wijs is traditioneel (oudste druk Montreal 1879, volgens Wikipedia (en),
+# "Alouette (song)"). Wie deze Engelse tekst maakte is niet bekend; rechthebbende van
+# de bewerking onbekend. Meld het als u de rechthebbende kent.
+# Overgenomen uit ALOUETTE.WPF (WordPerfect 5.1, 1991). Tikfouten hersteld: "bumby"
+# werd "bumpy", "stincking" werd "stinking". "strawly", "awfull well" en "stooney"
+# zijn aangehouden. Zie ook alouette-frans en alouette-nederlands.
+{title: Alouette}
+{subtitle: Engelse versie}
+{meta: id alouette-engels}
+{meta: language en}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit ALOUETTE.WPF (WordPerfect 5.1, 1991); herkomst van de wijs via Wikipedia (en)}
+{meta: tag kampvuur}
+{meta: variant-group alouette}
+{meta: melody Alouette}
+
+{start_of_chorus}
+Alouette, little alouette
+Alouette now I still love you
+{end_of_chorus}
+
+{start_of_verse}
+{comment: Voorzanger zingt voor, allen herhalen}
+And now I love you strawly hair
+And now I love you strawly hair
+strawly hair
+strawly hair
+Alouette
+Alouette, Aaaaaaaaaaaaaaaaaaah...........
+{end_of_verse}
+
+{chorus}
+
+{comment: Herhaal het couplet telkens met het volgende:}
+
+{start_of_verse}
+crossed eyes
+bumpy nose
+sailing ears
+bubbling lips
+iron skin
+big big mouth
+rubber skin
+wooden chest
+hanging tits
+awfull well
+long long neck
+stooney teeth
+funny breast
+stinking feet
+rotten tooth
+sweet sweet smile
+{end_of_verse}
+
+{comment: enz.}

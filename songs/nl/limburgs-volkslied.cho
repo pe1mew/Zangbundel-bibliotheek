@@ -1,0 +1,58 @@
+# Limburgs volkslied - "Waar in 't bronsgroen eikenhout", volkslied van Limburg
+# Tekst Gerard Krekelberg (1909), muziek Henri Tijssen (Wikipedia (nl), "Limburgs volkslied");
+# Tijssen overleed in 1926 (Wikipedia (nl), "Henri Tijssen"). De Nederlandse Liederenbank,
+# record 132267, noemt G. Krekelberg (tekst) en Henri Tijssen (componist); oudste gevonden
+# druk Nederlandsch volksliederenboek (De Lange, Kalff e.a., 2e druk, 1913). Levensjaren
+# volgens een uitgave van Die Klingende Brücke (klingendebruecke.de): G. Krekelberg
+# 1864-1937, Henry Tijssen 1862-1926. Beide overleden vóór 1956: tekst en muziek zijn
+# publiek domein.
+# Overgenomen uit LIMBURGS.LIE (WordPerfect 5.1, 1991). Hetzelfde bestand bevat daarna
+# "Loüende klokke", dat als eigen lied is opgenomen (louende-klokke). Hoofdletters gezet bij
+# Limburgs, Maas en Oranjehuis; dubbele spatie in het tweede couplet weggehaald.
+{title: Limburgs volkslied}
+{meta: id limburgs-volkslied}
+{meta: language nl}
+{lyricist: Gerard Krekelberg}
+{composer: Henri Tijssen}
+{year: 1909}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit LIMBURGS.LIE (WordPerfect 5.1, 1991); auteurs en jaar via Wikipedia (nl); Nederlandse Liederenbank, record 132267 (1913); levensjaren via Die Klingende Brücke}
+{meta: tag volkslied}
+{meta: tag kampvuur}
+{key: C}
+
+{start_of_verse}
+[C]Waar in [F]het bronsgroen eikenhout, [C]het nachtegaaltje zingt
+[F]Over 't malse korenveld 't [G]lied des leeuwriks klinkt
+[F]Waar de hoorn [C]des herders schalt langs de [G]beekjes boord
+{end_of_verse}
+
+{start_of_chorus}
+[C]Daar [F]is mijn vaderland Limburgs [C]dierbaar oord
+[F]Daar [C]is mijn vaderland [F]Limburgs dierba[G]ar oord[C]
+{end_of_chorus}
+
+{start_of_verse}
+Waar de brede stroom der Maas statig zeewaarts vloeit
+Weeldrig sappig veldgewas kost'lijk groeit en bloeit
+Bloemengaard en beemd en bos overheerlijk gloort
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Waar de vad'ren schone taal klinkt met held're kracht
+waar men kloek en fier van aard vreemde praal veracht
+Eigen zeden eigen schoon het hart des volks bekoort
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Waar aan 't oud Oranjehuis, 't volk blijft hou en trouw
+Met ons roemrijk Nederland een in vreugd en rouw
+Trouw aan plicht en trouw aan God heerst van Zuid tot Noord
+{end_of_verse}
+
+{chorus}

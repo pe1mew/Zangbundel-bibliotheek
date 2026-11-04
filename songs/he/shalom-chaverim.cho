@@ -1,0 +1,66 @@
+# Shalom Chaverim - traditioneel Hebreeuws afscheidslied, ook als canon
+# Traditioneel Hebreeuws volkslied van onbekende herkomst, mogelijk uit de
+# jeugdbeweging Habonim; te zingen als canon in vier groepen (Wikipedia (en),
+# "Shalom Chaverim"). De Nederlandse en Engelse strofen zijn vertalingen van
+# onbekende herkomst. Meld het als u de rechthebbende kent.
+# Overgenomen uit SHALONCH.AVE (WordPerfect 5.1, 1991). Tikfout hersteld: "Chaverin" werd
+# "Chaverim", zoals in de titel. Akkoorden alleen bij de eerste strofe. Het bestand
+# bevat daarna een Italiaans-Duitse canon; die staat apart als signor-abbate.
+{title: Shalom Chaverim}
+{meta: id shalom-chaverim}
+{meta: language he-Latn}
+{lyricist: traditioneel}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit SHALONCH.AVE (WordPerfect 5.1, 1991); herkomst via Wikipedia (en), Shalom Chaverim}
+{meta: tag canon}
+{meta: tag volkslied}
+{meta: tag kampvuur}
+{key: Dm}
+
+{start_of_verse}
+Shalom [Dm]Chaverim
+Shalom Chaverim
+Sha[Bb]lom, [C7]sha[F]lom
+Le [Dm]hidraoth
+Le hidraoth
+[Bb]Sha[Gm]lom, [A7]sha[Dm]lom
+{end_of_verse}
+
+{start_of_verse}
+Shalom Chaveroth
+Shalom Chaveroth
+Shalom, shalom
+Le hidraoth
+Le hidraoth
+Shalom, shalom
+{end_of_verse}
+
+{start_of_verse}
+Shalom kommerin
+Shalom kommerin
+Shalom, shalom
+Le hidraoth
+Le hidraoth
+Shalom, shalom
+{end_of_verse}
+
+{start_of_verse}
+Tot wederziens
+Tot wederziens
+Vaarwel, vaarwel
+De vrede zij U
+De vrede zij U
+Vaarwel, vaarwel!
+{end_of_verse}
+
+{start_of_verse}
+Farewell, good friends
+Farewell, good friends
+Farewell, farewell
+Till we meet again
+Till we meet again
+Farewell, farewell
+{end_of_verse}

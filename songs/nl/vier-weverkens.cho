@@ -1,0 +1,67 @@
+# Vier weverkens - traditioneel volkslied uit Vlaanderen
+# Traditioneel. Een zoekvraag vond R. Gaspar, "Het refrein in het volkslied 'Van de vier
+# weverkens'" (De Nieuwe Taalgids 77, 1984, via DBNL) en koorbewerkingen die Vlaanderen als
+# herkomst noemen. Geen auteur bekend; publiek domein.
+# Overgenomen uit VIER_WEV.ERK (WordPerfect 5.1, 1991). De bron noemt het refrein na het
+# eerste couplet; het is na elk couplet met {chorus} herhaald (in sommige versies volgt de
+# slotregel van het refrein het couplet). Een los woord aan het eind van de bron is
+# weggelaten. De dialectspelling volgt de bron.
+{title: Vier weverkens}
+{meta: id vier-weverkens}
+{meta: language nl}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit VIER_WEV.ERK (WordPerfect 5.1, 1991); herkomst via een zoekmachine (DBNL, De Nieuwe Taalgids 1984)}
+{meta: tag volkslied}
+{meta: tag kampvuur}
+
+{start_of_verse}
+Vier Weverkens zag men ter botermarkt gaan
+en de boter die was er zo diere
+Zij hadden geen duit meer haast' in hunne tas
+ze kochten een pond sa vieren
+{end_of_verse}
+
+{start_of_chorus}
+Schiet spoelle scherrebekke spoel za
+Djikke djakke kerrekoltjes klits klets
+en ze kochten een pond sa vieren
+{end_of_chorus}
+
+{start_of_verse}
+En als ze dat boter hadden verkocht
+Zij hadden er vier platelen
+Zij spraken dat vrouwke zo vriendelijk aan
+Sa vrouwke en wil het ons delen
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Het vrouwke dat sprak: ja dat zal ik wel doen
+ja, zo wel als een vrouwke met ere
+Want ik wete wel dat er weverkens zijn
+En de weverkens zijn geen heren
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Wat zouden weverkens geen heren zijn
+Zij hebben er huizen noch erven
+En kruipt er een muiske in hunne schapraai
+Van honger zo moet het er sterven
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En als dat muiske gestorven zal zijn
+waar zullen zij het begraven?
+Al onder de weverkens hunne getouw
+en het grafke zal rooskens dragen
+{end_of_verse}
+
+{chorus}

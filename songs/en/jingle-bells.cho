@@ -1,0 +1,68 @@
+# Jingle bells - Amerikaans winter- en kerstlied
+# Geschreven door James Lord Pierpont, uitgegeven in 1857 als "The One Horse Open
+# Sleigh" (Oliver Ditson & Co., Boston), volgens Wikipedia (en), "Jingle Bells".
+# Publiek domein. Het laatste couplet staat volgens dat artikel niet in de tekst
+# van 1857; het is een latere toevoeging van onbekende herkomst.
+# Overgenomen uit JINGLEBE.LLS (WordPerfect 5.1, 1991). Het refrein staat in de bron
+# twee keer achter elkaar en is zo overgenomen. Akkoorden volgens de kolommen; "Gmi"
+# van de bron als Gm, en "B6" als Bb6: in F is dat de vierde trap (Duitse notatie B).
+{title: Jingle bells}
+{meta: id jingle-bells}
+{meta: language en}
+{lyricist: James Lord Pierpont}
+{composer: James Lord Pierpont}
+{year: 1857}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit JINGLEBE.LLS (WordPerfect 5.1, 1991); schrijver en jaar via Wikipedia (en)}
+{meta: tag kerst}
+{meta: tag kampvuur}
+{key: F}
+
+{start_of_verse}
+[F]Dashing thro' the snow
+in a one [Bb6]horse open sleigh
+And [Gm]over the fields we [C7]go
+laughing all [F]the way
+[F]The bells on bobtail ring
+making spirits [Bb6]bright
+what [Gm]fun it [C7]is to rid[F]e
+and sing [Gm]a sleighing song [F]tonight
+{end_of_verse}
+
+{start_of_chorus}
+[F]Jingle bells, jingle bells,
+jingle all the way
+[Bb6]O what fun it is to [F]ride
+in [G7]a one horse open [C7]sleigh
+[F]Jingle bells, jingle bells,
+jingle all the way
+[Bb6]O what fun it is to [F]ride
+in [G7]a one horse open [F]sleigh
+{end_of_chorus}
+
+{start_of_verse}
+A day or two ago
+I thought I'd take a ride
+And soon Miss Fannie Bright,
+Was seated by my side
+The horse was lean and lank
+Misfortune seemed his lot
+He got into a drifted bank
+And we, upset we got
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Now the ground is white
+Go it while you're young
+Take the girls tonight
+And sing this sleighing song
+Just get a bobtailed bay
+Two forty for his speed
+Then hitch him to an open sleigh
+And crack! you'll take the lead
+{end_of_verse}
+
+{chorus}

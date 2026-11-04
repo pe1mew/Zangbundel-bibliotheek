@@ -1,0 +1,64 @@
+# Faria - Nederlands trekkerslied op de wijs van "Lustig ist das Zigeunerleben"
+# De wijs is een Duits volkslied, in de mondelinge overlevering opgetekend in Hessen
+# (1824) en Silezië (1829) (Wikipedia (de), "Lustig ist das Zigeunerleben"),
+# publiek domein. De maker van deze Nederlandse tekst is onbekend. De Nederlandse
+# Liederenbank, record 87283 (cd Oude schoolliedjes 1, Duo Karst, zonder jaar), vermeldt
+# "Arr. Trad. bew. J. Karst-Dubbelboer / Karst H. René": een bewerking van een traditioneel
+# lied, zonder tekstdichter. Meld het als u de rechthebbende kent.
+# Overgenomen uit FARIA.NED (WordPerfect 5.1, 1991), in de bron "Faria (1)
+# (Nederlands)". Tikfout hersteld: "faria,fa-ri-a" werd "faria, fa-ri-a".
+# Akkoorden staan in de bron alleen bij het eerste couplet.
+{title: Faria}
+{subtitle: Zingend trekken wij nu naar buiten}
+{meta: id faria-1-nederlands}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit FARIA.NED (WordPerfect 5.1, 1991); herkomst van de wijs via Wikipedia (de); Nederlandse Liederenbank, record 87283}
+{meta: tag kampvuur}
+{meta: tag scouting}
+{meta: melody Lustig ist das Zigeunerleben}
+{meta: variant-group faria}
+{key: C}
+
+{start_of_verse}
+Zin[C]gen trekken wij nu naar buiten, [F]fa[C]ria.
+Wie niet zingen wil moet maar fluiten, [F]fa[C]ria.
+[F]Want zolang je maar vrolijk [C]bent,
+[F]Ben je rijk ook al heb je [C]geen cent.
+[C]Faria, fa[F]ria, fa[G]ria, fa[C]ria, fa-ri-a.
+{end_of_verse}
+
+{start_of_verse}
+Heerlijk is het trekkersleven, faria.
+Waar wij lopen is om het even, faria.
+Als de dageraad nauwelijks gloort,
+Staan wij op en de reis die gaat voort.
+Faria, faria, faria, faria, fa-ri-a.
+{end_of_verse}
+
+{start_of_verse}
+Nimmer worden we moe te dwalen, faria.
+Over de bergen en door de dalen, faria.
+Langs de velden en door de wei,
+Door de bossen en op de hei.
+Faria, faria, faria, faria, fa-ri-a.
+{end_of_verse}
+
+{start_of_verse}
+Maar wij willen het heus wel weten, faria.
+Nooit ontbreekt ons de lust tot eten, faria.
+Als de pot op 't kampvuur staat,
+Vallen we letterlijk van de graat.
+Faria, faria, faria, faria, fa-ri-a.
+{end_of_verse}
+
+{start_of_verse}
+Na het eten wat musiceren, faria.
+En we zingen dan heel wat keren, faria.
+Samen vrolijk een trekkerslied,
+Boze mensen die zingen niet.
+Faria, faria, faria, faria, fa-ri-a.
+{end_of_verse}

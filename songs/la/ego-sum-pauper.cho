@@ -1,0 +1,33 @@
+# Ego sum pauper - Latijns lied met Engelse vertaling
+# Rechthebbende onbekend. Delpher (2026): de Volkskrant van 22 augustus 1938 noemt het als canon,
+# gezongen op een zomerbijeenkomst van de Jonge Wacht; de oudste gevonden bundel is Kampliederen
+# (1950), de tweede regel staat ook in De Zangspuit (1953). Kranten van april 1917 noemen een
+# koorwerk met deze titel van Giovanni Croce. Volgens zoekresultaten (CPDL, IMSLP) schreven Croce
+# (1597), Lassus (1575) en Filago (1619) motetten op Psalm 68/69 die zo beginnen, maar geen canon
+# met de tekst van dit lied. Eerder vond een zoekopdracht alleen de verwante psalmregel "Ego autem
+# mendicus sum et pauper" (Psalm 39/40). De Engelse regels zijn een vertaling van onbekende hand.
+# Niet aantoonbaar publiek domein. Meld het als u de rechthebbende kent.
+# Overgenomen uit EGO_SUM.PAU (WordPerfect 5.1, 1991). Tikfout hersteld: "nuhil" werd
+# "nihil".
+{title: Ego sum pauper}
+{meta: id ego-sum-pauper}
+{meta: language la}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit EGO_SUM.PAU (WordPerfect 5.1, 1991); oudste gevonden vermelding de Volkskrant, 1938, oudste bundel Kampliederen, 1950 (Delpher); motetten met deze titel via zoekresultaten CPDL en IMSLP}
+{meta: tag kampvuur}
+
+{start_of_verse}
+Ego sum pauper:
+Nihil habeo
+Et nihil dabo!
+Cor meum dabo
+{end_of_verse}
+
+{start_of_verse}
+Nothing do I own
+Poor of things I live
+But my heart I give
+{end_of_verse}

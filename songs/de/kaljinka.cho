@@ -1,0 +1,33 @@
+# Kaljinka - Russisch lied (Kalinka) met een Duits couplet
+# "Kalinka" is in 1860 geschreven door Ivan Larionov (1830-1889), tekst en muziek
+# (Wikipedia (en), "Kalinka (1860 song)"); het origineel is publiek domein. Het refrein
+# staat in de bron in Duitse transcriptie van het Russisch; het couplet is een Duitse
+# vertaling van onbekende herkomst (de Wikipedia-pagina noemt geen Duitse versie).
+# Meld het als u de vertaler kent.
+# Overgenomen uit KALJINKA (WordPerfect 5.1, 1991). "Grünen" stond in de bron met een
+# hoofdletter Ü midden in het woord. De bron schrijft het refrein één keer; het is na het
+# couplet herhaald, zoals het lied gezongen wordt.
+{title: Kaljinka}
+{meta: id kaljinka}
+{meta: language de}
+{lyricist: Ivan Larionov}
+{lyricist: onbekend}
+{composer: Ivan Larionov}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit KALJINKA (WordPerfect 5.1, 1991); auteur en jaar van het origineel via Wikipedia (en), Kalinka (1860 song)}
+{meta: tag kampvuur}
+
+{start_of_chorus}
+Kaljinka kaljinka kaljinka moja!
+wsado jadoga maljinka maljinka moja.
+{end_of_chorus}
+
+{start_of_verse}
+Unter der Föhre, unter der Grünen,
+legt ich mich nieder zum schlafen sacht,
+Aidaljuli ljula
+Aidaljuli ljula
+{end_of_verse}
+
+{chorus}

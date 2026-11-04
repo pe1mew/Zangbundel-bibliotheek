@@ -1,0 +1,55 @@
+# Scarborough Fair - traditionele Engelse ballade
+# Traditionele Noord-Engelse ballade, verwant aan "The Elfin Knight" (Child 2, tot
+# 1670 terug te voeren); de bekende melodie werd in 1947 door Ewan MacColl opgetekend.
+# Simon & Garfunkel maakten het in 1966 bekend in een bewerking naar Martin Carthy
+# (Wikipedia (en), "Scarborough Fair (ballad)"). Tekst en wijs publiek domein; de
+# akkoorden volgen de gangbare bewerking.
+# Overgenomen uit SCARBORO.GHF (WordPerfect 5.1, 1991). Tikfout hersteld: "Tell here" werd
+# "Tell her". Het bestand bevat daarna nog een kort Nederlands lied; dat staat
+# apart als samen-trekken-wij-naar-de-hei.
+{title: Scarborough Fair}
+{meta: id scarborough-fair}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit SCARBORO.GHF (WordPerfect 5.1, 1991); herkomst via Wikipedia (en), Scarborough Fair (ballad)}
+{meta: tag volkslied}
+{meta: tag kampvuur}
+{key: Em}
+
+{start_of_verse}
+[Em]Are you going to [D]Scarborough [Em]Fair
+[G]Parsley, [Em]sage, rosema[G]ry [A]and [Em]thyme
+Remember me to [G]someone who [F#]lives [Em][D]there
+She [Em]once was a [D][Em]true [D]love [Em]of [D][Em]mine
+{end_of_verse}
+
+{start_of_verse}
+Tell her to make me a cambric shirt
+Parsley, sage, rosemary and thyme
+Without no seams nor needle work
+Then she'll be a true love of mine
+{end_of_verse}
+
+{start_of_verse}
+Tell her to find me an acre of land
+Parsley, sage, rosemary and thyme
+Between the salt water and the sea strands
+Then she'll be a true love of mine
+{end_of_verse}
+
+{start_of_verse}
+Tell her to reap it with a sickle of leather
+Parsley, sage, rosemary and thyme
+And gather it all in a bunch of heather
+Then she'll be a true love of mine
+{end_of_verse}
+
+{start_of_verse}
+Are you going to Scarborough Fair
+Parsley, sage, rosemary and thyme
+Remember me to one who lives there
+She once was a true love of mine
+{end_of_verse}

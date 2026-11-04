@@ -1,0 +1,28 @@
+# Old King Cole - Engels kinderrijmpje
+# Traditioneel; voor het eerst gedrukt in William King, Useful Transactions in
+# Philosophy (1708-1709) (Wikipedia, en). Publiek domein.
+# Overgenomen uit OLDKINGC.OLE (WordPerfect 5.1, 1991). Tikfouten hersteld: "fidler" en "fidle"
+# werden "fiddler" en "fiddle" (zoals elders in de bron). Akkoorden naar de kolommen
+# van de bron; Duitse notatie H/H7 als B/B7, Emi/Ami als Em/Am geschreven.
+{title: Old King Cole}
+{meta: id old-king-cole}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit OLDKINGC.OLE (WordPerfect 5.1, 1991); herkomst via Wikipedia (en)}
+{meta: tag kinderlied}
+{key: Em}
+
+{start_of_verse}
+[Em]Old King [Am6]Cole was a [B]merry old soul
+[B7]and a merry [Em]old [B]soul [Em]was [Am]he[B]
+[Em]He called for his [Am6]pipes
+[B7]and he called [Em]for his [Am6]bowl
+[Em]and he [C]called for [Am]his [B7]fiddlers [Em]three
+Every [Am]fiddler [F#7]had [B]a fine fiddle
+[B7]And a [Em]very fine fiddle [C]had [B]he
+[Em]Tweedle [Am6]dee, [B7]Tweedle dee, [Em]Tweedle dee, Tweedle [Am6]dee,
+With [Em]king [C]Cole and his [Am]fid[B7]dlers [Em]three
+{end_of_verse}

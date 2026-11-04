@@ -1,0 +1,73 @@
+# Aan de oever van de Rotte - kampvuurlied en uitbeeldlied
+# Rechthebbende onbekend. Nederlandse tekst op de wijs van "Oh My Darling, Clementine"; volgens
+# Wikipedia (en, "Oh My Darling, Clementine") meestal toegeschreven aan Percy Montrose
+# (bladmuziek 1884), herkomst van de melodie onbekend.
+# Delpher (2026): oudste gevonden druk van de Nederlandse tekst is de bundel Kampliederen (1950),
+# met beginregel en tweede regel; ook in Zingend kamp (z.j.). Geen tekstdichter gevonden.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit AANDOEV.WPF (WordPerfect 5.1, 1991), de volledigste versie, met
+# akkoorden bij het eerste couplet. Aan de oever van de Rotte.doc (Word 97-2003,
+# 2004) noemt als auteur "onbekend" en wijkt af: "luid te wenen", "met een kleine
+# op haar knie", "zal 'k hem op zijn donder slaan", mist het couplet "En de kikvors
+# groot geworden" en heeft "In de slokdarm aangekomen" waar de WP-versie "Toen hij
+# binnen was gekomen" heeft.
+# Akkoorden geplaatst op de kolommen van de bron, verschoven naar de dichtstbijzijnde
+# lettergreep.
+{title: Aan de oever van de Rotte}
+{meta: id aan-de-oever-van-de-rotte}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit AANDOEV.WPF (WordPerfect 5.1, 1991) en Aan de oever van de Rotte.doc (2004); wijs via Wikipedia (en, Oh My Darling, Clementine); oudste gevonden druk Kampliederen, 1950 (Delpher)}
+{meta: tag kampvuur}
+{meta: tag kinderlied}
+{meta: melody Oh My Darling, Clementine}
+{key: D}
+
+{comment: Een paar kinderen beelden het lied uit terwijl de rest het zingt.}
+
+{start_of_verse}
+Aan de [D]oever van de [A]Rotte
+Tussen [A7]Delft en Over[D]schie
+Zat een [G]kikvors droef te [D]wenen
+Met een [A]zuigling op der [D]knie
+{end_of_verse}
+
+{start_of_verse}
+Lieve kleine sprak de oude
+zie je ginds die ooievaar
+'t is de moordenaar van je vader
+hij vrat hem op met huid en haar
+{end_of_verse}
+
+{start_of_verse}
+Potverdomme sprak de kleine
+heeft die rotzak dat gedaan
+Als ik later groot en sterk ben
+zal ik hem op z'n falie slaan
+{end_of_verse}
+
+{start_of_verse}
+En de kikvors groot geworden
+zag opnieuw die ooievaar
+En je zult het niet geloven
+hij vrat hem op met huid en haar
+{end_of_verse}
+
+{comment: Andere versie van dit couplet:}
+
+{start_of_verse}
+Nauwelijks had hij dat gesproken
+of daar kwam de ooievaar
+Pakte hem op bij zijn lurven
+en vrat hem op met huid en haar
+{end_of_verse}
+
+{start_of_verse}
+Toen hij binnen was gekomen
+zag hij daar zijn vader staan
+En toen zijn ze met z'n beidjes
+naar de uitgang toegegaan
+{end_of_verse}

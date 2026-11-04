@@ -1,0 +1,62 @@
+# Daar was een wuf die spon - Vlaams kampvuurlied in dialect
+# Traditioneel Vlaams volkslied, publiek domein. Delpher (2026): de tweede regel staat in Het oude
+# Nederlandsche lied van Florimond van Duyse; daar (deel 2, 1905, op DBNL) is het variant F van
+# nr. 284, met als bron De Coussemaker, Chants populaires des Flamands de France (1856), nr. 91.
+# In 1912 gezongen als oud lied (krant, 18 januari 1912); later onder meer in Ons eigen volkslied
+# (J. Pollmann, 1936) en Padvindsters liederenbundel (1946).
+# Overgenomen uit WUFDIES.PON (WordPerfect 5.1, 1991). De bron zet het refrein eenmaal
+# bovenaan; hier aangenomen dat het ook na elk couplet gezongen wordt. In het laatste
+# couplet stonden twee regels op één regel; die zijn gesplitst. Dialect ("stoeg",
+# "en Hollands moleke") is niet aangepast.
+{title: Daar was een wuf die spon}
+{meta: id daar-was-een-wuf-die-spon}
+{meta: language nl}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit WUFDIES.PON (WordPerfect 5.1, 1991); De Coussemaker, Chants populaires des Flamands de France, 1856, via Van Duyse, Het oude Nederlandsche lied, deel 2, 1905 (DBNL, Delpher)}
+{meta: tag kampvuur}
+
+{start_of_chorus}
+Vive la peperbusse
+Vive la spa, tra la la la
+Gize, gaze, goeze,
+Ronflonfloeze, traderadera
+{end_of_chorus}
+
+{start_of_verse}
+Daar was een wuf die spon
+Daar was een wuf die spon
+Al op een houten spinnewiel:
+daar was geen toorteltje aan
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Haar mutse stoeg verdraait
+Haar mutse stoeg verdraait
+Gelijk en Hollands moleke,
+die met al windeke waait
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Dat wuf had ene zin
+Dat wuf had ene zin
+Als zij 's morgens buiten kroop
+'s Avonds kroop zij in
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Dat wuf had enen man
+Dat wuf had enen man
+'s zondags heet hij Pieter
+'s Maandags heet hij jan
+{end_of_verse}
+
+{chorus}

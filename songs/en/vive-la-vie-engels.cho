@@ -1,0 +1,38 @@
+# Vive la vie (Engels) - traditioneel drinklied "Vive la compagnie", kampvuurlied
+# Traditioneel. Oudste bekende druk: bladmuziek uit 1844 (E. D. Benteen); er zijn geen
+# vroege Franse drukken bekend, mogelijk een Engels lied (folklorist.org, via een
+# zoekvraag). Publiek domein.
+# Overgenomen uit VIVE_LA.VIE (WordPerfect 5.1, 1991). Het bestand bevat een Franse, een Engelse
+# en een Nederlandse versie; elk staat in een eigen bestand met dezelfde variant-group.
+{title: Vive la vie}
+{subtitle: Engelse versie}
+{meta: id vive-la-vie-engels}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit VIVE_LA.VIE (WordPerfect 5.1, 1991); herkomst via een zoekmachine (folklorist.org)}
+{meta: tag kampvuur}
+{meta: variant-group vive-la-vie-frans}
+
+{start_of_verse}
+Let ev'ry good fellow now join in a song.
+Vive la compagnie!
+Success to each other and pass it along.
+Vive la compagnie!
+{end_of_verse}
+
+{start_of_chorus}
+Vive la vie, Vive l'amour (2x)
+Vive l'amour, Vive l'amour. Vive la compagnie!
+{end_of_chorus}
+
+{start_of_verse}
+A friend on the left and a friend on the right.
+Vive la compagnie!
+In love and good fellowship let us unite.
+Vive la compagnie!
+{end_of_verse}
+
+{chorus}

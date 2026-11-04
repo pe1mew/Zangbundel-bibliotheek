@@ -1,0 +1,120 @@
+# Tante in Marokko - kinder- en scoutinglied, versie uit 1991
+# Rechthebbende onbekend. Andere versie van "Ik heb een tante in Marokko"
+# (ik-heb-een-tante-in-marokko), met dertien coupletten in plaats van zes, deels
+# andere; voor herkomst en rechten zie het onderzoek in dat bestand (wijs
+# "She'll Be Coming 'Round the Mountain").
+# Delpher (2026): de titelzin staat al in Kampliederen (1950), ouder dan de druk van 1986
+# die dat bestand noemt; de beginregel in Naar buiten (1979). Geen treffer noemt een maker.
+# Druk na 1900 zonder maker: Rechthebbende onbekend. Meld het als u de rechthebbende kent.
+# Overgenomen uit TANTEMAO.KKO (WordPerfect 5.1, 1991). De bron schrijft elk couplet
+# na het eerste als een regel; zo overgenomen, met het refrein erna. Tikfout
+# hersteld: "de" werd "die" in de eerste regel; Marokko met een hoofdletter. De
+# puntenrijen achter het refrein volgen de bron. De bron noemt de akkoorden C, G en
+# F bij het eerste couplet, maar de kolommen geven geen zinnige plaats; weggelaten.
+# Geen {meta: variant-group}: het bestaande lied mag in deze import niet worden
+# gewijzigd, en een groep met één lid geeft W011. De beheerder kan aan beide
+# bestanden {meta: variant-group ik-heb-een-tante-in-marokko} toevoegen.
+{title: Tante in Marokko}
+{subtitle: Versie met dertien coupletten}
+{meta: id tante-in-marokko}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit TANTEMAO.KKO (WordPerfect 5.1, 1991); herkomst zie ik-heb-een-tante-in-marokko; oudste gevonden druk Kampliederen, 1950 (Delpher)}
+{meta: tag kampvuur}
+{meta: tag kinderlied}
+{meta: melody She'll Be Coming 'Round the Mountain}
+
+{start_of_verse}
+Ik heb een tante in Marokko en die komt hiephoi
+ik heb een tante in Marokko en die komt hiephoi
+Ik heb een tante in Marokko een tante in Marokko
+een tante in Marokko en die komt
+{end_of_verse}
+
+{start_of_chorus}
+Singing ai ai yippie yippie jee ............
+Singing ai ai yippie yippie jee ............
+Singing ai ai yippie ai ai yippie ..........
+ai ai yippie yippie jee ........................
+{end_of_chorus}
+
+{start_of_verse}
+En dan drinken we een glaasje als ze komt, slurp slurp
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En we drinken Coca cola als ze komt, blub blub
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En ze schiet met twee pistolen als ze komt, pief poef
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En zij komt op twee kamelen als ze komt, hobbel hobbel
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En wat zullen we lekker smullen als ze komt, smul smul
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En we braden dan een varken aan het spit, knor knor
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En dan eten we ons buikje lekker rond, nou nou
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En mijn tante uit Marokko gaat weer weg, bye bye
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En wij brengen d'r met z'n allen naar de trein, dag hoor
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En dan gaat ze met treintje weer naar huis, tuut tuut
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En wij zwaaien met ons handje als ze gaat, Dáááág
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En mijn tante uit Marokko is weer weg, hèhè
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En dat is dan weer het einde van het lied, jam - mer
+{end_of_verse}
+
+{chorus}

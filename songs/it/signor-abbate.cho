@@ -1,0 +1,35 @@
+# Signor Abbate - canon van Ludwig van Beethoven
+# Beethoven, canon "Signor Abate", WoO 178, ca. 1820 (Wikipedia (en), "List of
+# compositions by Ludwig van Beethoven"). De canon zet Italiaanse regels naast een Duitse
+# vloek aan het slot (charlespetzold.com, The "Complete" Beethoven, dag 317); de Duitse regels
+# in de bron horen dus bij WoO 178. De canon "Hol' euch der Teufel!", WoO 173, is een ander
+# werk. Publiek domein.
+# Overgenomen uit SHALONCH.AVE (WordPerfect 5.1, 1991), waar de canon zonder eigen titel na
+# Shalom Chaverim staat.
+{title: Signor Abbate}
+{meta: id signor-abbate}
+{meta: language it}
+{lyricist: onbekend}
+{composer: Ludwig van Beethoven}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit SHALONCH.AVE (WordPerfect 5.1, 1991); componist en werknummer via Wikipedia (en), List of compositions by Ludwig van Beethoven; tekst via charlespetzold.com}
+{meta: tag canon}
+
+{start_of_verse}
+Signor abbate
+Signor Abbate!
+io sono, io sono
+io sono ammalato!
+Santo Padre!
+vieni e datemi la benedizione,
+la benedizione
+{end_of_verse}
+
+{start_of_verse}
+Hol' Sie der Teufel
+wenn Sie nicht kommen!
+Hol' Sie der Teufel
+wenn Sie nicht kommen!
+Hol' Sie der Teufel
+{end_of_verse}

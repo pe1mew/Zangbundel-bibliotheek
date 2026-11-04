@@ -1,0 +1,48 @@
+# Vive la vie (Nederlands) - Nederlandse versie van "Vive la compagnie", kampvuurlied
+# Vertaling van onbekende herkomst van het traditionele drinklied (oudste druk 1844,
+# folklorist.org, via een zoekvraag). Meld het als u de vertaler kent.
+# Overgenomen uit VIVE_LA.VIE (WordPerfect 5.1, 1991). Het bestand bevat een Franse, een Engelse
+# en een Nederlandse versie; elk staat in een eigen bestand met dezelfde variant-group.
+# De regel "Nederlandse versie:" uit de bron is weggelaten.
+{title: Vive la vie}
+{subtitle: Nederlandse versie}
+{meta: id vive-la-vie-nederlands}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit VIVE_LA.VIE (WordPerfect 5.1, 1991); herkomst van de wijs via een zoekmachine (folklorist.org)}
+{meta: tag kampvuur}
+{meta: melody Vive la compagnie}
+{meta: variant-group vive-la-vie-frans}
+
+{start_of_verse}
+Laat iedereen nu zingen dit vrolijke lied.
+Vive la compagnie!
+Geniet van de vreugde die vriendschap je biedt.
+Vive la compagnie!
+{end_of_verse}
+
+{start_of_chorus}
+Vive la vie, Vive l'amour (2x)
+Vive l'amour, Vive l'amour. Vive la compagnie!
+{end_of_chorus}
+
+{start_of_verse}
+Wij zeuren en zorgen, wees vrolijk en lach.
+Vive la compagnie!
+Wie vrienden ontmoet heeft een zonnige dag.
+Vive la compagnie!
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+De vriendenkring groter, dat is onze wens.
+Vive la compagnie!
+We zingen met vrienden ver over de grens.
+Vive la compagnie!
+{end_of_verse}
+
+{chorus}

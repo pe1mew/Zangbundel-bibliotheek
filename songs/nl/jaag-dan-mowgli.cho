@@ -1,0 +1,38 @@
+# Jaag dan Mowgli - welpenlied op de wijs van "Vader Jacob"
+# Rechthebbende van de tekst onbekend; het bronbestand noemt geen tekstdichter. De
+# melodie "Vader Jacob" (Frère Jacques) is traditioneel en publiek domein (volgens
+# het bronbestand de wijs; niet verder nagekeken).
+# Oudste gevonden druk: Padvinders-liederenbundel, verzameld door Haasnoot, [1955+]
+# (Nederlandse Liederenbank, record 143060), als canon met de vermelding "uit Frankrijk";
+# daar staat het deel met Shere Khan vooraan. De tekst is dus waarschijnlijk naar het Frans;
+# een maker of vertaler wordt niet genoemd.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit JAAGMOW.GLI (WordPerfect 5.1, 1991). "shere Kahn" werd "Shere
+# Kahn" (eigennaam). Akkoorden alleen bij het eerste couplet, volgens de kolommen.
+{title: Jaag dan Mowgli}
+{meta: id jaag-dan-mowgli}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit JAAGMOW.GLI (WordPerfect 5.1, 1991); melodie volgens het bronbestand; oudste gevonden druk Haasnoot, Padvinders-liederenbundel, [1955+]; Nederlandse Liederenbank, record 143060}
+{meta: tag welpen}
+{meta: tag scouting}
+{meta: tag kampvuur}
+{meta: melody Vader Jacob}
+{key: D}
+
+{start_of_verse}
+[D]Jaag dan Mowgli, Jaag dan Mowgli
+Jaag dan voort, [A]Jaag dan voort
+Hoor je niet [D]die jachtkreet, Hoor je niet die jachtkreet
+[D]woef, [A]woef, [D]woef, [D]woef, [A]woef, [D]woef,
+{end_of_verse}
+
+{start_of_verse}
+Jaag dan Mowgli, Jaag dan Mowgli
+Dood Shere Kahn, Dood Shere Kahn
+Vil die boze veedief, Vil die boze veedief
+ra, ra, ra, ra, ra, ra
+{end_of_verse}

@@ -1,0 +1,55 @@
+# Yalahi, klinkt door de nacht - welpenlied (jungle)
+# Rechthebbende onbekend. Het bronbestand noemt geen tekstdichter of componist. De Nederlandse
+# Liederenbank heeft geen record van dit lied; niet verder op het web nagezocht.
+# Niet aantoonbaar publiek domein. Meld het als u de rechthebbende kent.
+# Overgenomen uit YALAHIKL.INK (WordPerfect 5.1, 1991). Het bestand eindigt met een los fragment
+# "s moedig en ho", een restant uit het lied Yalahi (YALAHI); dat is weggelaten.
+# Tikfouten hersteld: "schuddden" werd "schudden", "neurien" werd "neuriën". De regel
+# "Nee, schudden en neuriën" is een aanwijzing en is een {comment} geworden.
+# Geen variant-group met "Yalahi": ander lied, andere wijs.
+{title: Yalahi, klinkt door de nacht}
+{meta: id yalahi-klinkt-door-de-nacht}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit YALAHIKL.INK (WordPerfect 5.1, 1991)}
+{meta: tag welpen}
+{meta: tag kampvuur}
+
+{start_of_verse}
+Yalahi klinkt door de nacht,
+Ik wil jagen vannacht
+Roept Akela, roept Akela
+Yalahi klinkt door de nacht
+Ik wil jagen vannacht
+Alle wolven gaan met mij op jacht
+een twee vlug, een twee vlug, daar springt Mowgli op zijn rug
+een twee vlug, een twee vlug, daar springt Mowgli op zijn rug
+Och akela luister goed, Leer mij hoe ik jagen moet.
+{end_of_verse}
+
+{start_of_verse}
+Zeg eens, wie sluipt daar stil en zacht
+en geruisloos door de nacht
+da's Bagheera da's Bagheera
+Zeg wie sluipt daar stil en zacht
+en geruisloos door de nacht
+Da's Bagheera met zijn zwarte vacht
+Een, twee vlug Daar springt Mowgli op zijn rug
+Een, twee vlug Daar springt Mowgli op zijn rug
+Ach Bagheera luister goed, Leer mij hoe ik jagen moet
+{end_of_verse}
+
+{start_of_verse}
+Mowgli, Mowgli, roept Baloe,
+Kom eens kijken wat ik doe
+Nee schud Mowgli Nee schud Mowgli
+Mowgli, Mowgli roept Baloe
+Kom eens kijken wat ik doe
+{comment: Nee, schudden en neuriën}
+Een twee vlug daar springt Mowgli op zijn rug
+Een twee vlug daar springt Mowgli op zijn rug
+Ach, het was maar voor de pret, Heus Baloe, ik ken de wet
+{end_of_verse}

@@ -1,0 +1,61 @@
+# Sur le pont d'Avignon - Nederlandse versie van het Franse kinderlied
+# Het Franse lied is traditioneel; de dans gaat terug op de 15e eeuw, de tekst staat
+# in de verzameling van Weckerlin (1870) (Wikipedia (en), "Sur le Pont d'Avignon").
+# De Nederlandse tekst is van een onbekende. Meld het als u de rechthebbende kent.
+# Overgenomen uit SURLEP.ONT (WordPerfect 5.1, 1991). Tikfout hersteld: "diftig" werd "deftig".
+# De bron noteert het refrein een keer; hier staat het na elk couplet. Het Franse
+# slotcouplet staat zoals de bron het geeft.
+{title: Sur le pont d'Avignon}
+{meta: id sur-le-pont-d-avignon}
+{meta: language nl}
+{lyricist: onbekend}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit SURLEP.ONT (WordPerfect 5.1, 1991); herkomst via Wikipedia (en), Sur le Pont d'Avignon}
+{meta: tag kinderlied}
+{meta: tag volkslied}
+{meta: melody Sur le pont d'Avignon}
+
+{start_of_chorus}
+Op de brug, heen en terug,
+dansen mensen, iedereen kent ze
+Op de brug, heen en terug,
+dansen mensen vliegensvlug
+{end_of_chorus}
+
+{start_of_verse}
+In hele sjieke kleren
+dansen de heren.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En deftig trots als pauwen
+dansen de vrouwen.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+En stoer zonder te praten
+dansen soldaten.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Maar kwebbelend als sijsjes
+dansen de meisjes.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Sur le pont d'Avignon
+L'on y danse, l'on y danse
+Sur le pont d'Avignon
+L'on y danse tout en ronde
+{end_of_verse}

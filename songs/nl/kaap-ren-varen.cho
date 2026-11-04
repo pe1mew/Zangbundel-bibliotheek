@@ -1,0 +1,71 @@
+# Kaap'ren varen - Vlaams-Nederlands zeemanslied
+# Traditioneel. Volgens Wikipedia (nl, "Al die willen te kaap'ren varen") een
+# anoniem Vlaams-Nederlands zeemanslied, ook als kinderlied gezongen; oudste druk in
+# Edmond de Coussemaker, "Chants populaires des Flamands de France" (Gent, 1856),
+# later in Florimond van Duyse, "Het oude Nederlandsche lied" (1903). Publiek domein.
+# Overgenomen uit KAAPRENV.ARE (WordPerfect 5.1, 1991). De bron zet het refrein
+# voorop en herhaalt het walruscouplet als laatste couplet; beide zo overgenomen.
+# Akkoorden bij refrein en eerste couplet geplaatst op de kolommen van de bron,
+# verschoven naar de dichtstbijzijnde lettergreep; controleer ze bij het spelen.
+# Variant van "Kerels met baarden" (kerels-met-baarden).
+{title: Kaap'ren varen}
+{meta: id kaap-ren-varen}
+{meta: language nl}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit KAAPRENV.ARE (WordPerfect 5.1, 1991); herkomst via Wikipedia (nl, Al die willen te kaap'ren varen)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+{meta: variant-group kaap-ren-varen}
+{key: Am}
+
+{start_of_chorus}
+[Am]Jan, Pier, Joris en [Am]Corneel
+[Am]Die hebben [E7]baarden, die [E7]hebben baar[Am]den
+[Am]Jan, Pier, Joris en Corneel
+[Am]Die hebben [E7]baarden, zij [E7]varen [Am]mee
+{end_of_chorus}
+
+{start_of_verse}
+[Am]Al die [E7]willen te [Am]kaap'ren varen
+[Am]Moeten mannen [E7]met baarden [Am]zijn.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Al die ranzige tweebak lusten
+Moeten mannen met baarden zijn.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Al die deftige pijpkens smoren
+Moeten mannen met baarden zijn.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Al die met ons de walrus killen
+Moeten mannen met baarden zijn.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Al die dood en duivel niet duchten
+Moeten mannen met baarden zijn.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Al die met ons de walrus killen
+Moeten mannen met baarden zijn.
+{end_of_verse}
+
+{chorus}

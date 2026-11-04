@@ -1,0 +1,59 @@
+# Tumbalalaika - lied met Jiddisch refrein, kampvuurlied
+# Volgens Wikipedia (en) een Jiddisch liefdeslied, losjes gebaseerd op een traditioneel
+# Oekraïens lied; het artikel noemt een versie van Abraham Ellstein uit 1940. De
+# Mlotek-collectie (yiddishsongs.org, "Tum Balalayke") noemt tekstdichter en componist
+# onbekend, als eerste bekende druk een Amerikaanse uitgave van A. Bitter uit 1940, en een
+# melodie die lijkt op het volkslied "Gantse teg zits ikh aleyn". Een druk van vóór 1900 is
+# niet gevonden; de melodie is dus niet aantoonbaar traditioneel. De Engelse coupletten zijn
+# een vertaling van onbekende herkomst. Rechthebbende van de vertaling onbekend; meld het
+# als u de vertaler kent.
+# Overgenomen uit TOEMBALA.IKA (WordPerfect 5.1, 1991), eerste van twee versies in dat bestand.
+# Tikfouten hersteld: "Waiden" werd "Maiden", "Wht" werd "What". De bron zet het
+# refrein vooraan; het is na elk couplet met {chorus} herhaald. Akkoorden alleen bij
+# het refrein en het eerste couplet.
+{title: Tumbalalaika}
+{meta: id tumbalalaika}
+{meta: language en}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit TOEMBALA.IKA (WordPerfect 5.1, 1991); herkomst via Wikipedia (en) en yiddishsongs.org (Mlotek-collectie)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+{meta: variant-group tumbalalaika}
+{key: Em}
+
+{start_of_chorus}
+[Em]Tumbala, tumbala, tumbalalaika[B7],
+Tumbala, tumbala, tumbalala[Em]ika,
+Tumb[C]alalaika, Shpiel bolaika[Em]
+Tumbalalalaika, [B7]let us be gay
+{end_of_chorus}
+
+{start_of_verse}
+Staye[Em]d a lad awake the night thr[B7]u
+Thinking, think[Em]ing, what would we do?
+Whom shall he marry, no longer [Em]tarry?
+[B7]Whom shall he marry, no longer tarry?[Em]
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Maiden, maiden, tell if you know
+What though it have no rain can grow
+What can burn for years and years
+What can yearn and cry without tears
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Foolish lad, you surely should know
+A stone though it have no rain can grow
+Love can burn for years and years
+A heart can yearn and cry without tears.
+{end_of_verse}
+
+{chorus}

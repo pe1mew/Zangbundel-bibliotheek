@@ -1,0 +1,85 @@
+# Old Mac Donald - Engels kinderlied
+# Traditioneel; de vorm met het refrein verscheen voor het eerst gedrukt in Tommy's
+# Tunes (Londen, 1917), de naam Old MacDonald en de gangbare wijs in Amerikaanse
+# opnamen uit 1927 (Wikipedia, en; de Morgan Library).
+# Publiek domein.
+# Overgenomen uit OLDMACDO.NAL (WordPerfect 5.1, 1991), dat ook een bewegingsversie
+# (old-mac-donald-andere-versie) en een Nederlandse versie (old-mac-donald-nederlands)
+# bevat. Na het eerste couplet geeft de bron per dier alleen twee regels, met
+# "....."; zo overgenomen. Akkoorden bij het eerste couplet, naar de kolommen van de
+# bron; Ami7 als Am7 geschreven.
+{title: Old Mac Donald}
+{meta: id old-mac-donald}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit OLDMACDO.NAL (WordPerfect 5.1, 1991), Engelse versie; herkomst via Wikipedia (en) en de Morgan Library}
+{meta: tag kinderlied}
+{meta: variant-group old-mac-donald}
+{key: G}
+
+{start_of_verse}
+[G]Old [C]mac donald [G]had a farm
+hia [D]hia [G]ho
+[G]And on this farm he [C]had some [G]chicks
+hia [D]hia [G]ho
+[C]With a chick chick here [Am7]and a chick [Bbdim]chick [G]there
+[C]Here a chick, there a [G]chick, ev'ry where [Am7]a chick chick.[G]
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had some cows
+With a moow moow here and a moow moow there .....
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had some bees
+With a bzzz bzzz here .......
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had some ducks
+With a quack quack here .......
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had some dogs
+With a woof woof here ........
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had some cats
+With a miau miau here .......
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had some mice
+With a squeek squeek here ........
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had some pigs
+With a oink oink here .........
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had some sheep
+With a meh meh here ........
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had some donkeys
+With a ia ia here ........
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had some turkeys
+With a gobble gobble here ........
+{end_of_verse}
+
+{start_of_verse}
+And on this farm he had a Ford
+With a rattle rattle here ........
+{end_of_verse}

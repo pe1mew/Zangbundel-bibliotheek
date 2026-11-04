@@ -1,0 +1,60 @@
+# Yalahi - welpenlied op de wijs van De uil zat in de olmen
+# Welpentekst van onbekende herkomst op de traditionele wijs die het bronbestand noemt.
+# De Nederlandse Liederenbank (zoeken in november 2026) had geen treffer op beginregel of
+# titel. Tekst niet aantoonbaar publiek domein. Meld het als u de rechthebbende kent.
+# Overgenomen uit YALAHI (WordPerfect 5.1, 1991). Tikfouten hersteld: "klingt" werd "klinkt",
+# "antwoord" werd "antwoordt". Akkoorden alleen bij het eerste couplet in de bron.
+# Geen variant-group met "Yalahi, klinkt door de nacht": dat is een ander lied met een andere
+# wijs en versmaat, alleen de beginwoorden komen overeen.
+{title: Yalahi}
+{meta: id yalahi}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit YALAHI (WordPerfect 5.1, 1991); wijs volgens het bronbestand; Nederlandse Liederenbank zonder treffer}
+{meta: tag welpen}
+{meta: tag kampvuur}
+{meta: melody De uil zat in de olmen}
+{key: E}
+
+{start_of_verse}
+Yala[E]hi klinkt door de rimboe
+bij het [B]vallen van de [E]nacht
+[E]en uit de wolvenholen,
+de [B]horde antwoordt [E]zacht
+[E]Ga mee op jacht, ga mee [A]op jacht, Akela [E]goede jacht
+[E]Ga mee op jacht, ga [A]mee op jacht, A[E]kela goede jacht
+{end_of_verse}
+
+{start_of_verse}
+Wie komt daar aangeslopen
+wie klimt daar op de rots
+het is de grijze wolf
+de welpen roepen trots
+wij doen ons best, wij doen ons best, wij doen, wij doen ons best
+wij doen ons best, wij doen ons best, wij doen, wij doen ons best
+{end_of_verse}
+
+{start_of_verse}
+Wie leert ons al de wetten
+het is de bruine beer
+maar dat is nog niet alles
+zij leert ons nog veel meer
+Houdt vol, houdt vol, houdt vol, houdt vol
+wees moedig en houdt vol
+Houdt vol, houdt vol, houdt vol, houdt vol
+wees moedig en houdt vol
+{end_of_verse}
+
+{start_of_verse}
+Ook kunnen wij nog sluipen
+dat leren wij zo goed
+dat leert de zwarte panter
+die weet pas hoe het moet
+sluip zacht, sluip zacht, sluip zacht, sluip zacht,
+wees stil en sluip zacht
+sluip zacht, sluip zacht, sluip zacht, sluip zacht,
+wees stil en sluip zacht
+{end_of_verse}

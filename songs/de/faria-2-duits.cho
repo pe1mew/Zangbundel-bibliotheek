@@ -1,0 +1,84 @@
+# Faria (Lustig ist das Zigeunerleben) - Duits volkslied
+# Traditioneel. Volgens Wikipedia (de), "Lustig ist das Zigeunerleben", stamt het
+# lied uit de mondelinge overlevering; de oudste opgetekende versies in het Deutsches
+# Volksliedarchiv komen uit Hessen (1824) en Silezië (1829). Publiek domein.
+# Overgenomen uit FARIA.DUI (WordPerfect 5.1, 1991), in de bron "Faria (2) (Duits)".
+# De bron schrijft "gr" + backspace + "u" (overslag) voor "grünen". Tikfouten en
+# spelfouten hersteld: "ziguener leben" werd "Zigeunerleben", "zigueners" werd
+# "Zigeuners", "de Heu" werd "dem Heu", "groszes" werd "großes", "Blizt" werd
+# "Blitzt", "qualen" werd "quälen", "drinken" werd "trinken", "mosigen" werd
+# "moosigen", "musst" werd "müsst", "jagers buchse" werd "Jägers Büchse", "un sein"
+# werd "uns sein", "blauwe" werd "blaue", "Müssenn" werd "Müssen", "swartzbraunen"
+# werd "schwarzbraunen". De regel "Wenn des Jägers Büchse kracht" stond in de bron
+# vast aan de faria-regel en is gesplitst. Het restant "-400" aan het eind van het
+# bestand (printernaam) is weggelaten.
+# Akkoorden staan in de bron alleen bij het eerste couplet.
+{title: Faria}
+{subtitle: Lustig ist das Zigeunerleben}
+{meta: id faria-2-duits}
+{meta: language de}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit FARIA.DUI (WordPerfect 5.1, 1991); herkomst via Wikipedia (de)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+{meta: variant-group faria}
+{key: C}
+
+{start_of_verse}
+Lus[C]tig ist das Zigeunerleben [F]fa[C]ria
+Brauch dem kaiser kein zins zu geben, [F]fa[C]ria
+[F]Lustig ist es im grünen [C]Wald
+[F]Wo des Zigeuners aufenthalt[C]
+[C]faria, fa[F]ria, fa[G]ria, fa[C]ria, faria,
+{end_of_verse}
+
+{start_of_verse}
+Aus dem Stroh und aus dem Heu, faria
+Da machen wir uns ein großes feuer, faria
+Blitzt uns nicht als wie die Sonn
+So leben wir in Freund und Wonn
+faria, faria, faria, faria, faria,
+{end_of_verse}
+
+{start_of_verse}
+Sollt uns einmal der durst sehr quälen, faria
+gehn wir hin zu wasserquellen, faria
+trinken wasser vom moosigen stein
+Meinen, es müsst champagner sein
+faria, faria, faria, faria, faria,
+{end_of_verse}
+
+{start_of_verse}
+Sollt uns einmal der hunger plagen, faria
+Gehn wir uns ein Hirschlein jagen, faria
+Hirschlein, nimm dich wohl in acht
+Wenn des Jägers Büchse kracht
+faria, faria, faria, faria, faria,
+{end_of_verse}
+
+{start_of_verse}
+Wenn wir auch kein federbett haben, faria
+Tun wir uns ein Loch ausgraben, faria
+Legen Moos und reisig hinein
+das soll uns sein federbett sein
+faria, faria, faria, faria, faria,
+{end_of_verse}
+
+{start_of_verse}
+Mädchen willst du Tabak rauchen, faria
+Brauchst du keine Pfeife zu kaufen, faria
+Dort in meinem Mantelsack
+Steckt ein' Pfeife und rauchtabak
+faria, faria, faria, faria, faria,
+{end_of_verse}
+
+{start_of_verse}
+Manche haben blaue Augen, faria
+Müssen eine Brille brauchen, faria
+Wir mit unsere'm schwarzbraunen Gesicht
+Brauchen keine Brille nicht
+faria, faria, faria, faria, faria,
+{end_of_verse}

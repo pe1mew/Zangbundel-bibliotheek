@@ -1,0 +1,58 @@
+# Alouette - Nederlandse spotversie van het Frans-Canadese volksliedje
+# De wijs is traditioneel (oudste druk Montreal 1879, volgens Wikipedia (en),
+# "Alouette (song)"). Wie deze Nederlandse tekst maakte is niet bekend; rechthebbende
+# van de bewerking onbekend. Meld het als u de rechthebbende kent.
+# Overgenomen uit ALOUETTE.NED (WordPerfect 5.1, 1991) en Alouette Nederlands.doc
+# (Word 97-2003, 2004); beide bestanden hebben dezelfde tekst. Tikfout hersteld:
+# "Aloutte" werd "Alouette". Zie ook alouette-frans en alouette-engels.
+{title: Alouette}
+{subtitle: Nederlandse versie}
+{meta: id alouette-nederlands}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit ALOUETTE.NED (WordPerfect 5.1, 1991) en Alouette Nederlands.doc (Word, 2004); herkomst van de wijs via Wikipedia (en)}
+{meta: tag kampvuur}
+{meta: tag kinderlied}
+{meta: variant-group alouette}
+{meta: melody Alouette}
+
+{start_of_chorus}
+Alouette, kleine alouette
+Alouette hou je nog van mij
+{end_of_chorus}
+
+{start_of_verse}
+{comment: Voorzanger zingt voor, allen herhalen}
+Hou je van mijn houtenkop
+Hou je van mijn houtenkop
+Mijn houtenkop
+mijn houtenkop!
+Mijn houtenkop
+mijn houtenkop, Aaaaaaaaaaaaaaaaaaah...........
+{end_of_verse}
+
+{chorus}
+
+{comment: Herhaal het couplet telkens met het volgende:}
+
+{start_of_verse}
+apehaar
+schele oog
+bloemkool neus
+scheve neus
+hazelip
+dubbele kin
+kippeborst
+vette lijf
+kleine jan
+houten been
+klu-uts knie
+zwee-eet voet
+kromme teen
+gli-im lach
+{end_of_verse}
+
+{comment: enz.}

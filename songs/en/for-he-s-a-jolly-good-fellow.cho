@@ -1,0 +1,30 @@
+# For he's a jolly good fellow - traditioneel feestlied
+# Traditioneel. De wijs komt van het Franse lied "Malbrough s'en va-t-en guerre",
+# minstens uit de 18e eeuw; halverwege de 19e eeuw werd het met de Engelse woorden
+# gezongen (Wikipedia (en), "For He's a Jolly Good Fellow", via een zoekresultaat).
+# Publiek domein.
+# Overgenomen uit FORHE_JO.LLY en JOLLYFEL.LOW (beide WordPerfect 5.1, 1991): dezelfde
+# tekst. Tekst en akkoorden volgen JOLLYFEL.LOW, de versie met akkoorden; FORHE_JO.LLY
+# verdeelt dezelfde woorden over kortere regels.
+{title: For he's a jolly good fellow}
+{meta: id for-he-s-a-jolly-good-fellow}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit JOLLYFEL.LOW en FORHE_JO.LLY (WordPerfect 5.1, 1991); herkomst via Wikipedia (en)}
+{meta: tag kampvuur}
+{meta: melody Malbrough s'en va-t-en guerre}
+{key: C}
+
+{start_of_chorus}
+For [C]he's a jolly good fellow, [F6]for [C]he's a jol[G7]ly good fellow,[C]
+for he's a jolly good fel[F6]low and so [C]say all [G7]of [C]us.
+{end_of_chorus}
+
+{start_of_bridge}
+And so say [F6]all of [C]us and so say [F6]all of [C]us.[G7]
+{end_of_bridge}
+
+{chorus}

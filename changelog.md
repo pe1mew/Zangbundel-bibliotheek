@@ -7,6 +7,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
+- *Nothing.*
+
+### Changed
+- *Nothing.*
+
+### Fixed
+- *Nothing.*
+
+### Removed
+- *Nothing.*
+
+## [2026.11.0] - 2026-11-04
+
+Fourth release: 238 songs from the Drasva songbook, bringing the library to 247 songs in twelve languages, a README route for your own songs as a ZIP file, and a release workflow that no longer breaks on committed build output.
+
+### Added
+- 238 songs from the Drasva songbook (scouting, campfire and children's songs): 65 in the public domain, 134 whose rights holder could not be traced and 39 translations of free songs by an unknown translator. The last two groups are marked `proprietary` with "Rechthebbende onbekend", and their `#` lines record the sources searched and the oldest print found. Songs with a known author still under copyright are not included. `zangbundel.json` gains the languages `en`, `de`, `fr`, `li`, `af`, `he-Latn`, `it`, `mi`, `nds-NL` and `srn`, and the tags `geestelijk`, `kerst`, `scouting` and `welpen`.
 - README section "Your own songs the easy way: a ZIP file" ([#1](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/1), Pepe's proposal 8, step 1). It describes the route with no GitHub, git or Python: a folder with `zangbundel.json` (a template to fill in), `LICENSE` and `songs/`, its contents zipped with Explorer, then "import from file" in the app, which checks every song. It warns against `Compress-Archive` of Windows PowerShell 5.1, and against `.cho.txt` names. Tested with ZIPs made by Python, by Explorer's "Send to → Compressed (zipped) folder", by `Compress-Archive` (refused, as the app will) and without a licence file (refused, L007). It also lists the two planned steps: a library builder in the browser without uploads, and signed archives (song-format Q12).
 - Validation workflow: a warning when build output (`dist/`, `*.zbl`) is committed to git.
 - README, "Your own private library": a `.gitignore` row (keep it; how to remove committed build output), and what to do when no release appears (the run's summary page names the cause; delete and re-push the tag).
@@ -15,6 +32,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 - Workflows use `actions/checkout@v7` and `actions/setup-python@v7`, which run on Node.js 24, so GitHub no longer warns about Node.js 20.
 - `.gitignore` also ignores `*.zbl` anywhere in the repository.
 - Release notes say to add the library by the URL of its `releases.json` instead of its repository URL (the app imports release archives only).
+- README: the library is described as mostly Dutch with songs in other languages, and the repository layout lists the new language folders.
 
 ### Fixed
 - A committed `dist/` folder broke the release with only "Process completed with exit code 2" on the run's summary page ([#2](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/2), Pepe's proposal 7):
@@ -23,9 +41,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 
   The archive is unchanged: rebuilding tag `v2026.10.2` with the new tool gives the published SHA-256 `f63559de…b47f`.
 - `release.py verify` checks entry names as stored in the ZIP. On Windows, Python turns backslashes into slashes when reading, which hid ZIPs that the app refuses, such as those made by `Compress-Archive` of Windows PowerShell 5.1.
-
-### Removed
-- *Nothing.*
 
 ## [2026.10.2] - 2026-10-26
 

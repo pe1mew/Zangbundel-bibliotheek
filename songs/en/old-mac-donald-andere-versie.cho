@@ -1,0 +1,50 @@
+# Old Mac Donald - bewegingsversie van het Engelse kinderlied
+# Traditioneel; de vorm met het refrein verscheen voor het eerst gedrukt in Tommy's
+# Tunes (Londen, 1917), de naam Old MacDonald en de gangbare wijs in Amerikaanse
+# opnamen uit 1927 (Wikipedia, en; de Morgan Library).
+# Publiek domein.
+# Overgenomen uit OLDMACDO.NAL (WordPerfect 5.1, 1991), onder de kop "Andere versie". De uitleg
+# over de bewegingen staat hier als opmerkingen. Akkoorden naar de kolommen van de bron.
+{title: Old Mac Donald}
+{subtitle: Andere versie met bewegingen}
+{meta: id old-mac-donald-andere-versie}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit OLDMACDO.NAL (WordPerfect 5.1, 1991), andere versie; herkomst via Wikipedia (en) en de Morgan Library}
+{meta: tag kinderlied}
+{meta: variant-group old-mac-donald}
+{key: G}
+
+{start_of_verse}
+[G]Old [C]mac donald [G]had a farm
+hia [D]hia [G]ho
+[G]And on this farm he [C]had some [G]chicks
+hia [D]hia [G]ho
+[C]Tall chicks, short chicks, [Am7]short chicks, [Bbdim]tall chicks[G]
+[C]Fat chicks, thin chicks, [G]thin chicks, [Am7]fat chicks[G]
+enz....
+{end_of_verse}
+
+{comment: Bewegingen: iedereen geeft met de handen de hoogte of breedte van het dier aan.}
+
+{comment: Lukt dat goed, draai dan de volgorde van tall/short en fat/thin om en bekijk de chaos.}
+
+{comment: Andere manier: herhaal steeds de laatste twee regels van alle vorige dieren, dus:}
+
+{start_of_verse}
+Tall chicks, short chicks, short chicks, tall chicks
+Fat chicks, thin chicks, thin chicks, fat chicks
+{end_of_verse}
+
+{comment: En bij het volgende couplet:}
+
+{start_of_verse}
+Tall cows, short cows, short cows, tall cows
+Fat cows, thin cows, thin cows, fat cows
+Tall chicks, short chicks, short chicks, tall chicks
+Fat chicks, thin chicks, thin chicks, fat chicks
+enz.....
+{end_of_verse}

@@ -1,0 +1,37 @@
+# In de bergen stond een boom - stapelliedje voor het kampvuur
+# Rechthebbende onbekend. De bron noemt geen tekstdichter of componist. Spoor: de
+# Nederlandse Liederenbank, record 140845, heeft in Zangzaad voor kampeerders (Wolsey en
+# Waldorp, ca. 1946) een kampeerlied over een boom op de bergen dat naar believen wordt
+# uitgebreid, maar met een andere beginregel; of het een variant is, is niet vastgesteld.
+# Meld het als u de rechthebbende kent.
+# Overgenomen uit In de bergen stond een boom.docx (Word 2007+, 2026, OKHH
+# Zangbundel 2027). De bron geeft alleen het eerste couplet volledig en daarna een
+# rij woorden voor de volgende coupletten ("tak, blad luis, poot, wrat, haar,
+# eind"); die rij staat hier als opmerking. Tikfout hersteld: "En hele grote boom"
+# werd "Een hele grote boom".
+# Variant van "De Boom" (de-boom).
+{title: In de bergen stond een boom}
+{meta: id in-de-bergen-stond-een-boom}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Rechthebbende onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit In de bergen stond een boom.docx (2026, OKHH Zangbundel 2027); spoor in Nederlandse Liederenbank, record 140845}
+{meta: tag kampvuur}
+{meta: tag kinderlied}
+{meta: variant-group de-boom}
+
+{start_of_verse}
+In de bergen stond een boom
+Een hele grote boom
+een kanjer van een boom
+Tjonge jonge jonge wat een boom was dat
+En de boom stond in de bergen en bloeide schoon
+{end_of_verse}
+
+{start_of_verse}
+En aan die boom daar zat een tak
+{end_of_verse}
+
+{comment: Verder telkens een woord erbij: blad, luis, poot, wrat, haar, eind}

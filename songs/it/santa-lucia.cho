@@ -1,0 +1,37 @@
+# Santa Lucia - Napolitaans volkslied in het Italiaans
+# Italiaanse tekst door Teodoro Cottrau (overleden 1879), uitgegeven in 1849 als
+# barcarola; de componist is onbekend (Wikipedia (en), "Santa Lucia (song)").
+# Publiek domein.
+# Overgenomen uit SANTA_LU.CIA (WordPerfect 5.1, 1991). De bron schrijft de apostrof als
+# koppelteken en laat "è" weg; hersteld tot "l'astro d'argento", "placida è" en
+# "prospero è il". Tikfout hersteld: "nua" werd "mia".
+{title: Santa Lucia}
+{meta: id santa-lucia}
+{meta: language it}
+{lyricist: Teodoro Cottrau}
+{composer: onbekend}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit SANTA_LU.CIA (WordPerfect 5.1, 1991); tekstdichter en jaar via Wikipedia (en), Santa Lucia (song)}
+{meta: tag volkslied}
+{meta: tag kampvuur}
+
+{start_of_verse}
+Sul mare luccica
+L'astro d'argento
+Placida è l'onda
+Prospero è il vento
+Sul mare luccica
+L'astro d'argento
+Placida è l'onda
+Prospero è il vento
+{end_of_verse}
+
+{start_of_chorus}
+Venite all'agile
+Barchetta mia
+Santa Lucia Santa Lucia
+Venite all'agile
+Barchetta mia
+Santa Lucia Santa Lucia
+{end_of_chorus}

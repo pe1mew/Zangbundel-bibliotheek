@@ -1,0 +1,46 @@
+# Kerels met baarden - Vlaams-Nederlands zeemanslied
+# Traditioneel. Andere tekst van "Al die willen te kaap'ren varen", volgens
+# Wikipedia (nl) een anoniem Vlaams-Nederlands zeemanslied met als oudste druk
+# Edmond de Coussemaker, "Chants populaires des Flamands de France" (Gent, 1856).
+# Publiek domein.
+# Overgenomen uit KERELSME.TBA (WordPerfect 5.1, 1991). Tikfout hersteld: "heben"
+# werd "hebben".
+# Variant van "Kaap'ren varen" (kaap-ren-varen).
+{title: Kerels met baarden}
+{meta: id kerels-met-baarden}
+{meta: language nl}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit KERELSME.TBA (WordPerfect 5.1, 1991); herkomst via Wikipedia (nl, Al die willen te kaap'ren varen)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+{meta: variant-group kaap-ren-varen}
+
+{start_of_verse}
+Allen die willen te kaap'ren varen,
+moeten mannen met baarden zijn,
+Jan Piet Joris en Korneel,
+die hebben baarden, die hebben baarden,
+Jan Piet Joris en Korneel,
+die hebben baarden, zij varen mee.
+{end_of_verse}
+
+{start_of_verse}
+Allen die willen de walrus doden,
+moeten mannen met baarden zijn,
+Jan, Piet, Joris en Korneel,
+die hebben baarden, die hebben baarden,
+Jan, Piet, Joris en Korneel,
+die hebben baarden, zij varen mee.
+{end_of_verse}
+
+{start_of_verse}
+Allen die duvel noch helle vrezen,
+moeten mannen met baarden zijn,
+Jan, Piet, Joris en Korneel,
+die hebben baarden, die hebben baarden,
+Jan, Piet, Joris en Korneel,
+die hebben baarden, zij varen mee.
+{end_of_verse}

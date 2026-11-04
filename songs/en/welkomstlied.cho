@@ -1,0 +1,51 @@
+# Welkomstlied - When Johnny Comes Marching Home, Amerikaans lied uit de Burgeroorlog
+# Gepubliceerd in 1863 door Patrick Gilmore onder het pseudoniem Louis Lambert; Gilmore
+# noemde de melodie zelf een overgeleverde wijs die hij iemand had horen neuriën
+# (Wikipedia (en), "When Johnny Comes Marching Home"). Gilmore overleed in 1892: publiek domein.
+# De coupletten over 1861 en 1863 horen bij overgeleverde varianten, niet bij Gilmores tekst.
+# Overgenomen uit WELKOMSL.IED (WordPerfect 5.1, 1991). Tikfout hersteld: "five him" werd "give him".
+# De tekst bevat een verouderde, kwetsende term voor zwarte Amerikanen; overgenomen zoals in de bron.
+{title: Welkomstlied}
+{subtitle: When Johnny Comes Marching Home}
+{meta: id welkomstlied}
+{meta: language en}
+{lyricist: Patrick Gilmore}
+{composer: traditioneel}
+{year: 1863}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit WELKOMSL.IED (WordPerfect 5.1, 1991); auteur en jaar via Wikipedia (en)}
+{meta: tag kampvuur}
+{meta: tag volkslied}
+
+{start_of_verse}
+When Johnny comes marching home again
+Hurrah! Hurrah!
+We'll give him a hearty welcome then
+Hurrah! Hurrah!
+The men will cheer, the boys will shout
+the ladies they will all turn out and we'll feel gay
+when Johnny comes marching home!
+{end_of_verse}
+
+{start_of_verse}
+In eighteen hundred and sixty one
+Hurrah! Hurrah!
+That was when the war begun
+Hurrah! Hurrah!
+In eighteen hundred and sixty one
+Both sides were falling to
+And we'll all drink stone wine
+when Johnny comes marching home!
+{end_of_verse}
+
+{start_of_verse}
+In eighteen hundred and sixty three
+Hurrah! Hurrah!
+Abe Lincoln set the darkies free
+Hurrah! Hurrah!
+In eighteen hundred and sixty three
+Old Abe set the darkies free
+And we'll all drink stone wine
+when Johnny comes marching home!
+{end_of_verse}

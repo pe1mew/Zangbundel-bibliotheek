@@ -1,0 +1,51 @@
+# Taptoe - avondlied op de melodie van het hoornsignaal Taps, scoutinglied
+# De melodie is het Amerikaanse hoornsignaal Taps (1862), meestal in verband gebracht met
+# Daniel Butterfield en Oliver Norton; de Engelse woorden "Day is done" worden vaak
+# toegeschreven aan Horace Lorenzo Trim (Wikipedia (en), "Taps (bugle call)"). De
+# Nederlandse, Franse en Duitse coupletten zijn vertalingen van onbekende herkomst.
+# Oudste gevonden druk: De stemvork, liederenbundel voor gidsen en padvindsters,
+# [1952 na?] (Nederlandse Liederenbank, record 142406), met dezelfde Nederlandse
+# beginregel; volgens het record staan daar ook de Engelse, Franse en Duitse tekst.
+# Een vertaler wordt niet genoemd. Meld het als u de vertaler kent.
+# Overgenomen uit TAPTOE (WordPerfect 5.1, 1991). Tikfouten hersteld: "laplain" werd
+# "la plaine"; in het Duitse couplet zijn de umlauts aangevuld ("tönet", "schützt").
+# "windegroet" staat zo in de bron.
+{title: Taptoe}
+{meta: id taptoe}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: traditioneel}
+{copyright: Rechthebbende van de vertaling onbekend}
+{meta: license proprietary}
+{meta: source Overgenomen uit TAPTOE (WordPerfect 5.1, 1991); herkomst melodie en Engelse tekst via Wikipedia (en), Taps (bugle call); oudste gevonden druk De stemvork, [1952 na?]; Nederlandse Liederenbank, record 142406}
+{meta: tag kampvuur}
+{meta: tag scouting}
+{meta: melody Taps}
+
+{start_of_verse}
+d'Avond valt, alles zwijgt.
+Zachtkens ruist over zee
+bos en heide windegroet
+alles wel: God nabij
+{end_of_verse}
+
+{start_of_verse}
+Day is done, gone the sun
+From the sea, from the hills
+from the sky; All is well
+safely rest: God is nigh.
+{end_of_verse}
+
+{start_of_verse}
+C'est la nuit, tout se tait
+sur la plaine, les collines
+et les bois, C'est la paix
+tout est bien et Dieu vient
+{end_of_verse}
+
+{start_of_verse}
+Durch die nacht tönet sacht'
+unser lied, Friede zieht
+durch das land, alles ruht
+Gottes Hand schützt uns gut
+{end_of_verse}

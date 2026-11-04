@@ -1,0 +1,39 @@
+# Vader Jacob - traditionele canon in het Nederlands, Engels en Frans, kinderlied
+# Traditioneel. Oudste bron een Frans handschrift van ca. 1780 ("Frère Blaise"); de
+# toeschrijving aan Rameau is onzeker; oudste Nederlandse vindplaats 1843 (Wikipedia (nl)).
+# Publiek domein.
+# Overgenomen uit VADER_JA.COB (WordPerfect 5.1, 1991). Tikfout hersteld: "sleept" werd "sleeps".
+# Het tweede couplet is Engels, het derde Frans.
+{title: Vader Jacob}
+{meta: id vader-jacob}
+{meta: language nl}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit VADER_JA.COB (WordPerfect 5.1, 1991); herkomst via Wikipedia (nl)}
+{meta: tag kinderlied}
+{meta: tag canon}
+
+{comment: Canon}
+
+{start_of_verse}
+Vader Jacob, vader Jacob,
+slaapt gij nog, slaapt gij nog?
+Alle klokken luiden, alle klokken luiden,
+bim bam bom, bim bam bom.
+{end_of_verse}
+
+{start_of_verse}
+Brother Peter, brother Peter,
+sleeps too well, sleeps too well.
+Ring the bell for breakfast, ring the bell for breakfast,
+ding dong bell, ding dong bell.
+{end_of_verse}
+
+{start_of_verse}
+Frère Jacques, frère Jacques,
+dormez-vous, dormez-vous?
+Sonnez les matines, sonnez les matines,
+ding ding dong, ding ding dong.
+{end_of_verse}

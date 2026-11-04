@@ -1,0 +1,90 @@
+# This old man - traditioneel Engels telliedje, kinderlied
+# Traditioneel, auteur onbekend (Roud 3550). Anne Gilchrist publiceerde in 1937 een versie
+# die zij in de jaren 1870 van haar Welshe kindermeid had geleerd (Wikipedia (en)).
+# Publiek domein.
+# Overgenomen uit THIS_OLD.MAN (WordPerfect 5.1, 1991). De bron noemt het refrein na het eerste
+# couplet; het is na elk couplet met {chorus} herhaald.
+{title: This old man}
+{meta: id this-old-man}
+{meta: language en}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Overgenomen uit THIS_OLD.MAN (WordPerfect 5.1, 1991); herkomst via Wikipedia (en)}
+{meta: tag kinderlied}
+{meta: tag kampvuur}
+
+{start_of_verse}
+This old man, he played one,
+He played nick nack on my drum
+{end_of_verse}
+
+{start_of_chorus}
+With a nick nack paddy wack
+give a dog a bone
+This old man came rolling home
+{end_of_chorus}
+
+{start_of_verse}
+This old man, he played two
+He played nick nack on my shoe
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+This old man, he played three
+He played nick nack on my knee
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+This old man, he played four
+He played nick nack on my door
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+This old man, he played five
+He played nick nack on my hive
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+This old man, he played six
+He played nick nack on my sticks
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+This old man, he played seven
+He played nick nack up to Devon
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+This old man, he played eight
+He played nick nack on my pate
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+This old man, he played nine
+He played nick nack on my spine
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+This old man, he played ten
+He played nick nack on my hen.
+{end_of_verse}
+
+{chorus}
