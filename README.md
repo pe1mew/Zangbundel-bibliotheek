@@ -132,6 +132,16 @@ It prints one line per finding as `path:line LEVEL CODE message`, using the code
 
 The same check runs on GitHub for every push and pull request.
 
+### The contract with the app
+
+The format is defined by [design/song-format.md](https://github.com/pe1mew/Zangbundel/blob/main/design/song-format.md) in the app repository; this repository's tools and the app each implement it. Both are held to the same **conformance corpus**: test vectors with the result the specification requires, in the app repository under `android/core/testing/src/main/resources/conformance/`. The vectors cover songs, setlists, library files (`zangbundel.json`) and archives, both good and bad. The app's tests run them, and so does `scripts/conformance.py` here:
+
+```bash
+python scripts/conformance.py <path to the conformance folder>
+```
+
+The validation workflow runs it on every push, against the corpus at a pinned commit of the app repository (`CONFORMANCE_REF` in `.github/workflows/validate.yml`). A disagreement is a bug in one implementation or in the specification. The script's docstring says what is compared for each kind of vector.
+
 ## Your own songs the easy way: a ZIP file
 
 The quickest way to put a group's own songs in the app needs no GitHub, no git and no Python. Write the songs, put them in a folder with two small files, zip the folder's contents, and open the ZIP in the app. The app checks every song on import and reports anything it cannot use.

@@ -7,6 +7,11 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    env:
+      # Commit of github.com/pe1mew/Zangbundel whose conformance corpus this repository's tools
+      # must agree with. Move it on purpose, in its own commit, when the corpus has grown; never
+      # follow the app's main branch, so that app changes cannot silently change this check.
+      CONFORMANCE_REF: 41eb28ce554144259871c7ac5e0c6be7061fe0f4
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -21,3 +26,12 @@ jobs:
             n=$(printf '%s\n' "$tracked" | wc -l)
             echo "::warning title=Build output in git::$n build output file(s) are committed, for example $(printf '%s\n' "$tracked" | head -1). Keep dist/ and *.zbl in .gitignore and remove them from git with: git rm -r --cached dist"
           fi
+      - name: Fetch the conformance corpus from the app repository
+        uses: actions/checkout@v7
+        with:
+          repository: pe1mew/Zangbundel
+          ref: ${{ env.CONFORMANCE_REF }}
+          path: .conformance
+          sparse-checkout: android/core/testing/src/main/resources/conformance
+      - name: Run the conformance corpus against the tools
+        run: python scripts/conformance.py .conformance/android/core/testing/src/main/resources/conformance

@@ -437,12 +437,14 @@ def verify(args):
     if 'zangbundel.json' not in files:
         top = {n.split('/')[0] for n in files}
         if len(top) == 1 and ('%s/zangbundel.json' % next(iter(top))) in files:
+            # Validated below like any snapshot, from inside the wrapping directory (section 12.5).
             report.warning(name, None, 'A102', 'repository snapshot (single top-level directory, no manifest): '
                            'revision unknown, no update checks')
+            manifest = None
         else:
             report.error(name, None, 'A001', 'no zangbundel.json at the archive root')
-        return finish_verify(report, args)
-    if MANIFEST_NAME not in files:
+            return finish_verify(report, args)
+    elif MANIFEST_NAME not in files:
         report.warning(name, None, 'A102', 'repository snapshot without manifest: revision unknown, no update checks')
         manifest = None
     else:

@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
+- `scripts/conformance.py` runs the app repository's conformance corpus against `validate.py` and `release.py`: songs, setlists, library files and archives. The validation workflow runs it on every push, with the corpus fetched at a pinned commit of the app repository (`CONFORMANCE_REF`). All 58 vectors agree, including the new library-file vectors. With one expectation deliberately changed, the script reports the difference and exits with an error. README section "The contract with the app".
+
 - `release-menu.py`: a step-by-step menu for validating, staging, committing, tagging, pushing and pulling, in Dutch, English and German, with explanations that can be shown or hidden ([#3](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/3), Pepe's proposal 10). It is adapted from Pepe's CC0 menu for his own library:
   - Dutch is added.
   - Only the library's own files are staged; other changes are listed and left alone.
@@ -26,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 - `license.md`: the code licence covers `release-menu.py`, with the menu's origin in Pepe's public-domain menu.
 
 ### Fixed
-- *Nothing.*
+- `release.py verify` now validates the songs in a ZIP with a single wrapping folder (song-format 12.5). It used to accept such a ZIP after the A102 warning without looking inside it. Conformance vector `snapshot-top-directory` found this.
 
 ### Removed
 - *Nothing.*
