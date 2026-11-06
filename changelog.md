@@ -7,10 +7,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
-- *Nothing.*
+- `release-menu.py`: a step-by-step menu for validating, staging, committing, tagging, pushing and pulling, in Dutch, English and German, with explanations that can be shown or hidden ([#3](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/3), Pepe's proposal 10). It is adapted from Pepe's CC0 menu for his own library:
+  - Dutch is added.
+  - Only the library's own files are staged; other changes are listed and left alone.
+  - A commit is refused while library changes are unstaged, so the check matches what is committed.
+  - Before a tag is set, the commit is built and verified exactly as the release workflow will do it.
+  - Newer commits on GitHub are offered as a pull instead of ending the menu, and pulling is fast-forward only.
+  - Unexpected errors keep a double-clicked window open.
+
+  Tested in a scratch clone with scripted answers in all three languages: staging left a stray file alone, the pre-flight build passed, and the unstaged-change refusal and the error handler worked. Every commit, tag and push was shown but declined.
+- README:
+  - Release menu: a "Without git commands: the release menu" section with the step table.
+  - GitHub Desktop: how to use it, so that only the validator needs the terminal (Pepe's proposal 10, part A).
+  - The private-library instructions name the menu as the easiest way to release.
+  - Language codes: what a BCP 47 language tag is, how to find one in the official IANA language subtag registry, and a table of the twelve languages in `songs/` with their folder, tag and name ([#4](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/4), Pepe's proposal 11). `contributing.md` points to it.
 
 ### Changed
-- *Nothing.*
+- `license.md`: the code licence covers `release-menu.py`, with the menu's origin in Pepe's public-domain menu.
 
 ### Fixed
 - *Nothing.*

@@ -39,13 +39,15 @@ Every effort is made to credit authors, composers and sources correctly and to s
 
 ## Code: Apache License 2.0 with the Commons Clause
 
-The code in this repository, today the validator under `scripts/`, is licensed under the **Apache License 2.0**, subject to the **Commons Clause License Condition v1.0**. (The Zangbundel app dropped the Commons Clause on 2026-10-20 to qualify for F-Droid; this library repository is not distributed through F-Droid and keeps it.) In short:
+The code in this repository, today the tools under `scripts/` and the release menu `release-menu.py`, is licensed under the **Apache License 2.0**, subject to the **Commons Clause License Condition v1.0**. (The Zangbundel app dropped the Commons Clause on 2026-10-20 to qualify for F-Droid; this library repository is not distributed through F-Droid and keeps it.) In short:
 
 - **Use, modify and redistribute** the code under the terms of the Apache License 2.0.
 - **No selling**: the Commons Clause withholds the right to sell the software, meaning to provide it, or a product or service whose value derives substantially from it, to third parties for a fee or other consideration. Running it for your own library, modifying it and sharing your changes are all fine.
 - **Attribution**: keep the licence and attribution notices, including the Commons Clause notice, in any copy or derivative.
 
 The full condition is in [scripts/LICENSE](scripts/LICENSE). The Apache License 2.0 text is at https://www.apache.org/licenses/LICENSE-2.0.
+
+`release-menu.py` is adapted from `menu-with-tutorial-for-release-process.py` by Pepe ([Zangbundel-bibliotheek-van-Pepe](https://github.com/pepe-hb9evt/Zangbundel-bibliotheek-van-Pepe)), which he dedicated to the public domain under CC0 1.0. His original stays in the public domain; the adapted version in this repository is under the terms above.
 
 ---
 

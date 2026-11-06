@@ -19,6 +19,7 @@ raw/                  source material the songs were transcribed from (ignored b
 releases.json         release index: every published .zbl archive with URL, size and SHA-256
 scripts/validate.py   command-line validator applying the format's rules (see "Validating")
 scripts/release.py    builds, verifies and indexes .zbl release archives (see "Releases")
+release-menu.py       step-by-step menu for validating, committing, tagging and releasing (see "Releases")
 .github/workflows/    runs the validator on every push; builds and publishes a release on every tag
 .gitattributes        pins LF line endings, so song files hash identically everywhere
 .editorconfig         editor settings matching the format (UTF-8, LF, no trailing spaces)
@@ -66,11 +67,54 @@ python scripts/release.py index dist/zangbundel-bibliotheek-2026.10.0.zbl
 
 `build` reads the tagged commit from git, never the working tree, and writes the archive and release notes to `dist/`. `verify` applies the archive checks the app applies (A001 to A103) and the library validator to the archive. `index` adds the archive to `releases.json`.
 
+### Without git commands: the release menu
+
+`release-menu.py` guides you through a release step by step, in Dutch, English or German. Double-click it in the library folder (Windows needs Python 3 and Git for Windows installed), or run `python release-menu.py`. The menu lists every step with its number; the release order is shown below the menu:
+
+| Step | Menu item | What happens |
+|---|---|---|
+| 1 | 2 Validate library | Runs the validator. Nothing changes. |
+| 2 | 4 Stage changes | Stages changes to the library's own files: `songs/`, `setlists/`, `zangbundel.json`, the licence, README and changelog. Other files are listed and left alone. |
+| 3 | 5 Create commit | Checks GitHub for newer commits (and offers to pull them), refuses while library changes are unstaged, validates, and asks for a commit message. |
+| 4 | 6 Set tag | Suggests the next tag, such as `v2026.11.1`. First it builds and verifies the commit exactly as GitHub will, so a pushed tag does not start a release that fails. |
+| 5 | 10 Push commits | Uploads the commits to GitHub. |
+| 6 | 11 Push tag | Uploads the tag, which starts the release on GitHub. |
+| 7 | 12 Fetch changes | After the green tick under **Actions**: pulls the new `releases.json`. |
+
+Every git command that changes something is shown first and runs only when you answer `j` or `y`. Pulling is fast-forward only: the menu never makes a merge commit. Menu item 1 switches on explanations of each step, and item 3 shows the state of your folder compared with GitHub.
+
+The menu is based on Pepe's menu for his own library ([issue #3](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/3)), which he dedicated to the public domain.
+
+**GitHub Desktop.** If you prefer windows to a terminal, [GitHub Desktop](https://desktop.github.com/) does staging, committing, tagging (in the history, right-click a commit → **Create tag…**), pushing and pulling with dialog boxes. Then only the validator needs the terminal: run `python scripts/validate.py --strict --info .` before you commit, and push the tag after its commit.
+
 ## Song file format in short
 
-A song is one `.cho` file whose name is the song id (`advocaatje.cho` has id `advocaatje`). Required metadata: `{title: …}`, `{meta: id …}` equal to the file name, and `{meta: language …}` (a BCP 47 tag). Lyrics go in `{start_of_verse}` … `{end_of_verse}` and `{start_of_chorus}` … `{end_of_chorus}` blocks; `{chorus}` repeats the last chorus in full, so the text is complete and in sung order. Chords in `[F]` brackets are allowed and ignored by the phase 1 app. Lines starting with `#` are maintainer notes and are never shown.
+A song is one `.cho` file whose name is the song id (`advocaatje.cho` has id `advocaatje`). Required metadata: `{title: …}`, `{meta: id …}` equal to the file name, and `{meta: language …}` (a language tag, see [Language codes](#language-codes) below). Lyrics go in `{start_of_verse}` … `{end_of_verse}` and `{start_of_chorus}` … `{end_of_chorus}` blocks; `{chorus}` repeats the last chorus in full, so the text is complete and in sung order. Chords in `[F]` brackets are allowed and ignored by the phase 1 app. Lines starting with `#` are maintainer notes and are never shown.
 
 See [songs/nl/advocaatje.cho](songs/nl/advocaatje.cho) for a complete example, and the format specification for the full rules, the validation codes and the canonicalisation the content hash is computed over.
+
+### Language codes
+
+The language of a song is written as a **BCP 47 language tag**. BCP 47 is the international standard for naming languages, the one web pages and phones use; it is not an abbreviation of this project. Most tags are just the two- or three-letter code of the language: `nl` Dutch, `en` English, `fy` Western Frisian. A region or a script can follow after a hyphen: `nds-NL` is Low Saxon as spoken in the Netherlands, `he-Latn` is Hebrew written in Latin letters.
+
+To find the code for a language, search the official list for the language's English name: the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry). Each entry gives the code after `Subtag:` and the language after `Description:`. Use the shortest code the registry has for the language.
+
+The folders under `songs/` are named after the languages used in this library. The folder name is only for people; the app reads the language from `{meta: language …}`.
+
+| Folder | Tag | Language |
+|---|---|---|
+| `af` | `af` | Afrikaans |
+| `de` | `de` | German |
+| `en` | `en` | English |
+| `fr` | `fr` | French |
+| `he` | `he-Latn` | Hebrew, in Latin letters |
+| `it` | `it` | Italian |
+| `la` | `la` | Latin |
+| `li` | `li` | Limburgish |
+| `mi` | `mi` | Maori |
+| `nds` | `nds-NL` | Low Saxon (Netherlands) |
+| `nl` | `nl` | Dutch |
+| `srn` | `srn` | Sranan Tongo |
 
 ## Setlists
 
@@ -215,7 +259,7 @@ git push -u origin main
 | `setlists/` | Delete `voorbeeld-avond.zbs` and `demo-setlist.zbs`, or change their entries: an entry names a song as `<library id>/<song id>`, so after your id change the entries must use your id. |
 | `LICENSE`, `license.md` | Replace them with the licence of your collection, or a short "for use within our group only" statement for `proprietary`. `LICENSE` is the file `zangbundel.json` names in `license.file`. |
 | `README.md`, `changelog.md`, `contributing.md` | Rewrite them for your library, or delete what you do not need. |
-| `scripts/` | Keep as is, including `scripts/LICENSE`. The Commons Clause allows using and changing the scripts for your own library; it asks you to keep the licence notice. |
+| `scripts/`, `release-menu.py` | Keep as they are, including `scripts/LICENSE`. If your folder layout differs, adjust `LIBRARY_PATHS` at the top of the menu. The Commons Clause allows using and changing the scripts for your own library; it asks you to keep the licence notice. |
 | `raw/` | Delete it; it holds the source material of this library's songs. |
 | `.gitignore` | **Keep it.** It keeps `dist/` and `*.zbl` out of git: the archives you build locally belong on the release page, not in the repository. If you committed them anyway, remove them from git (the files stay on your disk) with `git rm -r --cached dist` and commit. |
 
@@ -229,7 +273,9 @@ Commit and push when it reports no errors.
 
 ### 3. Build a release
 
-**On GitHub (recommended).** Tag the commit and push the tag. The release workflow builds the archive, verifies it, publishes it as a release in your private repository and writes your new `releases.json`. Private repositories use GitHub Actions minutes from your account; one release takes well under a minute.
+**With the release menu (easiest).** Double-click `release-menu.py` and follow the release order it shows; see "Without git commands: the release menu" above. It checks and builds the tagged commit before you push the tag.
+
+**On GitHub, with git commands.** Tag the commit and push the tag. The release workflow builds the archive, verifies it, publishes it as a release in your private repository and writes your new `releases.json`. Private repositories use GitHub Actions minutes from your account; one release takes well under a minute.
 
 ```bash
 git tag v2026.11.0

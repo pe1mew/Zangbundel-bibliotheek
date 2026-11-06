@@ -37,7 +37,7 @@ Every effort is made to credit authors, composers and sources correctly, and to 
    ```
 2. **Choose the song id**: lower-case letters, digits and single hyphens, derived from the title with accents removed ("Zeg ken jij de mosselman?" becomes `zeg-ken-jij-de-mosselman`). The id is the file name and must be unique in the library. It never changes once published.
 3. **Create `songs/<language>/<song id>.cho`**: UTF-8, LF line endings, no trailing spaces, one final newline. The `.editorconfig` and `.gitattributes` in this repository take care of that in most editors. Use [songs/nl/advocaatje.cho](songs/nl/advocaatje.cho) as a template:
-   - Required: `{title: …}`, `{meta: id …}` equal to the file name, `{meta: language …}` (BCP 47: `nl`, `en`, `fy`, …).
+   - Required: `{title: …}`, `{meta: id …}` equal to the file name, `{meta: language …}` (a BCP 47 language tag: `nl`, `en`, `fy`, …; the README's [Language codes](README.md#language-codes) explains them and links the official list).
    - Recommended: `{lyricist}`, `{composer}`, `{copyright}`, `{meta: license}`, `{meta: source}` and one or more `{meta: tag …}`.
    - Lyrics in `{start_of_verse}` … `{end_of_verse}`, `{start_of_chorus}` … `{end_of_chorus}` and `{start_of_bridge}` … `{end_of_bridge}` blocks. Repeat a chorus with `{chorus}`, so the app shows the complete text in sung order. Leave the labels out unless the song needs a specific one; the app generates "Couplet 1" / "Refrein" in the user's language.
    - Chords in `[F]` brackets are welcome but optional. A backslash escapes a literal bracket or brace.
