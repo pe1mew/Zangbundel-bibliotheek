@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 
 ## [Unreleased]
 
+### Changed
+- `validate.py` and `release.py` follow song format v0.23, as the owner approved on 2026-11-06 (`design/proposals/2026-11-06-shared-test-libraries.md` in the app repository, 3.7 and O-11 f):
+  - S005: a file already skipped for another song error is not a song of the library and takes no part in the duplicate-id check. The good file of a pair now imports, where before neither did.
+  - A003: `release.py verify` takes the ratio limit (20 times) against the size of the archive file, not against the compressed sizes the central directory declares.
+- `scripts/conformance.py` also reads the corpus's `packages/` vectors, the library manager's 56 shared test libraries. It checks each one's `format_1_1` verdict and codes, as an app that reads only format 1.1 sees the package.
+  - On the app's corpus at `f658f51`, 113 of 114 vectors agree. The exception is `song-two-files`, whose `expected.json` still lists the old S005 reading (`A102, S004, S005, SL101`); under v0.23 the tools report `A102, S004`, and the old tools agree with all 114.
+  - The pin (`CONFORMANCE_REF`) stays at `dcc174d`, where all 58 vectors agree, until that expectation is corrected in the library manager and the app's copy.
+  - The published 2026.11.0 archive still passes `verify --strict`.
+
 ### Added
 - `scripts/conformance.py` runs the app repository's conformance corpus against `validate.py` and `release.py`: songs, setlists, library files and archives. The validation workflow runs it on every push, with the corpus fetched at a pinned commit of the app repository (`CONFORMANCE_REF`). All 58 vectors agree, including the new library-file vectors. With one expectation deliberately changed, the script reports the difference and exits with an error. README section "The contract with the app". The first run on GitHub passed with the pin on app commit `41eb28c` (46 vectors, no library vectors yet). The pin then moved to `dcc174d`, which adds the twelve library-file vectors; all 58 agree locally.
 

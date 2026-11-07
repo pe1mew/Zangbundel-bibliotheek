@@ -134,7 +134,7 @@ The same check runs on GitHub for every push and pull request.
 
 ### The contract with the app
 
-The format is defined by [design/song-format.md](https://github.com/pe1mew/Zangbundel/blob/main/design/song-format.md) in the app repository; this repository's tools and the app each implement it. Both are held to the same **conformance corpus**: test vectors with the result the specification requires, in the app repository under `android/core/testing/src/main/resources/conformance/`. The vectors cover songs, setlists, library files (`zangbundel.json`) and archives, both good and bad. The app's tests run them, and so does `scripts/conformance.py` here:
+The format is defined by [design/song-format.md](https://github.com/pe1mew/Zangbundel/blob/main/design/song-format.md) in the app repository; this repository's tools and the app each implement it. Both are held to the same **conformance corpus**: test vectors with the result the specification requires, in the app repository under `android/core/testing/src/main/resources/conformance/`. The vectors cover songs, setlists, library files (`zangbundel.json`) and archives, both good and bad. They also cover library packages: the library manager's shared test libraries, which these tools read as an app from before packages does, through the package's format 1.1 view. The app's tests run them, and so does `scripts/conformance.py` here:
 
 ```bash
 python scripts/conformance.py <path to the conformance folder>

@@ -403,7 +403,7 @@ def verify(args):
         return finish_verify(report, args)
     seen = set()
     files = {}
-    uncompressed = compressed = 0
+    uncompressed = 0
     for info in infos:
         if info.is_dir():
             continue
@@ -426,11 +426,12 @@ def verify(args):
         if info.create_system == 3 and mode not in (0, 0o100000):
             report.error(name, None, 'A005', 'entry "%s" is not a regular file' % info.filename)
         uncompressed += info.file_size
-        compressed += info.compress_size
         files[info.filename] = info
-    if uncompressed > MAX_UNCOMPRESSED or (compressed and uncompressed > MAX_RATIO * compressed):
-        report.error(name, None, 'A003', 'uncompressed total %d bytes exceeds the limits (compressed %d)' %
-                     (uncompressed, compressed))
+    # The ratio is taken against the size of the archive file, a fact of the file; the compressed
+    # sizes in the central directory are only claims it makes (song format v0.23, 12.2 and A003).
+    if uncompressed > MAX_UNCOMPRESSED or uncompressed > MAX_RATIO * size:
+        report.error(name, None, 'A003', 'uncompressed total %d bytes exceeds the limits (archive file %d bytes)' %
+                     (uncompressed, size))
     if validate.library_errors(report):
         return finish_verify(report, args)
 

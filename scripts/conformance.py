@@ -26,6 +26,11 @@ What is compared, per kind of vector:
     archives   verdict, and every code the vector expects must be among the codes reported. The
                release tool may report more findings after the first error; the app may stop
                earlier, which the specification allows.
+    packages   the library manager's shared test libraries (its FDS O-04), as an app that reads
+               only format 1.1 sees them: through the package's 1.1 view (song format 12.5). The
+               verdict and the codes of `format_1_1` in each expected.json, compared as for archives.
+               The package side (FDS rules, signature) is for the app and the manager, not for
+               these tools.
 
 Every vector's expected.json may carry the SHA-256 of the vector; a changed vector is reported.
 Exit code 0 when everything agrees, 1 otherwise. Standard library only, Python 3.8 or newer.
@@ -179,13 +184,40 @@ def check_archives(folder, checker):
         checker.result('archive', name, problems)
 
 
+def verify_archive(path):
+    """Run release.py verify on a file; return (accepted, sorted codes)."""
+    out = io.StringIO()
+    with contextlib.redirect_stdout(out):
+        release.verify(argparse.Namespace(archive=path, info=True, strict=False))
+    text = out.getvalue()
+    return 'Archive accepted' in text, sorted({m.group(3) for m in map(FINDING.match, text.splitlines()) if m})
+
+
+def check_packages(folder, checker):
+    """Library packages (the library manager's shared test libraries), read as format 1.1 does."""
+    for name in names(folder):
+        expected = json.loads(read(os.path.join(folder, name + '.expected.json')))
+        want = expected['format_1_1']
+        path = os.path.join(folder, name + '.zbl')
+        accepted, codes = verify_archive(path)
+        problems = integrity(expected, read(path, 'rb'))
+        want_accepted = want['verdict'] != 'refused'
+        if accepted != want_accepted:
+            problems.append('verdict %s, expected %s' % ('accepted' if accepted else 'refused', want['verdict']))
+        missing = sorted(set(want['codes']) - set(codes))
+        if missing:
+            problems.append('expected codes not reported: %s (reported %s)' % (missing, codes))
+        checker.result('package', name, problems)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description='Run the Zangbundel conformance corpus against the Python tools.')
     parser.add_argument('corpus', help='path to the conformance folder')
     args = parser.parse_args(argv)
     checker = Checker()
     for kind, check in (('songs', check_songs), ('setlists', check_setlists),
-                        ('libraries', check_libraries), ('archives', check_archives)):
+                        ('libraries', check_libraries), ('archives', check_archives),
+                        ('packages', check_packages)):
         folder = os.path.join(args.corpus, kind)
         if os.path.isfile(os.path.join(folder, 'index.txt')):
             check(folder, checker)

@@ -763,11 +763,13 @@ def run(root, app_version=None, allow_empty=False):
         for rel in song_files:
             songs.append(validate_song(root, rel, report, lib))
 
-        # S005: duplicate ids; the first in path order is imported.
+        # S005: duplicate ids; the first in path order is imported. A file already skipped for
+        # another song error is not a song of the library and takes no part (song format v0.23,
+        # 11.3), so the good file of a pair still imports.
         by_id = {}
         for song in songs:
             song_id = song.meta.get('id', (None, None))[0]
-            if not song_id:
+            if not song_id or song.skipped:
                 continue
             if song_id in by_id:
                 first = by_id[song_id]
