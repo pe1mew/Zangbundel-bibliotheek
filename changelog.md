@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
+- README repository layout lists `scripts/conformance.py`, and the workflow line names the conformance run.
 - `scripts/test_package.py` builds a library package (the library manager's FDS draft 0.8) of a release archive, for testing only and never published. The package holds:
   - the songs as `songs/<id>/<id>.cho`;
   - each setlist as a set, with title-only entries left out and reported;

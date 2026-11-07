@@ -19,9 +19,10 @@ raw/                  source material the songs were transcribed from (ignored b
 releases.json         release index: every published .zbl archive with URL, size and SHA-256
 scripts/validate.py   command-line validator applying the format's rules (see "Validating")
 scripts/release.py    builds, verifies and indexes .zbl release archives (see "Releases")
-scripts/test_package.py  builds a library package of a release, for testing only (see "A test package")
+scripts/conformance.py  runs the app's conformance corpus against these tools (see "The contract with the app")
+scripts/test_package.py builds a library package of a release, for testing only (see "A test package")
 release-menu.py       step-by-step menu for validating, committing, tagging and releasing (see "Releases")
-.github/workflows/    runs the validator on every push; builds and publishes a release on every tag
+.github/workflows/    on every push: the validator and the conformance corpus; on every tag: builds and publishes a release
 .gitattributes        pins LF line endings, so song files hash identically everywhere
 .editorconfig         editor settings matching the format (UTF-8, LF, no trailing spaces)
 ```
