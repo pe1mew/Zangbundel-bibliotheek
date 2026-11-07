@@ -261,7 +261,7 @@ def validate_library_json(root, report, app_version):
 
 
 # ---------------------------------------------------------------------------
-# Song level (sections 5 to 9, codes S001-S012, W001-W010, I001-I002)
+# Song level (sections 5 to 9, codes S001-S012, W001-W014, I001-I002)
 # ---------------------------------------------------------------------------
 
 # Sections 5.2 and 5.3 (song format v0.24): trimming removes spaces and tabs only. Other characters
@@ -336,7 +336,10 @@ def canonicalise(raw):
 
 
 def display_text(line):
-    """Section 9.1 step 5: remove [...] tokens, resolve escapes, tabs to spaces, trim right."""
+    """Section 9.1 step 5: remove [...] tokens, resolve escapes, tabs to spaces, trim right.
+
+    The right trim (song format v0.25) removes spaces and Unicode Zs, Zl and Zp characters, the
+    no-break space included, unlike the space-and-tab trimming of sections 5 and 6."""
     out = []
     i = 0
     n = len(line)
@@ -355,7 +358,11 @@ def display_text(line):
         else:
             out.append(c)
             i += 1
-    return ''.join(out).replace('\t', ' ').rstrip()
+    text = ''.join(out).replace('\t', ' ')
+    end = len(text)
+    while end and unicodedata.category(text[end - 1]) in ('Zs', 'Zl', 'Zp'):
+        end -= 1
+    return text[:end]
 
 
 class Song:
@@ -435,6 +442,10 @@ def validate_song(root, rel_path, report, lib):
             continue
         if line[0] == '#':
             continue
+        if trimmed[0] == '#':
+            # Song format v0.25, 5.2: not a file comment but a lyric line. Validator only.
+            report.warning(rel_path, line_no, 'W014', 'a "#" line with spaces or tabs before it is a lyric '
+                           'line, not a file comment; remove the indentation to make it a comment')
         starts = trimmed[0] == '{'
         ends = trimmed[-1] == '}'
         if starts or ends:

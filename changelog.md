@@ -30,7 +30,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   - 5.3: names, values and the `{meta}` split trim spaces and tabs only. Setlist lines and entries follow the same rule.
   - Unchanged: a file comment still needs `#` as its first character, and the display text of 9.1 still trims trailing whitespace.
 
-  The CI pin (`CONFORMANCE_REF`) moves to app commit `02bb9fd`, which adds the vectors `control-c1`, `directive-escaped-close` and `directive-indented`. All 117 vectors agree there. The previous tools fail exactly those three, and the new tools still agree with the 114 vectors at the old pin `71f0477`.
+  At app commit `02bb9fd`, which adds the vectors `control-c1`, `directive-escaped-close` and `directive-indented`, all 117 vectors agree. The previous tools fail exactly those three, and the new tools still agree with the 114 vectors at the old pin `71f0477`.
+- `validate.py` follows song format v0.25, as the owner approved on 2026-11-07 (`design/proposals/2026-11-07-indented-comments-and-display-text.md` in the app repository). Both points were settled as the app and these tools already read them, so the line list does not change:
+  - 5.2: a file comment's first character is `#`, with no trimming. A `#` line with spaces or tabs before it is a lyric line, and the validator now warns with W014. W014 is validator only: the app does not report it, and `conformance.py` leaves it out of every comparison.
+  - 9.1: the display text trims trailing spaces and Unicode Zs, Zl and Zp characters, the no-break space included. This is now written out instead of relying on Python's `rstrip()`, which gives the same result on any file that passes S001.
+
+  The CI pin (`CONFORMANCE_REF`) moves to app commit `d7e7485`. That commit adds the setlist vector `meta-tab` (at `61ca94a`) and the song vectors `comment-indented` and `nbsp-display`. All 120 vectors agree there. The previous tools agree with them too, as expected for readings that keep what the app did. The new tools still agree with the 118 vectors at `61ca94a`, and the library still passes with 0 warnings.
 - `validate.py` and `release.py` follow song format v0.23, as the owner approved on 2026-11-06 (`design/proposals/2026-11-06-shared-test-libraries.md` in the app repository, 3.7 and O-11 f):
   - S005: a file already skipped for another song error is not a song of the library and takes no part in the duplicate-id check. The good file of a pair now imports, where before neither did.
   - A003: `release.py verify` takes the ratio limit (20 times) against the size of the archive file, not against the compressed sizes the central directory declares.

@@ -32,6 +32,8 @@ What is compared, per kind of vector:
                The package side (FDS rules, signature) is for the app and the manager, not for
                these tools.
 
+Validator-only codes (W014) are left out of every comparison: the app never reports them.
+
 Every vector's expected.json may carry the SHA-256 of the vector; a changed vector is reported.
 Exit code 0 when everything agrees, 1 otherwise. Standard library only, Python 3.8 or newer.
 
@@ -54,6 +56,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import release  # noqa: E402
 import validate  # noqa: E402
 
+# Codes the validator reports and the app never does, so a vector cannot expect them (song format
+# v0.25: W014, a "#" line with spaces or tabs before it). They are left out of every comparison.
+VALIDATOR_ONLY = {'W014'}
 FINDING = re.compile(r'^(\S+?)(?::\d+)? (ERROR|WARNING|INFO) (\S+) ')
 LIBRARY = {
     'format': 'zangbundel-library', 'format_version': '1.1', 'id': '', 'name': 'Conformance',
@@ -93,7 +98,7 @@ def integrity(expected, data):
 
 
 def codes_of(report):
-    return sorted({f[3] for f in report.findings})
+    return sorted({f[3] for f in report.findings} - VALIDATOR_ONLY)
 
 
 def check_songs(folder, checker):
@@ -173,7 +178,7 @@ def check_archives(folder, checker):
             release.verify(argparse.Namespace(archive=path, info=True, strict=False))
         text = out.getvalue()
         accepted = 'Archive accepted' in text
-        codes = sorted({m.group(3) for m in map(FINDING.match, text.splitlines()) if m})
+        codes = sorted({m.group(3) for m in map(FINDING.match, text.splitlines()) if m} - VALIDATOR_ONLY)
         problems = integrity(expected, read(path, 'rb'))
         if accepted == expected['refused']:
             problems.append('verdict %s, expected %s' % ('accepted' if accepted else 'refused',
@@ -190,7 +195,7 @@ def verify_archive(path):
     with contextlib.redirect_stdout(out):
         release.verify(argparse.Namespace(archive=path, info=True, strict=False))
     text = out.getvalue()
-    return 'Archive accepted' in text, sorted({m.group(3) for m in map(FINDING.match, text.splitlines()) if m})
+    return 'Archive accepted' in text, sorted({m.group(3) for m in map(FINDING.match, text.splitlines()) if m} - VALIDATOR_ONLY)
 
 
 def check_packages(folder, checker):
