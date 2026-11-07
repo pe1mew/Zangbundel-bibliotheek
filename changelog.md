@@ -23,6 +23,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   Found along the way: a package carries no tag labels, because the manifest has no field for them and the view may hold no other fields. Phones show raw tag ids for it. README section "A test package".
 
 ### Changed
+- `validate.py` follows song format v0.24, as the owner approved on 2026-11-07 (`design/proposals/2026-11-07-fds-0.8-readings.md` in the app repository):
+  - 5.1, S001 and SL001: C1 control characters (U+0080 to U+009F) are refused.
+  - 5.2: blank and directive lines are judged after trimming spaces and tabs only. An indented directive is a directive, and a line holding only a no-break space is not blank.
+  - 5.2: a directive whose closing brace is escaped (`{c: a\}`) is malformed (S011). An escaped brace inside a directive is allowed, and directive values are unescaped (5.4).
+  - 5.3: names, values and the `{meta}` split trim spaces and tabs only. Setlist lines and entries follow the same rule.
+  - Unchanged: a file comment still needs `#` as its first character, and the display text of 9.1 still trims trailing whitespace.
+
+  The CI pin (`CONFORMANCE_REF`) moves to app commit `02bb9fd`, which adds the vectors `control-c1`, `directive-escaped-close` and `directive-indented`. All 117 vectors agree there. The previous tools fail exactly those three, and the new tools still agree with the 114 vectors at the old pin `71f0477`.
 - `validate.py` and `release.py` follow song format v0.23, as the owner approved on 2026-11-06 (`design/proposals/2026-11-06-shared-test-libraries.md` in the app repository, 3.7 and O-11 f):
   - S005: a file already skipped for another song error is not a song of the library and takes no part in the duplicate-id check. The good file of a pair now imports, where before neither did.
   - A003: `release.py verify` takes the ratio limit (20 times) against the size of the archive file, not against the compressed sizes the central directory declares.

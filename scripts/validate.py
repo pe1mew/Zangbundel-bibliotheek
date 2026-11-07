@@ -50,8 +50,9 @@ MAX_CANONICAL_LINES = 254
 
 # Setlists (section 13, format 1.1)
 SETLIST_MAX_ENTRIES = 200
-SETLIST_ENTRY_RE = re.compile(r'^([a-z0-9]+(?:-[a-z0-9]+)*)/([a-z0-9]+(?:-[a-z0-9]+)*)(?:\s+#.*)?$')
-SETLIST_TITLE_ENTRY_RE = re.compile(r'^\?\s+(\S.*)$')
+SETLIST_ENTRY_RE = re.compile(r'^([a-z0-9]+(?:-[a-z0-9]+)*)/([a-z0-9]+(?:-[a-z0-9]+)*)(?:[ \t]+#.*)?$')
+# "?" and a space (13.2); spaces and tabs only, not Python's Unicode \s (5.2, song format v0.24).
+SETLIST_TITLE_ENTRY_RE = re.compile(r'^\? [ \t]*([^ \t].*)$')
 
 # Short forms accepted by the profile (section 5.3, 6, 7).
 ALIASES = {
@@ -263,6 +264,51 @@ def validate_library_json(root, report, app_version):
 # Song level (sections 5 to 9, codes S001-S012, W001-W010, I001-I002)
 # ---------------------------------------------------------------------------
 
+# Sections 5.2 and 5.3 (song format v0.24): trimming removes spaces and tabs only. Other characters
+# Python's strip() and split() take, such as the no-break space, U+0085 and U+FEFF, are content.
+TRIM = ' \t'
+META_SPLIT_RE = re.compile(r'[ \t]+')
+
+
+def c1_controls(canonical):
+    """Section 5.1 (song format v0.24): the C1 control characters U+0080 to U+009F in a decoded file."""
+    return sorted({ord(c) for c in canonical.decode('utf-8') if '\x80' <= c <= '\x9f'})
+
+
+def escaped_at(s, i):
+    """Section 5.4: the character at i follows an odd run of backslashes, so it is escaped."""
+    k = i - 1
+    while k >= 0 and s[k] == '\\':
+        k -= 1
+    return (i - 1 - k) % 2 == 1
+
+
+def has_unescaped_brace(s):
+    i = 0
+    while i < len(s):
+        if s[i] == '\\':
+            i += 2
+            continue
+        if s[i] in '{}':
+            return True
+        i += 1
+    return False
+
+
+def unescape(s):
+    """Section 5.4 escapes in a directive value, so a label or title can carry a literal brace or bracket."""
+    out = []
+    i = 0
+    while i < len(s):
+        if s[i] == '\\' and i + 1 < len(s) and s[i + 1] in '[]{}\\':
+            out.append(s[i + 1])
+            i += 2
+        else:
+            out.append(s[i])
+            i += 1
+    return ''.join(out)
+
+
 def canonicalise(raw):
     """Section 8.1. Returns (canonical bytes, list of deviation names) or raises UnicodeDecodeError."""
     text = raw.decode('utf-8')
@@ -352,6 +398,10 @@ def validate_song(root, rel_path, report, lib):
     except UnicodeDecodeError as exc:
         err(None, 'S001', 'file is not valid UTF-8 (%s)' % exc)
         return song
+    c1 = c1_controls(canonical)
+    if c1:
+        err(None, 'S001', 'C1 control characters: %s' % ', '.join('U+%04X' % c for c in c1))
+        return song
     if deviations:
         report.warning(rel_path, None, 'W001', 'file is not in canonical form: %s; '
                        'hash computed over the canonical form' % ', '.join(deviations))
@@ -377,25 +427,31 @@ def validate_song(root, rel_path, report, lib):
             song.meta[name] = (value, line_no)
 
     for line_no, line in enumerate(source_lines, 1):
-        if line.strip() == '':
+        # Section 5.2: blank and directive lines are judged after trimming spaces and tabs only;
+        # a file comment still needs "#" as its first character.
+        trimmed = line.strip(TRIM)
+        if trimmed == '':
             in_implicit_verse = False
             continue
         if line[0] == '#':
             continue
-        starts = line[0] == '{'
-        ends = line[-1] == '}'
+        starts = trimmed[0] == '{'
+        ends = trimmed[-1] == '}'
         if starts or ends:
             if not (starts and ends):
                 err(line_no, 'S011', 'malformed directive line: %s' %
                     ('"{" without closing "}"' if starts else '"}" without opening "{"'))
                 continue
-            body = line[1:-1]
-            if '{' in body or '}' in body:
+            if len(trimmed) < 2 or escaped_at(trimmed, len(trimmed) - 1):
+                err(line_no, 'S011', 'malformed directive line: the closing "}" is escaped')
+                continue
+            body = trimmed[1:-1]
+            if has_unescaped_brace(body):
                 err(line_no, 'S011', 'malformed directive line: stray brace inside the directive')
                 continue
             name, sep, value = body.partition(':')
-            name = name.strip()
-            value = value.strip()
+            name = name.strip(TRIM)
+            value = unescape(value.strip(TRIM))
             if name != name.lower():
                 report.warning(rel_path, line_no, 'W006', 'directive name "%s" is not lower case' % name)
                 name = name.lower()
@@ -405,7 +461,7 @@ def validate_song(root, rel_path, report, lib):
             name = ALIASES.get(name, name)
             is_meta = False
             if name == 'meta':
-                parts = value.split(None, 1)
+                parts = META_SPLIT_RE.split(value, 1) if value else []
                 if not parts:
                     err(line_no, 'S011', '{meta} without a name')
                     continue
@@ -650,6 +706,10 @@ def validate_setlist(root, rel_path, report, lib, song_ids):
     except UnicodeDecodeError as exc:
         err(None, 'SL001', 'file is not valid UTF-8 (%s)' % exc)
         return sl
+    c1 = c1_controls(canonical)
+    if c1:
+        err(None, 'SL001', 'C1 control characters: %s' % ', '.join('U+%04X' % c for c in c1))
+        return sl
     if deviations:
         report.warning(rel_path, None, 'SL102', 'file is not in canonical form: %s' % ', '.join(deviations))
     sl.canonical = canonical
@@ -657,17 +717,19 @@ def validate_setlist(root, rel_path, report, lib, song_ids):
 
     unknown_reported = set()
     for line_no, line in enumerate(canonical.decode('utf-8').split('\n')[:-1], 1):
-        if line.strip() == '' or line[0] == '#':
+        # Section 5.2 as in songs (song format v0.24): trim spaces and tabs only.
+        line = line.strip(TRIM)
+        if line == '' or line[0] == '#':
             continue
         if line[0] == '{' or line[-1] == '}':
             if not (line[0] == '{' and line[-1] == '}') or '{' in line[1:-1] or '}' in line[1:-1]:
                 err(line_no, 'SL004', 'malformed directive line')
                 continue
             name, _, value = line[1:-1].partition(':')
-            name = name.strip().lower()
-            value = value.strip()
+            name = name.strip(TRIM).lower()
+            value = value.strip(TRIM)
             if name == 'meta':
-                parts = value.split(None, 1)
+                parts = META_SPLIT_RE.split(value, 1) if value else []
                 if not parts:
                     err(line_no, 'SL004', '{meta} without a name')
                     continue
@@ -700,8 +762,8 @@ def validate_setlist(root, rel_path, report, lib, song_ids):
             continue
         m = SETLIST_TITLE_ENTRY_RE.match(line)
         if m:
-            sl.entries.append({'kind': 'title', 'title': m.group(1).strip(), 'line': line_no})
-            report.info(rel_path, line_no, 'I005', 'title-only entry "%s"' % m.group(1).strip())
+            sl.entries.append({'kind': 'title', 'title': m.group(1).strip(TRIM), 'line': line_no})
+            report.info(rel_path, line_no, 'I005', 'title-only entry "%s"' % m.group(1).strip(TRIM))
             continue
         err(line_no, 'SL004', 'malformed entry line')
 

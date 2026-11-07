@@ -11,7 +11,7 @@ jobs:
       # Commit of github.com/pe1mew/Zangbundel whose conformance corpus this repository's tools
       # must agree with. Move it on purpose, in its own commit, when the corpus has grown; never
       # follow the app's main branch, so that app changes cannot silently change this check.
-      CONFORMANCE_REF: 71f04771518da8697d9c87ce8041d138f23743f0
+      CONFORMANCE_REF: 02bb9fdaadf68b0d4ddc9ad0b702da96a50fd5c2
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
