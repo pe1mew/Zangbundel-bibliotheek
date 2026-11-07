@@ -81,7 +81,7 @@ python scripts/release.py build --tag v2026.11.0
 python scripts/test_package.py dist/zangbundel-bibliotheek-2026.11.0.zbl
 ```
 
-The package, `dist/zangbundel-bibliotheek-testpakket.zbl`, has the songs, each setlist as a set, the 1.1 view, a test id and the title "Zangbundel bibliotheek (testpakket)". It is signed with the public RFC 8032 test key (fingerprint `21FE-31DF-A154-A261`). Title-only setlist entries are left out and reported, because a set lists song ids only. The script uses the library manager repository's `test-libraries/make_test_libraries.py`, which it expects next to this repository (`--manager` names another place). Never publish the result: anyone can sign with the test key.
+The package, `dist/zangbundel-bibliotheek-testpakket.zbl`, has the songs, each setlist as a set, the tag labels of `zangbundel.json` in the manifest's `tags` (song format v0.26), the 1.1 view (which carries no labels), a test id and the title "Zangbundel bibliotheek (testpakket)". It is signed with the public RFC 8032 test key (fingerprint `21FE-31DF-A154-A261`). Title-only setlist entries are left out and reported, because a set lists song ids only. The script uses the library manager repository's `test-libraries/make_test_libraries.py`, which it expects next to this repository (`--manager` names another place). Never publish the result: anyone can sign with the test key.
 
 ### Without git commands: the release menu
 

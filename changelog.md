@@ -7,6 +7,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
+- `scripts/test_package.py` writes the tag labels of `zangbundel.json` into the manifest's optional `tags`, as song format v0.26 (12.11) says. The owner decided this on 2026-11-07 (`design/proposals/2026-11-07-tag-labels-in-packages.md` in the app repository). The 1.1 view carries no labels. Labels that break the 12.11 rules are left out and reported:
+  - at most 200 tags, each in tag syntax;
+  - 1 to 20 labels per tag, with language codes as `{meta: language}`;
+  - each label 1 to 60 characters on one line, NFC, without control characters.
+
+  Built from release 2026.11.0 (rebuilt from its tag, byte-identical): 247 songs, two sets, and 9 tags with 18 labels (nl and en). Checks:
+  - the labels equal those of the release;
+  - the view's `zangbundel.json` has no `tags`;
+  - the signature verifies over the exact manifest bytes, and all 251 listed files match their size and SHA-256;
+  - `release.py verify` accepts the package as a snapshot;
+  - the library manager's engine, which does not know `tags` yet, ignores the field: 10 SNG-10 warnings, as before, and nothing blocking.
+
+  Output is deterministic.
 - README repository layout lists `scripts/conformance.py`, and the workflow line names the conformance run.
 - `scripts/test_package.py` builds a library package (the library manager's FDS draft 0.8) of a release archive, for testing only and never published. The package holds:
   - the songs as `songs/<id>/<id>.cho`;

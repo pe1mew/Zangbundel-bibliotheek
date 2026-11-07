@@ -11,6 +11,8 @@ library manager can be tried with real content:
 - the songs of the archive, as `songs/<id>/<id>.cho`;
 - each setlist of the archive as a set. Title-only entries (`? title`) are left out and
   reported, because a set lists song ids only;
+- the tag labels of `zangbundel.json` in the manifest's `tags` (song format v0.26, 12.11). Entries
+  that break its rules are left out and reported. The 1.1 view carries no labels;
 - the 1.1 view the FDS requires (`zangbundel.json`, `LICENSE`, `setlists/set-<n>.zbs`);
 - a manifest with a test id and a title ending in "(testpakket)", so it sits next to the real
   library on a phone;
@@ -42,11 +44,59 @@ import json
 import os
 import re
 import sys
+import unicodedata
 import zipfile
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEST_LIBRARY_ID = 'b7a3e2d4-5c6f-4a8b-9d0e-1f2a3b4c5d6e'   # UUID v4 form, used for this test package only
 DATE = '2026-11-07T12:00:00Z'
+
+# Song format v0.26, 12.11 (decision 2026-11-07-tag-labels-in-packages.md): the manifest's `tags`.
+TAG_RE = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*$')               # tag syntax = song id syntax (3.2)
+LANG_RE = re.compile(r'^[a-zA-Z]{2,3}(-[a-zA-Z0-9]{1,8})*$')    # as {meta: language} (6.1)
+MAX_TAGS, MAX_LABELS, MAX_LABEL = 200, 20, 60
+
+
+def label_problem(label):
+    if not isinstance(label, str) or not 1 <= len(label) <= MAX_LABEL:
+        return 'not 1 to %d characters' % MAX_LABEL
+    if any(ord(c) < 0x20 or 0x7F <= ord(c) <= 0x9F for c in label):
+        return 'holds a line break or control character'
+    if unicodedata.normalize('NFC', label) != label:
+        return 'not NFC'
+    return None
+
+
+def tags_from(lib, notes):
+    """The manifest's `tags` from zangbundel.json's, leaving out and naming what breaks 12.11 (as EDT-26)."""
+    source = lib.get('tags')
+    if not isinstance(source, dict):
+        return None
+    tags = {}
+    for tag in sorted(source):
+        labels = source[tag]
+        if len(tag) > 64 or not TAG_RE.match(tag):
+            notes.append('tag "%s" left out: not in tag syntax' % tag)
+            continue
+        if not isinstance(labels, dict):
+            notes.append('tag "%s" left out: its labels are not an object' % tag)
+            continue
+        kept = {}
+        for lang in sorted(labels):
+            problem = 'language code not valid' if not LANG_RE.match(lang) else label_problem(labels[lang])
+            if problem:
+                notes.append('label %s of tag "%s" left out: %s' % (lang, tag, problem))
+            else:
+                kept[lang] = labels[lang]
+        if not kept:
+            notes.append('tag "%s" left out: no valid label' % tag)
+        elif len(kept) > MAX_LABELS:
+            notes.append('tag "%s" left out: more than %d labels' % (tag, MAX_LABELS))
+        else:
+            tags[tag] = kept
+    if len(tags) > MAX_TAGS:
+        raise SystemExit('error: %d tags, more than the %d a manifest holds (song format 12.11)' % (len(tags), MAX_TAGS))
+    return tags or None
 
 
 def load_builder(manager):
@@ -125,6 +175,9 @@ def main(argv=None):
         'maintainer': lib['maintainer'],
         'sets': sets_from(setlists, lib['id'], songs, notes),
     }
+    tags = tags_from(lib, notes)
+    if tags:
+        manifest['tags'] = tags       # the manifest only: the 1.1 view has no labels (PF-41)
     for field, limit in (('title', 80), ('description', 1000)):
         if len(manifest[field]) > limit:
             raise SystemExit('error: %s is longer than %d characters (FDS 4.1)' % (field, limit))
@@ -154,6 +207,8 @@ def main(argv=None):
     print('wrote %s: %d bytes' % (out, len(buf.getvalue())))
     print('  %d songs; sets: %s' % (len(songs), ', '.join('%s (%d)' % (s['name'], len(s['songs']))
                                                            for s in manifest['sets']) or 'none'))
+    print('  tag labels: %s' % ('%d tags, %d labels' % (len(tags), sum(len(v) for v in tags.values()))
+                                if tags else 'none'))
     print('  test id %s, signed with the RFC 8032 test key, fingerprint %s' % (
         TEST_LIBRARY_ID, builder.fingerprint(builder.public_key(builder.TEST_SEED))))
     for note in notes:
