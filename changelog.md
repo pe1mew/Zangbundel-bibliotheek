@@ -12,7 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   - A003: `release.py verify` takes the ratio limit (20 times) against the size of the archive file, not against the compressed sizes the central directory declares.
 - `scripts/conformance.py` also reads the corpus's `packages/` vectors, the library manager's 56 shared test libraries. It checks each one's `format_1_1` verdict and codes, as an app that reads only format 1.1 sees the package.
   - On the app's corpus at `f658f51`, 113 of 114 vectors agree. The exception is `song-two-files`, whose `expected.json` still lists the old S005 reading (`A102, S004, S005, SL101`); under v0.23 the tools report `A102, S004`, and the old tools agree with all 114.
-  - The pin (`CONFORMANCE_REF`) stays at `dcc174d`, where all 58 vectors agree, until that expectation is corrected in the library manager and the app's copy.
+  - The pin (`CONFORMANCE_REF`) stayed at `dcc174d`, where all 58 vectors agree, until that expectation was corrected: in the library manager on 2026-11-07 (`cb5fd82`) and in the app's copy (`71f0477`).
+  - The pin then moved to `71f0477`, where all 114 vectors agree.
   - The published 2026.11.0 archive still passes `verify --strict`.
 
 ### Added
