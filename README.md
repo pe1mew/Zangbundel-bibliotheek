@@ -19,6 +19,7 @@ raw/                  source material the songs were transcribed from (ignored b
 releases.json         release index: every published .zbl archive with URL, size and SHA-256
 scripts/validate.py   command-line validator applying the format's rules (see "Validating")
 scripts/release.py    builds, verifies and indexes .zbl release archives (see "Releases")
+scripts/test_package.py  builds a library package of a release, for testing only (see "A test package")
 release-menu.py       step-by-step menu for validating, committing, tagging and releasing (see "Releases")
 .github/workflows/    runs the validator on every push; builds and publishes a release on every tag
 .gitattributes        pins LF line endings, so song files hash identically everywhere
@@ -66,6 +67,20 @@ python scripts/release.py index dist/zangbundel-bibliotheek-2026.10.0.zbl
 ```
 
 `build` reads the tagged commit from git, never the working tree, and writes the archive and release notes to `dist/`. `verify` applies the archive checks the app applies (A001 to A103) and the library validator to the archive. `index` adds the archive to `releases.json`.
+
+### A test package (never published)
+
+This library is published as release archives. The second library format, the *library package* of the library manager ([FDS](https://github.com/pe1mew/Zangbundel-bibliotheek-manager/blob/main/design/FDS.md), song format 12.11), would make it a different library on every phone (a package needs a UUID id) and would stop update checks (a package has no release index). To try the app's package reader or the library manager with this library's songs, `scripts/test_package.py` makes a package of a release archive for testing only:
+
+```bash
+python scripts/release.py build --tag v2026.11.0
+```
+
+```bash
+python scripts/test_package.py dist/zangbundel-bibliotheek-2026.11.0.zbl
+```
+
+The package, `dist/zangbundel-bibliotheek-testpakket.zbl`, has the songs, each setlist as a set, the 1.1 view, a test id and the title "Zangbundel bibliotheek (testpakket)". It is signed with the public RFC 8032 test key (fingerprint `21FE-31DF-A154-A261`). Title-only setlist entries are left out and reported, because a set lists song ids only. The script uses the library manager repository's `test-libraries/make_test_libraries.py`, which it expects next to this repository (`--manager` names another place). Never publish the result: anyone can sign with the test key.
 
 ### Without git commands: the release menu
 

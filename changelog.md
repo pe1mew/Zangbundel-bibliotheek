@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 
 ## [Unreleased]
 
+### Added
+- `scripts/test_package.py` builds a library package (the library manager's FDS draft 0.8) of a release archive, for testing only and never published. The package holds:
+  - the songs as `songs/<id>/<id>.cho`;
+  - each setlist as a set, with title-only entries left out and reported;
+  - the 1.1 view;
+  - a test UUID and the title "… (testpakket)";
+  - a signature with the public RFC 8032 test key.
+
+  It reuses the library manager's `make_test_libraries.py`, and its output is deterministic. Made from release 2026.11.0: 247 songs and two sets. The "? Vader Jacob" entry of "Voorbeeldavond" is left out. Checks:
+  - the library manager's engine (`validateLibrary`) finds nothing blocking, with 10 SNG-10 warnings for translations and versions with the same title;
+  - `release.py verify` accepts it as a snapshot;
+  - the signature verifies with the `cryptography` package.
+
+  Found along the way: a package carries no tag labels, because the manifest has no field for them and the view may hold no other fields. Phones show raw tag ids for it. README section "A test package".
+
 ### Changed
 - `validate.py` and `release.py` follow song format v0.23, as the owner approved on 2026-11-06 (`design/proposals/2026-11-06-shared-test-libraries.md` in the app repository, 3.7 and O-11 f):
   - S005: a file already skipped for another song error is not a song of the library and takes no part in the duplicate-id check. The good file of a pair now imports, where before neither did.
