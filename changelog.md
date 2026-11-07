@@ -36,6 +36,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   Found along the way: a package carries no tag labels, because the manifest has no field for them and the view may hold no other fields. Phones show raw tag ids for it. README section "A test package".
 
 ### Changed
+- CI pin (`CONFORMANCE_REF`) moves to app commit `6a963fe` (song format v0.27). It adds the library manager's package cases `tag-labels` and `tag-label-invalid`. All 122 vectors agree there, with 58 packages checked on their format 1.1 side. The tools needed no change: a package's tag labels live in its manifest, which the 1.1 side does not read.
 - `validate.py` follows song format v0.24, as the owner approved on 2026-11-07 (`design/proposals/2026-11-07-fds-0.8-readings.md` in the app repository):
   - 5.1, S001 and SL001: C1 control characters (U+0080 to U+009F) are refused.
   - 5.2: blank and directive lines are judged after trimming spaces and tabs only. An indented directive is a directive, and a line holding only a no-break space is not blank.
