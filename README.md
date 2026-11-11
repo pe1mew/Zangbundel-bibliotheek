@@ -21,6 +21,7 @@ scripts/validate.py   command-line validator applying the format's rules (see "V
 scripts/release.py    builds, verifies and indexes .zbl release archives (see "Releases")
 scripts/conformance.py  runs the app's conformance corpus against these tools (see "The contract with the app")
 scripts/test_package.py builds a library package of a release, for testing only (see "A test package")
+scripts/package.py      builds a signed library package of a release (see "A signed package next to a release")
 release-menu.py       step-by-step menu for validating, committing, tagging and releasing (see "Releases")
 .github/workflows/    on every push: the validator and the conformance corpus; on every tag: builds and publishes a release
 .gitattributes        pins LF line endings, so song files hash identically everywhere
@@ -82,6 +83,32 @@ python scripts/test_package.py dist/zangbundel-bibliotheek-2026.11.0.zbl
 ```
 
 The package, `dist/zangbundel-bibliotheek-testpakket.zbl`, has the songs, each setlist as a set, the tag labels of `zangbundel.json` in the manifest's `tags` (song format v0.26), the 1.1 view (which carries no labels), a test id and the title "Zangbundel bibliotheek (testpakket)". It is signed with the public RFC 8032 test key (fingerprint `21FE-31DF-A154-A261`). Title-only setlist entries are left out and reported, because a set lists song ids only. The script uses the library manager repository's `test-libraries/make_test_libraries.py`, which it expects next to this repository (`--manager` names another place). Never publish the result: anyone can sign with the test key.
+
+### A signed package next to a release
+
+A release archive carries no signature (song format Q12). A library that wants one can publish a signed library package next to each release, built from the published archive with the maintainer's own key (a `.zbkey` file of the library manager, FDS 5.3). The app shows the author name and fingerprint of a signed package and warns when an update is signed with another key. The package is a separate library on the phone, with its own UUID id. The app finds no updates for it by itself: the leader opens each new package file, and the app updates the library when the version is higher and the key is the same. Install the package or the archive, not both.
+
+Once, create the package id and commit `library-package.json`; the id must never change:
+
+```bash
+python scripts/package.py --init
+```
+
+For each release, after the release workflow has finished, download the published archive, build the package, and add it to the release:
+
+```bash
+gh release download v2026.11.0 -p "<library id>-2026.11.0.zbl" -D dist
+```
+
+```bash
+python scripts/package.py dist/<library id>-2026.11.0.zbl --key <path to your .zbkey>
+```
+
+```bash
+gh release upload v2026.11.0 dist/<library id>-2026.11.0-pakket.zbl
+```
+
+`scripts/package.py` signs on your own computer: the key file never goes to GitHub. The package holds the archive's songs byte for byte, the setlists whose songs are in this library as sets, the tag labels, the 1.1 view, version `20261100` for release `2026.11.0` (year, month, two digits of sequence), and the release's changelog summary as its `changes` note. Like `test_package.py`, it uses the library manager repository's `test-libraries/make_test_libraries.py`. The output is deterministic. Keep the key file out of the repository, and keep a copy in a safe place: a lost key cannot be replaced without phones warning about a new key.
 
 ### Without git commands: the release menu
 

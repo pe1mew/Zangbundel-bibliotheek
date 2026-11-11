@@ -7,7 +7,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
-- *Nothing.*
+- `scripts/package.py` builds a signed library package (the library manager's format, FDS 5) of a published release archive, to add to that release. It signs on the maintainer's own computer with a `.zbkey` key file, which is checked as SG-11 says and never written anywhere. The package id comes from `library-package.json`, made once with `--init`. The version number follows the release version: `2026.11.0` becomes 20261100. The `changes` note is the release's changelog summary, at most 500 characters. Setlists become sets as far as their songs are in this library; a setlist left without songs is not a set (SET-03). The output is deterministic. README section "A signed package next to a release".
+
+  Tested on Drasva release 2026.11.0:
+  - The package of 168 songs is accepted by the library manager's engine (`validateLibrary`) with no findings, signed.
+  - The signature verifies with the `cryptography` package.
+  - All 170 listed files match their size and SHA-256.
+  - `release.py verify --strict` accepts its 1.1 view as a snapshot.
 
 ### Changed
 - Release notes say more. Besides the archive table, `release.py build` now writes:
