@@ -7,33 +7,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 ## [Unreleased]
 
 ### Added
-- `scripts/test_package.py` writes the tag labels of `zangbundel.json` into the manifest's optional `tags`, as song format v0.26 (12.11) says. The owner decided this on 2026-11-07 (`design/proposals/2026-11-07-tag-labels-in-packages.md` in the app repository). The 1.1 view carries no labels. Labels that break the 12.11 rules are left out and reported:
-  - at most 200 tags, each in tag syntax;
-  - 1 to 20 labels per tag, with language codes as `{meta: language}`;
-  - each label 1 to 60 characters on one line, NFC, without control characters.
+- *Nothing.*
 
-  Built from release 2026.11.0 (rebuilt from its tag, byte-identical): 247 songs, two sets, and 9 tags with 18 labels (nl and en). Checks:
-  - the labels equal those of the release;
-  - the view's `zangbundel.json` has no `tags`;
-  - the signature verifies over the exact manifest bytes, and all 251 listed files match their size and SHA-256;
-  - `release.py verify` accepts the package as a snapshot;
-  - the library manager's engine, which does not know `tags` yet, ignores the field: 10 SNG-10 warnings, as before, and nothing blocking.
+### Changed
+- *Nothing.*
 
-  Output is deterministic.
-- README repository layout lists `scripts/conformance.py`, and the workflow line names the conformance run.
-- `scripts/test_package.py` builds a library package (the library manager's FDS draft 0.8) of a release archive, for testing only and never published. The package holds:
-  - the songs as `songs/<id>/<id>.cho`;
-  - each setlist as a set, with title-only entries left out and reported;
-  - the 1.1 view;
-  - a test UUID and the title "… (testpakket)";
-  - a signature with the public RFC 8032 test key.
+### Fixed
+- *Nothing.*
 
-  It reuses the library manager's `make_test_libraries.py`, and its output is deterministic. Made from release 2026.11.0: 247 songs and two sets. The "? Vader Jacob" entry of "Voorbeeldavond" is left out. Checks:
-  - the library manager's engine (`validateLibrary`) finds nothing blocking, with 10 SNG-10 warnings for translations and versions with the same title;
-  - `release.py verify` accepts it as a snapshot;
-  - the signature verifies with the `cryptography` package.
+### Removed
+- *Nothing.*
 
-  Found along the way: a package carries no tag labels, because the manifest has no field for them and the view may hold no other fields. Phones show raw tag ids for it. README section "A test package".
+## [2026.11.1] - 2026-11-11
+
+Fifth release: 20 Sinterklaas songs, bringing the library to 267 songs. The tools follow song format v0.25 and are checked in CI against the app's conformance corpus; new are a step-by-step release menu and a test package builder.
+
+### Added
 - 18 Sinterklaas songs in the public domain, under `songs/nl/` with the new tag `sinterklaas` (Sinterklaas / Saint Nicholas):
   - **Traditional or anonymous, first printed more than 70 years ago:** `sinterklaas-kapoentje`, `sinterklaasje-bonne-bonne-bonne`, `sinterklaas-goed-heiligman`, `sinterklaas-die-goede-heer`, `daar-wordt-aan-de-deur-geklopt`, `hoor-de-wind-waait-door-de-bomen`, `hop-hop-hop`, `rommeldebommel` and `sinterklaasje-kom-maar-binnen`.
   - **Named makers who all died before 1956:**
@@ -54,6 +43,48 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   - **Hoor, wie klopt daar, kinderen:** the oldest dated print in the Liederenbank is from 1993 (record 198940). It is usually sung after `hoor-de-wind-waait-door-de-bomen`.
 
   The texts come from Wikisource (nl).
+- `scripts/conformance.py` runs the app repository's conformance corpus against `validate.py` and `release.py`: songs, setlists, library files and archives. The validation workflow runs it on every push, with the corpus fetched at a pinned commit of the app repository (`CONFORMANCE_REF`). All 58 vectors agree, including the new library-file vectors. With one expectation deliberately changed, the script reports the difference and exits with an error. README section "The contract with the app". The first run on GitHub passed with the pin on app commit `41eb28c` (46 vectors, no library vectors yet). The pin then moved to `dcc174d`, which adds the twelve library-file vectors; all 58 agree locally.
+- `release-menu.py`: a step-by-step menu for validating, staging, committing, tagging, pushing and pulling, in Dutch, English and German, with explanations that can be shown or hidden ([#3](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/3), Pepe's proposal 10). It is adapted from Pepe's CC0 menu for his own library:
+  - Dutch is added.
+  - Only the library's own files are staged; other changes are listed and left alone.
+  - A commit is refused while library changes are unstaged, so the check matches what is committed.
+  - Before a tag is set, the commit is built and verified exactly as the release workflow will do it.
+  - Newer commits on GitHub are offered as a pull instead of ending the menu, and pulling is fast-forward only.
+  - Unexpected errors keep a double-clicked window open.
+
+  Tested in a scratch clone with scripted answers in all three languages: staging left a stray file alone, the pre-flight build passed, and the unstaged-change refusal and the error handler worked. Every commit, tag and push was shown but declined.
+- README:
+  - Release menu: a "Without git commands: the release menu" section with the step table.
+  - GitHub Desktop: how to use it, so that only the validator needs the terminal (Pepe's proposal 10, part A).
+  - The private-library instructions name the menu as the easiest way to release.
+  - Language codes: what a BCP 47 language tag is, how to find one in the official IANA language subtag registry, and a table of the twelve languages in `songs/` with their folder, tag and name ([#4](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/4), Pepe's proposal 11). `contributing.md` points to it.
+- `scripts/test_package.py` builds a library package (the library manager's FDS draft 0.8) of a release archive, for testing only and never published. The package holds:
+  - the songs as `songs/<id>/<id>.cho`;
+  - each setlist as a set, with title-only entries left out and reported;
+  - the 1.1 view;
+  - a test UUID and the title "… (testpakket)";
+  - a signature with the public RFC 8032 test key.
+
+  It reuses the library manager's `make_test_libraries.py`, and its output is deterministic. Made from release 2026.11.0: 247 songs and two sets. The "? Vader Jacob" entry of "Voorbeeldavond" is left out. Checks:
+  - the library manager's engine (`validateLibrary`) finds nothing blocking, with 10 SNG-10 warnings for translations and versions with the same title;
+  - `release.py verify` accepts it as a snapshot;
+  - the signature verifies with the `cryptography` package.
+
+  Found along the way: a package carries no tag labels, because the manifest has no field for them and the view may hold no other fields. Phones show raw tag ids for it. README section "A test package".
+- `scripts/test_package.py` writes the tag labels of `zangbundel.json` into the manifest's optional `tags`, as song format v0.26 (12.11) says. The owner decided this on 2026-11-07 (`design/proposals/2026-11-07-tag-labels-in-packages.md` in the app repository). The 1.1 view carries no labels. Labels that break the 12.11 rules are left out and reported:
+  - at most 200 tags, each in tag syntax;
+  - 1 to 20 labels per tag, with language codes as `{meta: language}`;
+  - each label 1 to 60 characters on one line, NFC, without control characters.
+
+  Built from release 2026.11.0 (rebuilt from its tag, byte-identical): 247 songs, two sets, and 9 tags with 18 labels (nl and en). Checks:
+  - the labels equal those of the release;
+  - the view's `zangbundel.json` has no `tags`;
+  - the signature verifies over the exact manifest bytes, and all 251 listed files match their size and SHA-256;
+  - `release.py verify` accepts the package as a snapshot;
+  - the library manager's engine, which does not know `tags` yet, ignores the field: 10 SNG-10 warnings, as before, and nothing blocking.
+
+  Output is deterministic.
+- README repository layout lists `scripts/conformance.py`, and the workflow line names the conformance run.
 
 ### Changed
 - CI pin (`CONFORMANCE_REF`) moves to app commit `6a963fe` (song format v0.27). It adds the library manager's package cases `tag-labels` and `tag-label-invalid`. All 122 vectors agree there, with 58 packages checked on their format 1.1 side. The tools needed no change: a package's tag labels live in its manifest, which the 1.1 side does not read.
@@ -78,33 +109,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   - The pin (`CONFORMANCE_REF`) stayed at `dcc174d`, where all 58 vectors agree, until that expectation was corrected: in the library manager on 2026-11-07 (`cb5fd82`) and in the app's copy (`71f0477`).
   - The pin then moved to `71f0477`, where all 114 vectors agree.
   - The published 2026.11.0 archive still passes `verify --strict`.
-
-### Added
-- `scripts/conformance.py` runs the app repository's conformance corpus against `validate.py` and `release.py`: songs, setlists, library files and archives. The validation workflow runs it on every push, with the corpus fetched at a pinned commit of the app repository (`CONFORMANCE_REF`). All 58 vectors agree, including the new library-file vectors. With one expectation deliberately changed, the script reports the difference and exits with an error. README section "The contract with the app". The first run on GitHub passed with the pin on app commit `41eb28c` (46 vectors, no library vectors yet). The pin then moved to `dcc174d`, which adds the twelve library-file vectors; all 58 agree locally.
-
-- `release-menu.py`: a step-by-step menu for validating, staging, committing, tagging, pushing and pulling, in Dutch, English and German, with explanations that can be shown or hidden ([#3](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/3), Pepe's proposal 10). It is adapted from Pepe's CC0 menu for his own library:
-  - Dutch is added.
-  - Only the library's own files are staged; other changes are listed and left alone.
-  - A commit is refused while library changes are unstaged, so the check matches what is committed.
-  - Before a tag is set, the commit is built and verified exactly as the release workflow will do it.
-  - Newer commits on GitHub are offered as a pull instead of ending the menu, and pulling is fast-forward only.
-  - Unexpected errors keep a double-clicked window open.
-
-  Tested in a scratch clone with scripted answers in all three languages: staging left a stray file alone, the pre-flight build passed, and the unstaged-change refusal and the error handler worked. Every commit, tag and push was shown but declined.
-- README:
-  - Release menu: a "Without git commands: the release menu" section with the step table.
-  - GitHub Desktop: how to use it, so that only the validator needs the terminal (Pepe's proposal 10, part A).
-  - The private-library instructions name the menu as the easiest way to release.
-  - Language codes: what a BCP 47 language tag is, how to find one in the official IANA language subtag registry, and a table of the twelve languages in `songs/` with their folder, tag and name ([#4](https://github.com/pe1mew/Zangbundel-bibliotheek/issues/4), Pepe's proposal 11). `contributing.md` points to it.
-
-### Changed
 - `license.md`: the code licence covers `release-menu.py`, with the menu's origin in Pepe's public-domain menu.
 
 ### Fixed
 - `release.py verify` now validates the songs in a ZIP with a single wrapping folder (song-format 12.5). It used to accept such a ZIP after the A102 warning without looking inside it. Conformance vector `snapshot-top-directory` found this.
-
-### Removed
-- *Nothing.*
 
 ## [2026.11.0] - 2026-11-04
 
