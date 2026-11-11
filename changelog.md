@@ -48,10 +48,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   Left out for now:
   - "Wie komt er alle jaren": no death year found for its lyricist, Fred Berens.
   - "Dag Sinterklaasje": attributed to Antoinette van Dijk (died 1975).
-  - "De zak van Sinterklaas" and "Hoor wie klopt daar, kinderen": no print older than 70 years is certain.
-    - For "De zak van Sinterklaas", Wikipedia names a 1925 booklet, but Wikisource and the Nederlandse Liederenbank (record 170308) give 1963.
-    - For "Hoor wie klopt daar, kinderen", the oldest dated print in the Liederenbank is from 1993 (record 198940).
   - Songs by Herman Broekhuizen and other protected makers.
+- Two more Sinterklaas songs, at the maintainer's request: `de-zak-van-sinterklaas` and `hoor-wie-klopt-daar-kinderen`. Their makers are unknown, but no print older than 70 years is certain, so they are marked `proprietary` with "Rechthebbende onbekend":
+  - **De zak van Sinterklaas:** Wikipedia names a 1925 booklet, but Wikisource and the Nederlandse Liederenbank (record 170308) give 1963.
+  - **Hoor, wie klopt daar, kinderen:** the oldest dated print in the Liederenbank is from 1993 (record 198940). It is usually sung after `hoor-de-wind-waait-door-de-bomen`.
+
+  The texts come from Wikisource (nl).
 
 ### Changed
 - CI pin (`CONFORMANCE_REF`) moves to app commit `6a963fe` (song format v0.27). It adds the library manager's package cases `tag-labels` and `tag-label-invalid`. All 122 vectors agree there, with 58 packages checked on their format 1.1 side. The tools needed no change: a package's tag labels live in its manifest, which the 1.1 side does not read.
