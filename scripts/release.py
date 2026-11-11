@@ -33,6 +33,7 @@ scripts/LICENSE and license.md.
 """
 
 import argparse
+import collections
 import datetime
 import hashlib
 import io
@@ -194,6 +195,117 @@ def add_entry(zf, name, data, date_time):
     zf.writestr(info, data, compress_type=zipfile.ZIP_DEFLATED, compresslevel=DEFLATE_LEVEL)
 
 
+def changelog_section(path, version):
+    """Returns (summary, [(heading, text)]) of the '## [version]' section of a Keep a Changelog file.
+    Sections holding only '- *Nothing.*' are left out. Returns None when the file or section is missing."""
+    try:
+        with open(path, encoding='utf-8') as fh:
+            lines = fh.read().split('\n')
+    except OSError:
+        return None
+    head = re.compile(r'^## \[%s\](\s|$)' % re.escape(version))
+    start = next((i for i, x in enumerate(lines) if head.match(x)), None)
+    if start is None:
+        return None
+    end = next((i for i in range(start + 1, len(lines))
+                if lines[i].startswith('## ') or lines[i].startswith('<!--')), len(lines))
+    body = lines[start + 1:end]
+    summary, parts, current = [], [], None
+    for line in body:
+        if line.startswith('### '):
+            current = [line[4:].strip(), []]
+            parts.append(current)
+        elif current is None:
+            summary.append(line)
+        else:
+            current[1].append(line)
+    sections = []
+    for heading, text in parts:
+        text = '\n'.join(text).strip('\n')
+        if text and text.strip() != '- *Nothing.*':
+            sections.append((heading, text))
+    return '\n'.join(summary).strip('\n'), sections
+
+
+def previous_release(index_path, version):
+    """The newest entry of a release index other than this version, or None."""
+    try:
+        with open(index_path, encoding='utf-8') as fh:
+            releases = json.load(fh).get('releases', [])
+    except (OSError, ValueError, AttributeError):
+        return None
+    return next((r for r in releases if isinstance(r, dict) and r.get('version') != version
+                 and REVISION_RE.match(str(r.get('revision', '')))), None)
+
+
+def song_ids_at(repo_dir, revision):
+    """Song ids (file names under songs/) at a revision, or None when git cannot read it."""
+    try:
+        listing = git('ls-tree', '-r', '--name-only', revision, '--', 'songs', cwd=repo_dir)
+    except ReleaseError:
+        return None
+    return {p.rsplit('/', 1)[-1][:-4] for p in listing.splitlines() if p.endswith('.cho')}
+
+
+def write_notes(fh, lib, version, revision, created, file_name, size, digest, songs, included, skipped,
+                setlist_entries, changes, previous, previous_ids):
+    by_id = {s.meta['id'][0]: s for s in songs if not s.skipped}
+    fh.write('Zangbundel library **%s** release %s\n\n' % (lib['name'], version))
+    if changes and changes[0]:
+        fh.write(changes[0] + '\n\n')
+
+    fh.write('## Songs\n\n')
+    langs = collections.Counter(s.meta['language'][0] for s in by_id.values())
+    fh.write('%d songs in %d language(s): %s.\n\n' % (
+        len(included), len(langs), ', '.join('`%s` %d' % kv for kv in sorted(langs.items(), key=lambda kv: (-kv[1], kv[0])))))
+    lic = collections.Counter(s.meta.get('license', ['(none)'])[0] for s in by_id.values())
+    fh.write('Licences: %s.\n\n' % ', '.join('`%s` %d' % kv for kv in sorted(lic.items(), key=lambda kv: (-kv[1], kv[0]))))
+    if previous and previous_ids is not None:
+        new = sorted(set(by_id) - previous_ids, key=lambda i: (by_id[i].meta['title'][0].lower(), i))
+        gone = sorted(previous_ids - set(by_id))
+        if new:
+            fh.write('New since %s (%d):\n\n' % (previous['version'], len(new)))
+            for i in new[:100]:
+                fh.write('- %s (`%s`)\n' % (by_id[i].meta['title'][0], i))
+            if len(new) > 100:
+                fh.write('- and %d more\n' % (len(new) - 100))
+            fh.write('\n')
+        if gone:
+            fh.write('Removed since %s (%d): %s.\n\n' % (previous['version'], len(gone),
+                                                         ', '.join('`%s`' % i for i in gone)))
+        if not new and not gone:
+            fh.write('No songs added or removed since %s.\n\n' % previous['version'])
+
+    fh.write('## Add it to the app\n\n')
+    index_url = lib.get('release_index')
+    if index_url:
+        fh.write('In the Zangbundel app, add the library by the URL of its release index; the app then '
+                 'offers every new release as an update:\n\n```\n%s\n```\n\n' % index_url)
+        fh.write('Or download `%s` below and open it in the app with "import from file".\n\n' % file_name)
+    else:
+        fh.write('Download `%s` below and open it in the app with "import from file".\n\n' % file_name)
+
+    if changes and changes[1]:
+        fh.write('## Changes\n\n')
+        for heading, text in changes[1]:
+            fh.write('### %s\n\n%s\n\n' % (heading, text))
+
+    fh.write('## Archive\n\n')
+    fh.write('| | |\n|---|---|\n')
+    fh.write('| Library id | `%s` |\n' % lib['id'])
+    fh.write('| Revision | `%s` |\n' % revision)
+    fh.write('| Created | %s |\n' % created)
+    fh.write('| Songs | %d included, %d skipped |\n' % (len(included), len(skipped)))
+    if setlist_entries:
+        fh.write('| Setlists | %d |\n' % len(setlist_entries))
+    fh.write('| Archive | `%s`, %d bytes |\n' % (file_name, size))
+    fh.write('| SHA-256 | `%s` |\n' % digest)
+    if skipped:
+        fh.write('\nSkipped songs:\n\n')
+        for s in skipped:
+            fh.write('- `%s`: %s %s\n' % (s['path'], s['code'], s['message']))
+
+
 def build(args):
     repo_dir = args.repo
     git('rev-parse', '--git-dir', cwd=repo_dir)
@@ -299,6 +411,15 @@ def build(args):
         setlist_entries.sort(key=lambda e: e['path'])
         skipped.sort(key=lambda e: e['path'])
 
+        # Release notes only: the changelog section and the previous release of the tagged commit.
+        changes = None
+        for name in ('changelog.md', 'CHANGELOG.md'):
+            if name in tree_paths:
+                changes = changelog_section(os.path.join(tmp, name), version)
+                break
+        previous = previous_release(os.path.join(tmp, 'releases.json'), version)
+        previous_ids = song_ids_at(repo_dir, previous['revision']) if previous else None
+
         manifest = {
             'format': 'zangbundel-archive',
             'archive_version': ARCHIVE_VERSION_WITH_SETLISTS if setlist_entries else ARCHIVE_VERSION,
@@ -339,22 +460,8 @@ def build(args):
 
     notes_path = os.path.join(args.out, 'release-notes.md')
     with open(notes_path, 'w', encoding='utf-8', newline='\n') as fh:
-        fh.write('Zangbundel library **%s** release %s\n\n' % (lib['name'], version))
-        fh.write('| | |\n|---|---|\n')
-        fh.write('| Library id | `%s` |\n' % lib['id'])
-        fh.write('| Revision | `%s` |\n' % revision)
-        fh.write('| Created | %s |\n' % created)
-        fh.write('| Songs | %d included, %d skipped |\n' % (len(included), len(skipped)))
-        if setlist_entries:
-            fh.write('| Setlists | %d |\n' % len(setlist_entries))
-        fh.write('| Archive | `%s`, %d bytes |\n' % (file_name, len(data)))
-        fh.write('| SHA-256 | `%s` |\n\n' % digest)
-        fh.write('Open the `.zbl` file with the Zangbundel app, or add the library by the URL of its '
-                 '`releases.json`.\n')
-        if skipped:
-            fh.write('\nSkipped songs:\n\n')
-            for s in skipped:
-                fh.write('- `%s`: %s %s\n' % (s['path'], s['code'], s['message']))
+        write_notes(fh, lib, version, revision, created, file_name, len(data), digest, songs, included, skipped,
+                    setlist_entries, changes, previous, previous_ids)
 
     print('built %s: %d bytes, sha256 %s' % (out_path, len(data), digest))
     print('  version %s, revision %s, created %s, %d song(s), %d skipped' %

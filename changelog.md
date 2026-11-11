@@ -10,7 +10,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 - *Nothing.*
 
 ### Changed
-- *Nothing.*
+- Release notes say more. Besides the archive table, `release.py build` now writes:
+  - the summary and the changes from the version's section in `changelog.md`; sections with only "*Nothing.*" are left out;
+  - the number of songs per language and per licence;
+  - the songs added and removed since the previous release in `releases.json`, by title and id, read from git at that release's revision;
+  - a section "Add it to the app" with the `release_index` URL from `zangbundel.json`, and "import from file" for the archive.
+
+  A library without a changelog section, release index or previous release gets the parts that apply. The archive does not change: rebuilding `v2026.11.1` gives the published SHA-256 `f759ac03…6626`. Tested on this library and on a private copy whose index lists only pre-releases.
 
 ### Fixed
 - *Nothing.*

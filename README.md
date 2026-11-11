@@ -67,7 +67,7 @@ python scripts/release.py verify dist/zangbundel-bibliotheek-2026.10.0.zbl
 python scripts/release.py index dist/zangbundel-bibliotheek-2026.10.0.zbl
 ```
 
-`build` reads the tagged commit from git, never the working tree, and writes the archive and release notes to `dist/`. `verify` applies the archive checks the app applies (A001 to A103) and the library validator to the archive. `index` adds the archive to `releases.json`.
+`build` reads the tagged commit from git, never the working tree, and writes the archive and release notes to `dist/`. The release notes give the summary and changes from the version's section in `changelog.md`, the songs per language and licence, the songs added or removed since the previous release in `releases.json`, the URL to add the library to the app, and the archive's size and SHA-256. `verify` applies the archive checks the app applies (A001 to A103) and the library validator to the archive. `index` adds the archive to `releases.json`.
 
 ### A test package (never published)
 
