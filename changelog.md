@@ -34,6 +34,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   - the signature verifies with the `cryptography` package.
 
   Found along the way: a package carries no tag labels, because the manifest has no field for them and the view may hold no other fields. Phones show raw tag ids for it. README section "A test package".
+- 18 Sinterklaas songs in the public domain, under `songs/nl/` with the new tag `sinterklaas` (Sinterklaas / Saint Nicholas):
+  - **Traditional or anonymous, first printed more than 70 years ago:** `sinterklaas-kapoentje`, `sinterklaasje-bonne-bonne-bonne`, `sinterklaas-goed-heiligman`, `sinterklaas-die-goede-heer`, `daar-wordt-aan-de-deur-geklopt`, `hoor-de-wind-waait-door-de-bomen`, `hop-hop-hop`, `rommeldebommel` and `sinterklaasje-kom-maar-binnen`.
+  - **Named makers who all died before 1956:**
+    - Jan Schenkman: `zie-ginds-komt-de-stoomboot`.
+    - J.P. Heije and J.J. Viotta: `zie-de-maan-schijnt-door-de-bomen`.
+    - Katharina Leopold: `hij-komt-hij-komt`, `jongens-heb-je-t-al-vernomen`, `sinterklaas-zegt-moe` and `o-kom-er-eens-kijken`.
+    - W.F. Oostveen and G.C. Weeren: `sinterklaas-is-jarig`.
+    - Simon Abramsz: `op-de-hoge-hoge-daken` and `zachtjes-gaan-de-paardenvoetjes`.
+
+  Makers and oldest prints come from Wikipedia (nl, "Sinterklaaslied"), with death years from the makers' Wikipedia pages. The texts come from Wikisource (nl), from Heije's and Schenkman's books on Project Gutenberg, and from the 1898 Leopold scan on Wikisource. The `#` lines of each song say which source was used, where the spelling was modernised, and which variants are sung. Texts keep the wording of their source, including the lines about Piet's colour.
+
+  Left out for now:
+  - "Wie komt er alle jaren": no death year found for its lyricist, Fred Berens.
+  - "Dag Sinterklaasje": attributed to Antoinette van Dijk (died 1975).
+  - "De zak van Sinterklaas" and "Hoor wie klopt daar, kinderen": no print older than 70 years is certain.
+    - For "De zak van Sinterklaas", Wikipedia names a 1925 booklet, but Wikisource and the Nederlandse Liederenbank (record 170308) give 1963.
+    - For "Hoor wie klopt daar, kinderen", the oldest dated print in the Liederenbank is from 1993 (record 198940).
+  - Songs by Herman Broekhuizen and other protected makers.
 
 ### Changed
 - CI pin (`CONFORMANCE_REF`) moves to app commit `6a963fe` (song format v0.27). It adds the library manager's package cases `tag-labels` and `tag-label-invalid`. All 122 vectors agree there, with 58 packages checked on their format 1.1 side. The tools needed no change: a package's tag labels live in its manifest, which the 1.1 side does not read.

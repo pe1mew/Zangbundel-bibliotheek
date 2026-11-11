@@ -1,0 +1,21 @@
+# Sinterklaas kapoentje - sinterklaaslied
+# Volksliedje uit de mondelinge overlevering; oudste druk De Navorscher, jaargang 1 (1851),
+# volgens Wikipedia (nl, "Sinterklaaslied"). Tekst en melodie anoniem: publiek domein. Tekst van
+# Wikisource (nl, "Sinterklaas kapoentje").
+{title: Sinterklaas kapoentje}
+{meta: id sinterklaas-kapoentje}
+{meta: language nl}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Wikisource (nl), Sinterklaas kapoentje; oudste druk 1851 (Wikipedia nl, Sinterklaaslied)}
+{meta: tag sinterklaas}
+{meta: tag kinderlied}
+
+{start_of_verse}
+Sinterklaas kapoentje
+Gooi wat in mijn schoentje
+Gooi wat in mijn laarsje
+Dank u, Sinterklaasje.
+{end_of_verse}

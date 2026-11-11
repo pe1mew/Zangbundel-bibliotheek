@@ -26,6 +26,7 @@
     "geestelijk": { "nl": "Geestelijk lied", "en": "Spiritual" },
     "kerst":      { "nl": "Kerst", "en": "Christmas" },
     "scouting":   { "nl": "Scouting", "en": "Scouting" },
+    "sinterklaas": { "nl": "Sinterklaas", "en": "Saint Nicholas" },
     "welpen":     { "nl": "Welpen", "en": "Cub Scouts" }
   }
 }

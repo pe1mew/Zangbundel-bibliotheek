@@ -1,0 +1,30 @@
+# Sinterklaasje, kom maar binnen - sinterklaaslied
+# Oudste druk: St. Nicolaasliedjes met pianobegeleiding, bijeengebracht door R.A. van Pelt en J.H.
+# Boon (Den Haag, 1926), volgens Wikisource en Wikipedia (nl). Tekstdichter en componist onbekend;
+# meer dan 70 jaar geleden anoniem gepubliceerd: publiek domein. Tekst van Wikisource (nl,
+# "Sinterklaasje kom maar binnen met je knecht"), naar kinderliedjes.overtuin.net. De bron
+# schrijft de herhaling van het refrein uit; hier (2x).
+{title: Sinterklaasje, kom maar binnen}
+{meta: id sinterklaasje-kom-maar-binnen}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Wikisource (nl), Sinterklaasje kom maar binnen met je knecht; oudste druk Van Pelt en Boon, St. Nicolaasliedjes (1926)}
+{meta: tag sinterklaas}
+{meta: tag kinderlied}
+
+{start_of_verse}
+Sinterklaasje, kom maar binnen met je knecht
+want we zitten allemaal even recht.
+Misschien heeft u nog even tijd
+voordat u weer naar Spanje rijdt?
+Kom dan nog eventjes bij ons aan
+en laat uw paardje maar buiten staan.
+{end_of_verse}
+
+{start_of_chorus}
+En we zingen en we springen en we zijn zo blij
+want er zijn geen stoute kinderen bij! (2x)
+{end_of_chorus}

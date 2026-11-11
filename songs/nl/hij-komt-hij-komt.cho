@@ -1,0 +1,40 @@
+# Hij komt, hij komt - sinterklaaslied
+# Tekst Katharina Leopold (1846-1914), voor het eerst gepubliceerd in haar Sint Nikolaas, twaalf
+# versjes met melodieën (Groningen, 1898), op de wijs van "Fröhlicher Landmann", volgens
+# Wikisource en Wikipedia (nl, "Sinterklaaslied"). Leopold en Schumann (1810-1856) overleden meer
+# dan 70 jaar geleden: publiek domein. Tekst van Wikisource (nl), naar kinderliedjes.overtuin.net.
+# Die geeft na het tweede couplet twee losse regels die eindigen op "...": een onvolledig couplet,
+# hier weggelaten. Het laatste couplet herhaalt het eerste.
+{title: Hij komt, hij komt}
+{meta: id hij-komt-hij-komt}
+{meta: language nl}
+{lyricist: Katharina Leopold}
+{composer: Robert Schumann}
+{year: 1898}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Wikisource (nl), Hij komt, hij komt; Leopold, Sint Nikolaas, twaalf versjes met melodieën (1898)}
+{meta: tag sinterklaas}
+{meta: tag kinderlied}
+{meta: melody Fröhlicher Landmann}
+
+{start_of_verse}
+Hij komt, hij komt
+die lieve goede Sint
+mijn beste vriend, jouw beste vriend
+de vriend van ieder kind.
+{end_of_verse}
+
+{start_of_verse}
+Mijn hartje klopt
+mijn hartje klopt zo blij
+wat brengt hij u, wat brengt hij mij
+wat brengt hij u en mij?
+{end_of_verse}
+
+{start_of_verse}
+Hij komt, hij komt
+die lieve goede Sint
+mijn beste vriend, jouw beste vriend
+de vriend van ieder kind.
+{end_of_verse}

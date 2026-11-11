@@ -1,0 +1,53 @@
+# Jongens, heb je 't al vernomen - sinterklaaslied
+# Tekst Katharina Leopold (1846-1914), voor het eerst gepubliceerd in haar Sint Nikolaas, twaalf
+# versjes met melodieën (Groningen, 1898), op de wijs van "Ihren Schäfer zu erwarten", volgens
+# Wikisource en Wikipedia (nl, "Sinterklaaslied"). Leopold overleed meer dan 70 jaar geleden; de
+# wijs bestond al vóór 1898 en de componist is onbekend: publiek domein. Tekst van Wikisource
+# (nl), naar liedjeskist.nl. Varianten volgens Wikisource: "Koopt maar, koopt maar wat hij kan"
+# (tweede couplet), "Alle kind'ren juichen, zingen" en "'k Zing met heel mijn hartje mee" (derde
+# couplet).
+{title: Jongens, heb je 't al vernomen}
+{meta: id jongens-heb-je-t-al-vernomen}
+{meta: language nl}
+{lyricist: Katharina Leopold}
+{composer: onbekend}
+{year: 1898}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Wikisource (nl), Jongens, heb je 't al vernomen; Leopold, Sint Nikolaas, twaalf versjes met melodieën (1898)}
+{meta: tag sinterklaas}
+{meta: tag kinderlied}
+{meta: melody Ihren Schäfer zu erwarten}
+
+{start_of_verse}
+Jongens, heb je 't al vernomen
+Tralalalie, tieralalala
+Sinterklaas is aangekomen
+Tralalalie, tieralalala
+Laat ons zingen hand in hand
+Sinterklaas is weer in 't land
+Tralalalie, tieralalala
+Tieralalalie, tieralalala.
+{end_of_verse}
+
+{start_of_verse}
+Mooie winkels allerwegen
+Tralalalie, tieralalala
+Prachtig speelgoed lacht ons tegen
+Tralalalie, tieralalala
+'t Knechtje, ja die zwarte man
+Koopt al wat hij kopen kan
+Tralalalie, tieralalala
+Tieralalalie, tieralalala.
+{end_of_verse}
+
+{start_of_verse}
+Alle kind'ren hupp'len, springen
+Tralalalie, tieralalala
+Hoor ze vrolijk juichen, zingen
+Tralalalie, tieralalala
+Ik zing ook plezierig mee
+Heerlijk, heerlijk is 't hoezee
+Tralalalie, tieralalala
+Tieralalalie, tieralalala.
+{end_of_verse}

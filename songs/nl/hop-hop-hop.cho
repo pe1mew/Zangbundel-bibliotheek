@@ -1,0 +1,34 @@
+# Hop, hop, hop - sinterklaaslied
+# Oudste druk: Vroolijk St. Nicolaas-feest, samengesteld door H.A. Almoes (Amsterdam, 192x;
+# Wikipedia nl: 1925). Tekstdichter en componist onbekend; meer dan 70 jaar geleden anoniem
+# gepubliceerd: publiek domein. Tekst van Wikisource (nl, "Hop, hop, hop, we zitten nu rechtop"):
+# de korte versie, naar kinderliedjes.overtuin.net. Wikisource geeft ook een langere versie met
+# drie coupletten.
+{title: Hop, hop, hop}
+{meta: id hop-hop-hop}
+{meta: language nl}
+{lyricist: onbekend}
+{composer: onbekend}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Wikisource (nl), Hop, hop, hop, we zitten nu rechtop; oudste druk Almoes, Vroolijk St. Nicolaas-feest (192x)}
+{meta: tag sinterklaas}
+{meta: tag kinderlied}
+
+{start_of_verse}
+Hop, hop, hop
+we zitten nu rechtop.
+Sinterklaas die komt uit Spanje
+hij brengt appels van oranje.
+Altijd in galop
+hop hop, hop hop, hop.
+{end_of_verse}
+
+{start_of_verse}
+Hop, hop, hop
+paardje in galop.
+En die beste Sinterklaas
+die brengt ons heel veel speculaas.
+Altijd in galop
+hop hop, hop hop, hop.
+{end_of_verse}

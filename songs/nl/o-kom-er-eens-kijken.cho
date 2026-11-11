@@ -1,0 +1,46 @@
+# O, kom er eens kijken - sinterklaaslied
+# Tekst Katharina Leopold (1846-1914), voor het eerst gepubliceerd in haar Sint Nikolaas, twaalf
+# versjes met melodieën (Groningen, 1898), op de wijs van "Freut euch des Lebens", volgens
+# Wikisource en Wikipedia (nl, "Sinterklaaslied"). Leopold en Nägeli (1773-1836) overleden meer
+# dan 70 jaar geleden: publiek domein. Tekst uit de scan van de uitgave van 1898 op Wikisource
+# (nl), onder de titel "Zes december", met gemoderniseerde spelling ("de beste Sint" voor "den
+# besten Sint"). Leopold geeft een couplet voor meisjes en een voor jongens; hier achter elkaar,
+# met het refrein ertussen. In latere drukken werd "Een doos soldaten" "Een doos met blokken" en
+# "En (heerlijk toch) een nieuwe pet" "En schaatsen en een nieuwe pet" (Wikisource).
+{title: O, kom er eens kijken}
+{meta: id o-kom-er-eens-kijken}
+{meta: language nl}
+{lyricist: Katharina Leopold}
+{composer: Hans Georg Nägeli}
+{year: 1898}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Wikisource (nl), O, kom er eens kijken; Leopold, Sint Nikolaas, twaalf versjes met melodieën (1898)}
+{meta: tag sinterklaas}
+{meta: tag kinderlied}
+{meta: melody Freut euch des Lebens}
+
+{start_of_chorus}
+O, kom eens kijken,
+Wat ik in mijn schoentje vind,
+Alles gekregen
+Van de beste Sint!
+{end_of_chorus}
+
+{start_of_verse}
+Een pop met vlechtjes in het haar,
+Een snoezig jurkje, kant en klaar,
+Drie kaatseballen in een net,
+Een letter van banket.
+{end_of_verse}
+
+{chorus}
+
+{start_of_verse}
+Een bromtol met een zweep erbij,
+Een doos soldaten, ook voor mij,
+En (heerlijk toch) een nieuwe pet!
+Een letter van banket.
+{end_of_verse}
+
+{chorus}

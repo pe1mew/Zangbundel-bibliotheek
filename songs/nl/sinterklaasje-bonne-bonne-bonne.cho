@@ -1,0 +1,23 @@
+# Sinterklaasje, bonne bonne bonne - sinterklaaslied
+# Volksliedje uit de mondelinge overlevering, vaak direct na "Sinterklaas kapoentje" gezongen;
+# oudste druk De Navorscher, jaargang 1 (1851), volgens Wikipedia (nl, "Sinterklaaslied"). Tekst
+# en melodie anoniem: publiek domein. Tekst van Wikisource (nl, "Sinterklaas kapoentje"); die
+# noemt als variant "Dan grabbelen wij" in de laatste regel, en een Belgische variant die eindigt
+# als "Sinterklaas kapoentje".
+{title: Sinterklaasje, bonne bonne bonne}
+{meta: id sinterklaasje-bonne-bonne-bonne}
+{meta: language nl}
+{lyricist: traditioneel}
+{composer: traditioneel}
+{copyright: Public domain}
+{meta: license public-domain}
+{meta: source Wikisource (nl), Sinterklaas kapoentje; oudste druk 1851 (Wikipedia nl, Sinterklaaslied)}
+{meta: tag sinterklaas}
+{meta: tag kinderlied}
+
+{start_of_verse}
+Sinterklaasje, bonne bonne bonne
+Gooi wat in mijn lege, lege tonne
+Gooi wat in de huizen
+Dan knabbelen wij als muizen!
+{end_of_verse}
