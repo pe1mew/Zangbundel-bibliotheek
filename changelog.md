@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
 
 ### Changed
 - CI pin (`CONFORMANCE_REF`) moves to app commit `2f00b34`, which adds the song vector `chorus-label-most-recent`: of two choruses labelled R, `{chorus: R}` repeats the second (song format 7.2). All 125 vectors agree there. The tools from before song format v0.29 fail it on the line list.
+- CI pin moves to app commit `ed3f797`, which adds the library manager's package case `song-chorus-repeat-bound`. A song of the package passes 32 768 lines through chorus repeats: the app refuses the package with SNG-19, and the format 1.1 side is accepted as a snapshot, with the song skipped by S013. All 126 vectors agree there, 60 of them packages.
 - Release notes say more. Besides the archive table, `release.py build` now writes:
   - the summary and the changes from the version's section in `changelog.md`; sections with only "*Nothing.*" are left out;
   - the number of songs per language and per licence;
