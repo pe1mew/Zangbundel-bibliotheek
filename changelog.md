@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   - `release.py verify --strict` accepts its 1.1 view as a snapshot.
 
 ### Changed
+- CI pin (`CONFORMANCE_REF`) moves to app commit `2f00b34`, which adds the song vector `chorus-label-most-recent`: of two choruses labelled R, `{chorus: R}` repeats the second (song format 7.2). All 125 vectors agree there. The tools from before song format v0.29 fail it on the line list.
 - Release notes say more. Besides the archive table, `release.py build` now writes:
   - the summary and the changes from the version's section in `changelog.md`; sections with only "*Nothing.*" are left out;
   - the number of songs per language and per licence;
