@@ -47,6 +47,9 @@ RECOMMENDED_FILE_BYTES = 8 * 1024
 MAX_TITLE = 60
 MAX_LINE = 120
 MAX_CANONICAL_LINES = 254
+# Song format 5.5 (v0.29): a hard bound on the canonical line list. A 64 KiB file cannot hold more
+# lines written out, so only chorus repeats (7.2) reach it; it is checked before each repeat is copied.
+MAX_CANONICAL_LINES_HARD = 32 * 1024
 
 # Setlists (section 13, format 1.1)
 SETLIST_MAX_ENTRIES = 200
@@ -261,7 +264,7 @@ def validate_library_json(root, report, app_version):
 
 
 # ---------------------------------------------------------------------------
-# Song level (sections 5 to 9, codes S001-S012, W001-W014, I001-I002)
+# Song level (sections 5 to 9, codes S001-S013, W001-W014, I001-I002)
 # ---------------------------------------------------------------------------
 
 # Sections 5.2 and 5.3 (song format v0.24): trimming removes spaces and tabs only. Other characters
@@ -425,6 +428,7 @@ def validate_song(root, rel_path, report, lib):
     in_implicit_verse = False
     unknown_reported = set()
     timing = []           # (line_no, kind, n, start)
+    over_bound = False    # S013 reported: no further repeats are copied
 
     def set_single(name, value, line_no):
         if name in song.meta:
@@ -514,11 +518,24 @@ def validate_song(root, rel_path, report, lib):
                 else:
                     selected = choruses[-1]
                     if value:
-                        for label, lines in choruses:
+                        # 7.2: of several choruses with this label, the most recent (as the app and the
+                        # library manager read it; FDS draft 0.8 readings, approved 2026-11-07).
+                        for label, lines in reversed(choruses):
                             if label == value:
                                 selected = (label, lines)
                                 break
-                    song.lines.extend(selected[1])
+                    if over_bound:
+                        pass
+                    elif len(song.lines) + len(selected[1]) > MAX_CANONICAL_LINES_HARD:
+                        # 5.5: checked before the copy, so the work stays within the bound.
+                        err(line_no, 'S013', 'the canonical line list would pass %d lines once the chorus '
+                            'repeats are written out' % MAX_CANONICAL_LINES_HARD)
+                        over_bound = True
+                    else:
+                        song.lines.extend(selected[1])
+                        # 7.2: a repeat inside a chorus definition is part of that chorus.
+                        if env == 'chorus' and chorus_lines is not None:
+                            chorus_lines.extend(selected[1])
             # --- metadata --------------------------------------------------
             elif name in SINGLE_VALUED:
                 set_single(name, value, line_no)

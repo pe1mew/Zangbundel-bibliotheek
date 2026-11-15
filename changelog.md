@@ -25,7 +25,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The libr
   A library without a changelog section, release index or previous release gets the parts that apply. The archive does not change: rebuilding `v2026.11.1` gives the published SHA-256 `f759ac03…6626`. Tested on this library and on a private copy whose index lists only pre-releases.
 
 ### Fixed
-- *Nothing.*
+- `validate.py` follows song format v0.29, which writes down the app's proposal `design/proposals/2026-11-12-chorus-repeat-bound.md` (assessment SP-41) in the app repository:
+  - 7.2: a `{chorus}` inside a chorus definition is now part of that chorus, as the app reads it. Before, `validate.py` did not add it to the chorus, so its line list could differ from the app's. It also missed that such repeats can double a song: 20 nested levels in 1.3 kB give about two million lines.
+  - 5.5 and the new S013: the song is refused when its canonical line list would pass 32 768 lines. This is checked before each repeat is copied, so 40 levels stop at once instead of growing without bound.
+  - 7.2: `{chorus: label}` with several choruses of that label now repeats the most recent, as the app and the library manager do (FDS draft 0.8 readings, approved 2026-11-07). Before, `validate.py` took the first. No vector covered it.
+
+  Tests:
+  - 32 768 lines are accepted, and 32 769 give S013.
+  - No song in this library changes its line list. 80 songs repeat a chorus, none inside a chorus definition.
+  - The CI pin (`CONFORMANCE_REF`) moves to app commit `ac3fed8`, which adds the vector `chorus-repeat-bound`. All 124 vectors agree there, and the 122 at the old pin `6a963fe` still agree. The previous tools fail exactly `chorus-repeat-bound`.
 
 ### Removed
 - *Nothing.*
